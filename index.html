@@ -23,21 +23,26 @@
     />
 
     <!-- Styles -->
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="styles/swiper.css" />
+    <!-- End Swiper -->
+
     <link rel="stylesheet" href="styles/general.css" />
     <link rel="stylesheet" href="styles/style.css" />
-
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
     <title>SKEMB. | eCommerce Website</title>
   </head>
   <body>
     <header>
-      <!-- offer py-2 text-center -->
-      <div class="offer py-2 text-center">
+      <!-- Offer Alert -->
+      <div class="offer py-1 text-center">
         <p>
           New Season Coming! Discount 20% For All Products Check It Out Now!
         </p>
       </div>
       <!-- NavBar -->
-      <nav class="nav-top py-3">
+      <nav class="nav-top py-1">
         <!-- Container -->
 
         <div class="nav container d-flex align-center justify-between">
@@ -62,8 +67,7 @@
         </div>
       </nav>
       <!-- Second Nav -->
-
-      <nav class="nav-secondary py-3">
+      <nav class="nav-secondary py-1">
         <div class="nav container">
           <ul class="nav-links g-2 d-flex">
             <li class="link position-relative pb-1 cursor-pointer">
@@ -84,13 +88,47 @@
           </ul>
         </div>
       </nav>
+
+      <!-- Slider == -->
+      <section class="slider swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="slide swiper-slide">
+            <img src="images/slide1.jpg" alt="" />
+          </div>
+          <div class="slide swiper-slide">
+            <img src="images/slide2.jpg" alt="" />
+          </div>
+          <div class="slide swiper-slide">
+            <img src="images/slide3.jpg" alt="" />
+          </div>
+          <div class="slide swiper-slide">
+            <img src="images/slide4.jpg" alt="" />
+          </div>
+          <div class="slide swiper-slide">
+            <img src="images/slide5.jpg" alt="" />
+          </div>
+          <div class="slide swiper-slide">
+            <img src="images/slide6.jpg" alt="" />
+          </div>
+        </div>
+        <div class="slider-content text-center absolute-center">
+          <h1 class="slider-heading">
+            Better Way To Start <br />
+            The Shopping
+          </h1>
+          <p class="slider-text">
+            Discover best seller items on SKEMB. <br />You can have anything you
+            want in the world.
+          </p>
+          <a href="#trending-cat" class="slider-btn"
+            >Discover More &nbsp;
+            <i class="fa-solid fa-arrow-right-long"></i>
+          </a>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </section>
     </header>
-
-    <!-- Slider == -->
-
-    <div>
-      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-    </div>
 
     <!-- ==================== -->
     <!-- *ANCHOR -  MAIN ==== -->
@@ -99,7 +137,7 @@
     <main class="main-section">
       <!-- *ANCHOR -  Categories -->
 
-      <section class="categories-trend section">
+      <section id="trending-cat" class="categories-trend section">
         <h2
           class="section-heading px-3 py-2 position-relative mx-auto my-7 w-fit"
         >
@@ -545,5 +583,8 @@
         <span class="footer-logo">SKEMB.</span>
       </p>
     </footer>
+    <!-- Swiper Library -->
+    <script src="/scripts/library/swiper.js"></script>
+    <script src="scripts/script.js"></script>
   </body>
 </html>
