@@ -1,6 +1,7 @@
 /* Section Heading */
 
 .section-heading {
+  margin-block: 3rem 4rem;
   letter-spacing: 1px;
   word-spacing: 3px;
   font-weight: var(--fweight-900);
@@ -96,7 +97,23 @@
 /* *ANCHOR - SLIDER */
 .slider {
   color: white;
+  width: 100%;
   height: calc(100vh - 10rem);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .slider-content {
@@ -118,19 +135,42 @@
   margin-block: 1rem 2rem;
 }
 
-.slider-btn {
+.slider-btn:hover {
+  text-shadow: var(--text-shadow);
+}
+
+.btn-more {
   padding: 0.75rem 2rem;
   font-weight: var(--fweight-600);
-  color: var(--color-primary-dark);
   border: 2px solid transparent;
+}
+
+.btn-more:hover {
+  background-color: transparent;
+}
+
+.btn-white {
+  color: var(--color-primary-dark);
   background-color: white;
 }
 
-.slider-btn:hover {
+.btn-white:hover {
   color: white;
   border: 2px solid white;
-  background-color: transparent;
-  text-shadow: var(--text-shadow);
+}
+
+.btn-dark {
+  color: white;
+  background-color: var(--color-primary-dark);
+}
+
+.btn-dark:hover {
+  color: var(--color-primary-dark);
+  border: 2px solid var(--color-primary-dark);
+}
+
+.section-btn {
+  margin-top: 5rem;
 }
 
 /* ===================== */
