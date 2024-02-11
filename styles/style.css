@@ -93,6 +93,46 @@
   font-size: var(--fsize-200);
 }
 
+/* *ANCHOR - SLIDER */
+.slider {
+  color: white;
+  height: calc(100vh - 10rem);
+}
+
+.slider-content {
+  position: absolute;
+  width: fit-content;
+  z-index: 3;
+}
+
+.slider-heading {
+  font-size: 3.5rem;
+  font-weight: var(--fweight-900);
+  text-shadow: var(--text-shadow);
+  line-height: 1.2;
+}
+
+.slider-text {
+  text-shadow: var(--text-shadow);
+  font-size: var(--fsize-400);
+  margin-block: 1rem 2rem;
+}
+
+.slider-btn {
+  padding: 0.75rem 2rem;
+  font-weight: var(--fweight-600);
+  color: var(--color-primary-dark);
+  border: 2px solid transparent;
+  background-color: white;
+}
+
+.slider-btn:hover {
+  color: white;
+  border: 2px solid white;
+  background-color: transparent;
+  text-shadow: var(--text-shadow);
+}
+
 /* ===================== */
 /* *ANCHOR -  MAIN ===== */
 /* ===================== */

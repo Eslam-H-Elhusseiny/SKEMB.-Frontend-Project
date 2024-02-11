@@ -32,6 +32,8 @@
   --button-color-hover: #2477af;
 
   /* Typography */
+  --text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+
   --text-color-dark: #333;
   --text-color-light: #777;
 
@@ -110,6 +112,12 @@ ul {
 
 .position-absolute {
   position: absolute;
+}
+
+.absolute-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* === *STUB -  Start Spacings === */
