@@ -186,6 +186,15 @@ ul {
 .my-3 {
   margin-block: 1rem;
 }
+.my-4 {
+  margin-block: 1.5rem;
+}
+.my-5 {
+  margin-block: 2rem;
+}
+.my-7 {
+  margin-block: 3rem;
+}
 
 /* *ANCHOR - margin bottom */
 .mb-1 {
