@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Styles -->
+
+    <link rel="stylesheet" href="styles/general.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+    <title> All Products</title>
+  </head>
+  <body>
+    <header>
+      <!-- Offer Alert -->
+      <div class="offer py-1 text-center">
+        <p>
+          New Season Coming! Discount 20% For All Products Check It Out Now!
+        </p>
+      </div>
+      <!-- NavBar -->
+      <nav class="nav-top py-1">
+        <!-- Container -->
+
+        <div class="nav container d-flex align-center justify-between">
+          <a href="#" class="logo">SKEMB<span class="logo-dot">.</span></a>
+          <!-- Search Bar -->
+
+          <form class="search-container d-flex">
+            <input
+              type="text"
+              class="search-input py-1 px-2"
+              id="search-bar"
+              placeholder="Search our store"
+            />
+            <a href="#" class="search-btn py-1 px-2"
+              ><i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+          </form>
+          <div class="nav-icons g-2 d-flex align-center justify-between">
+            <a href="#"> <i class="fa-solid fa-cart-shopping"></i> </a>
+            <a href="#"> <i class="fa-regular fa-user"></i> </a>
+          </div>
+        </div>
+      </nav>
+      <!-- Second Nav -->
+      <nav class="nav-secondary py-1">
+        <div class="nav container">
+          <ul class="nav-links g-2 d-flex">
+            <li class="link position-relative pb-1 cursor-pointer">
+              <a href="#">Home</a>
+            </li>
+            <li class="link position-relative pb-1 cursor-pointer">
+              <a href="#">Categories</a>
+            </li>
+            <li class="link position-relative pb-1 cursor-pointer">
+              <a href="#">Products</a>
+            </li>
+            <li class="link position-relative pb-1 cursor-pointer">
+              <a href="#">Hot offers</a>
+            </li>
+            <li class="link position-relative pb-1 cursor-pointer">
+              <a href="#">About Us</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+    </header>
+
+    <!-- ==================== -->
+    <!-- *ANCHOR -  MAIN ==== -->
+    <!-- ==================== -->
+    <main class="main-section">
+
+        <!-- *ANCHOR -  side bar -->
+        <div class="side_bar px-2 ">
+            <h2> CATEGORIES </h2> 
+            <ul >
+                <li class="link position-relative pb-1 cursor-pointer side_bar_item">
+                  <a href="#">Category 1</a>
+                </li>
+                <li class="link position-relative pb-1 cursor-pointer side_bar_item">
+                  <a href="#">Category 2</a>
+                </li>
+                <li class="link position-relative pb-1 cursor-pointer side_bar_item">
+                  <a href="#">Category 3</a>
+                </li>
+                <li class="link position-relative pb-1 cursor-pointer side_bar_item">
+                  <a href="#">Category 4</a>
+                </li>
+                <li class="link position-relative pb-1 cursor-pointer side_bar_item">
+                  <a href="#">Category 5</a>
+                </li>
+                <li class="link position-relative pb-1 cursor-pointer side_bar_item">
+                    <a href="#">Category 6</a>
+                  </li>
+              </ul> 
+
+        </div>
+
+      <!-- *ANCHOR - Products Cards Grid -->
+
+      <section class="section">
+
+        <!-- *ANCHOR - filter bar -->
+
+        <div class="filter_bar container d-flex ">
+
+            <!-- <h3> Sort by: </h3> -->
+
+        </div>
+
+
+        <div class=" products-grid d-grid">
+          <!-- 
+
+        -->
+
+          <!-- Card -->
+          <div class="card px-2 py-2">
+            <div
+              class="card-product position-relative justify-end d-flex flex-col align-center"
+            >
+              <a href="#" class="btn cart-btn w-75">Add To Cart</a>
+              <a href="#" class="fav position-absolute py-1 px-2"
+                ><i class="fa-regular fa-heart"></i
+              ></a>
+              <a href="#" class="fav position-absolute py-1 px-2 fav-solid"
+                ><i class="fa-solid fa-heart"></i
+              ></a>
+            </div>
+            <div class="card-text px-1">
+              <h3 class="product-h">Jackets</h3>
+              <p class="product-p">Lorem ipsum dolor sit doru ipsum dolor.</p>
+              <div
+                class="price-colors mt-1 align-center justify-between d-flex"
+              >
+                <h4 class="price-tag">
+                  <span class="currency">EGP</span>
+                  <span class="price">799</span>
+                </h4>
+                <div class="colors d-flex">
+                  <div
+                    class="color cursor-pointer color1 color cursor-pointer-active"
+                  ></div>
+                  <div class="color cursor-pointer color2"></div>
+                  <div class="color cursor-pointer color3"></div>
+                  <div class="color cursor-pointer color4"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card -->
+
+          <div class="card px-2 py-2">
+            <div
+              class="card-product position-relative justify-end d-flex flex-col align-center"
+            >
+              <a href="#" class="btn cart-btn w-75">Add To Cart</a>
+              <a href="#" class="fav position-absolute py-1 px-2"
+                ><i class="fa-regular fa-heart"></i
+              ></a>
+              <a href="#" class="fav position-absolute py-1 px-2 fav-solid"
+                ><i class="fa-solid fa-heart"></i
+              ></a>
+            </div>
+            <div class="card-text px-1">
+              <h3 class="product-h">Jackets</h3>
+              <p class="product-p">Lorem ipsum dolor sit doru ipsum dolor.</p>
+              <div
+                class="price-colors mt-1 align-center justify-between d-flex"
+              >
+                <h4 class="price-tag">
+                  <span class="currency">EGP</span>
+                  <span class="price">799</span>
+                </h4>
+                <div class="colors d-flex">
+                  <div class="color cursor-pointer color1"></div>
+                  <div class="color cursor-pointer color2"></div>
+                  <div class="color cursor-pointer color3"></div>
+                  <div
+                    class="color cursor-pointer color4 color cursor-pointer-active"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card -->
+
+          <div class="card px-2 py-2">
+            <div
+              class="card-product position-relative justify-end d-flex flex-col align-center"
+            >
+              <a href="#" class="btn cart-btn w-75">Add To Cart</a>
+              <a href="#" class="fav position-absolute py-1 px-2"
+                ><i class="fa-regular fa-heart"></i
+              ></a>
+              <a href="#" class="fav position-absolute py-1 px-2 fav-solid"
+                ><i class="fa-solid fa-heart"></i
+              ></a>
+            </div>
+            <div class="card-text px-1">
+              <h3 class="product-h">Jackets</h3>
+              <p class="product-p">Lorem ipsum dolor sit doru ipsum dolor.</p>
+              <div
+                class="price-colors mt-1 align-center justify-between d-flex"
+              >
+                <h4 class="price-tag">
+                  <span class="currency">EGP</span>
+                  <span class="price">799</span>
+                </h4>
+                <div class="colors d-flex">
+                  <div
+                    class="color cursor-pointer color1 color cursor-pointer-active"
+                  ></div>
+                  <div class="color cursor-pointer color2"></div>
+                  <div class="color cursor-pointer color3"></div>
+                  <div class="color cursor-pointer color4"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card -->
+
+          <div class="card px-2 py-2">
+            <div
+              class="card-product position-relative justify-end d-flex flex-col align-center"
+            >
+              <a href="#" class="btn cart-btn w-75">Add To Cart</a>
+              <a href="#" class="fav position-absolute py-1 px-2"
+                ><i class="fa-regular fa-heart"></i
+              ></a>
+              <a href="#" class="fav position-absolute py-1 px-2 fav-solid"
+                ><i class="fa-solid fa-heart"></i
+              ></a>
+            </div>
+            <div class="card-text px-1">
+              <h3 class="product-h">Jackets</h3>
+              <p class="product-p">Lorem ipsum dolor sit doru ipsum dolor.</p>
+              <div
+                class="price-colors mt-1 align-center justify-between d-flex"
+              >
+                <h4 class="price-tag">
+                  <span class="currency">EGP</span>
+                  <span class="price">799</span>
+                </h4>
+                <div class="colors d-flex">
+                  <div class="color cursor-pointer color1"></div>
+                  <div
+                    class="color cursor-pointer color2 color cursor-pointer-active"
+                  ></div>
+                  <div class="color cursor-pointer color3"></div>
+                  <div class="color cursor-pointer color4"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card -->
+
+          <div class="card px-2 py-2">
+            <div
+              class="card-product position-relative justify-end d-flex flex-col align-center"
+            >
+              <a href="#" class="btn cart-btn w-75">Add To Cart</a>
+              <a href="#" class="fav position-absolute py-1 px-2"
+                ><i class="fa-regular fa-heart"></i
+              ></a>
+              <a href="#" class="fav position-absolute py-1 px-2 fav-solid"
+                ><i class="fa-solid fa-heart"></i
+              ></a>
+            </div>
+            <div class="card-text px-1">
+              <h3 class="product-h">Jackets</h3>
+              <p class="product-p">Lorem ipsum dolor sit doru ipsum dolor.</p>
+              <div
+                class="price-colors mt-1 align-center justify-between d-flex"
+              >
+                <h4 class="price-tag">
+                  <span class="currency">EGP</span>
+                  <span class="price">799</span>
+                </h4>
+                <div class="colors d-flex">
+                  <div
+                    class="color cursor-pointer color1 color cursor-pointer-active"
+                  ></div>
+                  <div class="color cursor-pointer color2"></div>
+                  <div class="color cursor-pointer color3"></div>
+                  <div class="color cursor-pointer color4"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card -->
+
+          <div class="card px-2 py-2">
+            <div
+              class="card-product position-relative justify-end d-flex flex-col align-center"
+            >
+              <a href="#" class="btn cart-btn w-75">Add To Cart</a>
+              <a href="#" class="fav position-absolute py-1 px-2"
+                ><i class="fa-regular fa-heart"></i
+              ></a>
+              <a href="#" class="fav position-absolute py-1 px-2 fav-solid"
+                ><i class="fa-solid fa-heart"></i
+              ></a>
+            </div>
+            <div class="card-text px-1">
+              <h3 class="product-h">Jackets</h3>
+              <p class="product-p">Lorem ipsum dolor sit doru ipsum dolor.</p>
+              <div
+                class="price-colors mt-1 align-center justify-between d-flex"
+              >
+                <h4 class="price-tag">
+                  <span class="currency">EGP</span>
+                  <span class="price">799</span>
+                </h4>
+                <div class="colors d-flex">
+                  <div class="color cursor-pointer color1"></div>
+                  <div class="color cursor-pointer color2"></div>
+                  <div
+                    class="color cursor-pointer color3 color cursor-pointer-active"
+                  ></div>
+                  <div class="color cursor-pointer color4"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card -->
+
+          <div class="card px-2 py-2">
+            <div
+              class="card-product position-relative justify-end d-flex flex-col align-center"
+            >
+              <a href="#" class="btn cart-btn w-75">Add To Cart</a>
+              <a href="#" class="fav position-absolute py-1 px-2"
+                ><i class="fa-regular fa-heart"></i
+              ></a>
+              <a href="#" class="fav position-absolute py-1 px-2 fav-solid"
+                ><i class="fa-solid fa-heart"></i
+              ></a>
+            </div>
+            <div class="card-text px-1">
+              <h3 class="product-h">Jackets</h3>
+              <p class="product-p">Lorem ipsum dolor sit doru ipsum dolor.</p>
+              <div
+                class="price-colors mt-1 align-center justify-between d-flex"
+              >
+                <h4 class="price-tag">
+                  <span class="currency">EGP</span>
+                  <span class="price">799</span>
+                </h4>
+                <div class="colors d-flex">
+                  <div class="color cursor-pointer color1"></div>
+                  <div class="color cursor-pointer color2"></div>
+                  <div class="color cursor-pointer color3"></div>
+                  <div
+                    class="color cursor-pointer color4 color cursor-pointer-active"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card -->
+
+          <div class="card px-2 py-2">
+            <div
+              class="card-product position-relative justify-end d-flex flex-col align-center"
+            >
+              <a href="#" class="btn cart-btn w-75">Add To Cart</a>
+              <a href="#" class="fav position-absolute py-1 px-2"
+                ><i class="fa-regular fa-heart"></i
+              ></a>
+              <a href="#" class="fav position-absolute py-1 px-2 fav-solid"
+                ><i class="fa-solid fa-heart"></i
+              ></a>
+            </div>
+            <div class="card-text px-1">
+              <h3 class="product-h">Jackets</h3>
+              <p class="product-p">Lorem ipsum dolor sit doru ipsum dolor.</p>
+              <div
+                class="price-colors mt-1 align-center justify-between d-flex"
+              >
+                <h4 class="price-tag">
+                  <span class="currency">EGP</span>
+                  <span class="price">799</span>
+                </h4>
+                <div class="colors d-flex">
+                  <div class="color cursor-pointer color1"></div>
+                  <div
+                    class="color cursor-pointer color2 color cursor-pointer-active"
+                  ></div>
+                  <div class="color cursor-pointer color3"></div>
+                  <div class="color cursor-pointer color4"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center">
+          <a href="#" class="section-btn btn-more btn-dark"
+            >View More &nbsp;
+            <i class="fa-solid fa-arrow-right-long"></i>
+          </a>
+        </div>
+      </section>
+
+
+    </main>
+
+    <!-- ================= -->
+    <!-- *ANCHOR -  footer -->
+
+    <footer>
+      <div class="container d-grid g-1">
+        <div class="about-us">
+          <h3>About Us</h3>
+          <p>
+            The exciting contemporary brand SKEMB. is known for its attention to
+            detail and premium graphics.
+          </p>
+          <div class="social g-1 d-flex">
+            <a href="https://www.facebook.com"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a href="https://www.instagram.com"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="https://www.youtube.com"
+              ><i class="fa-brands fa-youtube"></i
+            ></a>
+            <a href="https://www.x.com"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+          </div>
+        </div>
+        <div class="quick-links quick-links-col-1">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Find Store Location</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Refund Policy</a></li>
+          </ul>
+        </div>
+        <div class="quick-links quick-links-col-2">
+          <ul>
+            <h3>Quick Links</h3>
+            <li><a href="#">Wishlist</a></li>
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">Product Compare</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="news-letter">
+          <h3>Newsletter</h3>
+          <p>Write Your Email To Know More Information</p>
+          <form
+            action="#"
+            class="newsletter py-1 px-2 w-90 d-flex align-center"
+          >
+            <label for="email">
+              <i class="fa-regular fa-envelope"></i>
+            </label>
+            <input
+              class="w-100 px-2 py-2"
+              type="email"
+              id="email"
+              placeholder="Enter your email"
+            />
+            <button type="submit" class="cursor-pointer">
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+          <img src="images/payment.png" class="payment" alt="payment methods" />
+        </div>
+      </div>
+      <p class="copyright text-center pt-3">
+        Made With <span class="heart">&#10084;</span> By
+        <span class="footer-logo">SKEMB.</span>
+      </p>
+    </footer>
+    <!-- Swiper Library -->
+    <!-- <script src="/scripts/library/swiper.js"></script> -->
+    <!-- <script src="scripts/script.js"></script> -->
+  </body>
+</html>
