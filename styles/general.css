@@ -46,6 +46,11 @@
   --fsize-700: 2rem;
   --fsize-800: 2.25rem;
   --fsize-900: 2.5rem;
+  --fsize-clamp-100: clamp(var(--fsize-100), 2vw, var(--fsize-200));
+  --fsize-clamp-200: clamp(var(--fsize-200), 2vw, var(--fsize-400));
+  --fsize-clamp-800: clamp(var(--fsize-500), 4vw, 2.5rem);
+  --fsize-clamp-900: clamp(var(--fsize-600), 6vw, 3.5rem);
+  --fsize-clamp-heading: clamp(var(--fsize-300), 3vw, var(--fsize-500));
 
   --fweight-100: 100;
   --fweight-200: 200;

@@ -7,3 +7,15 @@ var swiper = new Swiper(".mySwiper", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+var swiper = new Swiper(".mySwiper2", {
+  slidesPerView: "auto",
+  spaceBetween: 30,
+  centeredSlides: false,
+  freeMode: true,
+
+  // pagination: {
+  //   el: ".swiper-pagination",
+  //   clickable: true,
+  // },
+});

@@ -5,6 +5,7 @@
   letter-spacing: 1px;
   word-spacing: 3px;
   font-weight: var(--fweight-900);
+  font-size: var(--fsize-clamp-heading);
   border: 1px solid black;
   transition: var(--transition-short);
   z-index: 10;
@@ -55,6 +56,7 @@
 .offer {
   background-color: var(--color-primary-dark);
   color: white;
+  font-size: var(--fsize-clamp-100);
 }
 
 /* Nav */
@@ -63,6 +65,7 @@
 }
 
 .nav {
+  position: relative;
   font-size: var(--fsize-300);
 }
 
@@ -77,21 +80,29 @@
 }
 
 .search-container {
+  position: relative;
   border: 1px solid var(--color-border-light);
+  width: 50%;
 }
 
 .search-input {
-  width: 30rem;
+  min-width: 6rem;
   border: none;
   outline: none;
+  flex: 4 5;
 }
 
 .search-btn {
+  /* flex-grow: 1; */
+  width: 2.3rem;
+  /* position: absolute; */
+  right: 0;
+  top: 0;
   border-left: 1px solid var(--color-border-light);
 }
 
 .nav-links {
-  font-size: var(--fsize-200);
+  font-size: var(--fsize-clamp-100);
 }
 
 /* *ANCHOR - SLIDER */
@@ -123,15 +134,16 @@
 }
 
 .slider-heading {
-  font-size: 3.5rem;
+  font-size: var(--fsize-clamp-900);
   font-weight: var(--fweight-900);
+  max-width: 17ch;
   text-shadow: var(--text-shadow);
   line-height: 1.2;
 }
 
 .slider-text {
   text-shadow: var(--text-shadow);
-  font-size: var(--fsize-400);
+  font-size: var(--fsize-clamp-200);
   margin-block: 1rem 2rem;
 }
 
@@ -177,7 +189,33 @@
 /* *ANCHOR -  MAIN ===== */
 /* ===================== */
 
-/* *ANCHOR -  Categories Section */
+/* *ANCHOR -  All Categories*/
+
+.all-cat {
+  padding-block: 2rem;
+  padding-inline: 2rem;
+  height: 14rem;
+  /* display: flex;
+  align-items: center;
+  gap: 2rem; */
+}
+
+.cat-circle {
+  text-align: center;
+  position: relative;
+  width: 10rem;
+  height: 10rem;
+  aspect-ratio: 1/1;
+  background-color: #ceb17c;
+  border-radius: 50%;
+}
+
+.cat-circle span {
+  position: absolute;
+  font-weight: 700;
+}
+
+/* *ANCHOR - Trending Categories*/
 .categories-trend {
   background-color: var(--background-color-grey);
 }
@@ -348,10 +386,69 @@
 
 /* =========================== */
 
-/*  Our Services */
-.our-services {
+/* *ANCHOR -  Sale Section */
+
+.sale {
   background-color: var(--background-color-grey);
 }
+
+.sale-grid {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  gap: 1.5rem;
+  /* max-width: 100rem; */
+}
+
+.sale-card {
+  padding-inline: 4rem;
+  padding-block: 5rem;
+  background-color: #3498db;
+}
+
+.sale-card1 {
+  background-image: url(/images/sale1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: var(--transition-mid) background-image;
+}
+
+.sale-card2 {
+  background-image: url(/images/sale2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  transition: var(--transition-mid) background-image;
+}
+
+.sale-card1:hover {
+  background-image: url(/images/sale1-v2.jpg);
+}
+
+.sale-card2:hover {
+  background-image: url(/images/sale2-v2.jpg);
+}
+
+.sale-text {
+  margin-block: 0.25rem 2rem;
+  font-size: var(--fsize-clamp-800);
+  font-weight: var(--fweight-900);
+  text-shadow: 5px 5px #ddd;
+}
+
+.sale-text-white {
+  text-shadow: 5px 5px var(--color-primary-dark);
+}
+
+.sale-btn.btn-dark:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* =========================== */
+
+/* *ANCHOR -  Our Services */
 
 .box {
   background-color: var(--background-color);
