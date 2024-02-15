@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGN IN</title>
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/login.css">
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+</head>
+<body>
+    <!-- login container contain all element in login page  -->
+    <div class="login-container">
+        <div class="login">
+            <!-- section form and input , error -->
+            <section class="login-form">
+                <form action="post" id="login-submit">
+                    <div class="login-header">
+                        <h1>sign in</h1>
+                    </div>
+                    <div class="login-input">
+                        <div class="input-with-favicon">
+                            <img src="icons/user.png" alt="Favicon placeholder">
+                            <input type="text" name="username">
+                        </div>
+                        <!-- this element show message who is return if user is not authntaction -->
+                        <div class="error"></div>
+                    </div>
+                    <div class="login-input">
+                        <div class="input-with-favicon">
+                            <img src="icons/password-icon.png" alt="Favicon placeholder">
+                            <input type="password" name="password">
+                        </div>
+                        <div class="error"></div>
+                    </div>
+                    <div class="w-100 d-flex g-1 px-2 mt-1">
+                        <a class="font-weight" style="color: rgb(49, 49, 56);" href="#">Sign Up</a>
+                        <a class="font-weight" style="margin-left: auto;color: blue;" href="#">Forget Password</a>
+                    </div>
+                    <div class="login-button w-100">
+                        <input class="rounded w-50 h-100 cursor-pointer" type="submit" value="sign in">
+                    </div>
+                </form>
+                <!-- footer contain icon yahoo gmail facebook -->
+                <footer class="login-form-footer">
+                    <a href="https://www.facebook.com" target="_blank">
+                        <img src="icons/facebook.png" alt="facebook">
+                    </a>
+                    <a href="https://www.yahoo.com" target="_blank">
+                        <img src="icons/yahoo.png" alt="yahoo">
+                    </a>
+                    <a href="https://www.gmail.com" target="_blank">
+                        <img src="icons/gmail.png" alt="gmail">
+                    </a>
+                </footer>
+            </section>
+            <!-- section image login page -->
+            <section class="login-desgin">
+                <img src="images/login.jpg" alt="">
+            </section> 
+        </div>
+    </div>
+    <!-- <script src="scripts/login.js"></script> -->
+    <script type="module" src="scripts/login.js"></script>
+</body>
+</html>
