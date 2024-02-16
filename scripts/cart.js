@@ -2,7 +2,6 @@ const getUserCart = async () => {
     try {
         const response = await fetch('https://dummyjson.com/carts/user/5');
         const { carts } = await response.json();
-        console.log("carts" , carts);
         displayCartProducts(carts[0]?.products);
         displayCartSummary(carts[0]);
         attachEventListeners(carts[0]?.products , carts[0]);
@@ -86,13 +85,12 @@ const attachEventListeners = (products , cart) => {
 
 const updateSummary = (products, subtotalElement, discountElement, totalElement , cart) => {
     let discountPercentage = (cart.total - cart.discountedTotal) / (cart.total*100)
-    console.log("discountPercentage" , discountPercentage);
     let subtotal = 0;
+
     products.forEach(product => {
         subtotal += (product.price * product.quantity);
     });
-    console.log("subtotal" , subtotal);
-    console.log("products" , products);
+
     const deliveryFee = 30;
     const discount = Math.floor(subtotal * (discountPercentage * 100));
     const total = subtotal - discount + deliveryFee;
