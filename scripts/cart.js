@@ -1,3 +1,4 @@
+// *ANCHOR - get logged user cart 
 const getUserCart = async () => {
     try {
         const response = await fetch('https://dummyjson.com/carts/user/5');
@@ -9,7 +10,7 @@ const getUserCart = async () => {
         console.error('Error fetching user cart:', error);
     }
 }
-
+// *ANCHOR - display cart products
 const displayCartProducts = (products) => {
     let cartProductsContainer = ``;
     for (let i = 0; i < products.length; i++) {
@@ -35,7 +36,7 @@ const displayCartProducts = (products) => {
     }
     document.querySelector('.cartElements').innerHTML = cartProductsContainer;
 }
-
+// *ANCHOR - dispaly order summary
 const displayCartSummary = (usercart) => {
     let catSummaryContainer = `
         <h4 class="uppercase text-dark">Order Summary</h4>
@@ -55,7 +56,7 @@ const displayCartSummary = (usercart) => {
     `;
     document.querySelector('.orderSummary').innerHTML = catSummaryContainer;
 }
-
+// *ANCHOR - handle increase & decrease product quantity & change product price 
 const attachEventListeners = (products , cart) => {
     products.forEach((product, index) => {
         const decreaseBtn = document.querySelectorAll('.decrease')[index];
@@ -82,7 +83,7 @@ const attachEventListeners = (products , cart) => {
         });
     });
 }
-
+// *ANCHOR - handle quantity changes in order summary (total price & discount)
 const updateSummary = (products, subtotalElement, discountElement, totalElement , cart) => {
     let discountPercentage = (cart.total - cart.discountedTotal) / (cart.total*100)
     let subtotal = 0;
