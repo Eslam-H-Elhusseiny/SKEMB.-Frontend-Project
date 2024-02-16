@@ -28,6 +28,45 @@ const imgArr = [
   "/images/products/p24.png",
 ];
 
+const catImgArr = [
+  "/images/categories/c1.png",
+  "/images/categories/c2.png",
+  "/images/categories/c3.png",
+  "/images/categories/c4.png",
+  "/images/categories/c5.png",
+  "/images/categories/c6.png",
+  "/images/categories/c7.png",
+  "/images/categories/c8.png",
+  "/images/categories/c9.png",
+  "/images/categories/c10.png",
+];
+
+const catArr = [
+  "Smartphones",
+  "Laptops",
+  "Fragrances",
+  "Skincare",
+  "Groceries",
+  "Home Decor",
+  "Furniture",
+  "Furniture",
+  "Furniture",
+  "Furniture",
+  "Furniture",
+  "Furniture",
+  "Furniture",
+  "Furniture",
+];
+
+function displayCategoriesCircle() {
+  const catCircle = document.querySelectorAll(".cat-circle");
+  let i = 0;
+  catCircle.forEach((circle) => {
+    circle.style.backgroundImage = `url(${catImgArr[i++]})`;
+  });
+}
+displayCategoriesCircle();
+
 // Show Sidebar
 const showSidebarBtn = document.querySelector(".show-sidebar-btn");
 
@@ -74,9 +113,8 @@ async function displayTrendingProducts() {
           <a href="#" class="fav position-absolute py-1 px-2 fav-solid"><i class="fa-solid fa-heart"></i></a>
         </div>
         <div class="card-text px-1">
-          <a href="${product.category}" class="product-cat mt-4">${
-      product.category
-    }</a>
+          <a href="${product.category}"
+            class="product-cat mt-4">${product.category}</a>
           <a href="${product.id}" class="product-h mb-1">${product.title}</a>
           <p class="product-p">${product.description} </p>
           <div class="price-colors my-1 align-center justify-between d-flex">
