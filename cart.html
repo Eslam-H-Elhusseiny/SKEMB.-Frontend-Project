@@ -1,18 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Google Fonts -->
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
@@ -21,16 +17,87 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
-    <!-- Styles -->
-    <link rel="stylesheet" href="styles/general.css" />
-    <link rel="stylesheet" href="styles/style.css" />
-
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="general.css">
     <title>SKEMB. | My Cart</title>
 </head>
 <body>
-    <div class="container">
-        
-    </div>
+    <header>
+        <!-- Offer Alert -->
+        <div class="offer py-1 text-center">
+          <p>
+            New Season Coming! Discount 20% For All Products Check It Out Now!
+          </p>
+        </div>
+        <!-- NavBar -->
+        <nav class="nav-top py-1">
+          <!-- Container -->
+  
+          <div class="nav container d-flex align-center justify-between">
+            <a href="#" class="logo">SKEMB<span class="logo-dot">.</span></a>
+            <!-- Search Bar -->
+  
+            <form class="search-container d-flex">
+              <input
+                type="text"
+                class="search-input py-1 px-2"
+                id="search-bar"
+                placeholder="Search our store"
+              />
+              <a href="#" class="search-btn py-1 px-2"
+                ><i class="fa-solid fa-magnifying-glass"></i>
+              </a>
+            </form>
+            <div class="nav-icons g-2 d-flex align-center justify-between">
+              <a href="#"> <i class="fa-solid fa-cart-shopping"></i> </a>
+              <a href="#"> <i class="fa-regular fa-user"></i> </a>
+            </div>
+          </div>
+        </nav>
+        <!-- Second Nav -->
+        <nav class="nav-secondary py-1">
+          <div class="nav container">
+            <ul class="nav-links g-2 d-flex">
+              <li class="link position-relative pb-1 cursor-pointer">
+                <a href="#">Home</a>
+              </li>
+              <li class="link position-relative pb-1 cursor-pointer">
+                <a href="#">Categories</a>
+              </li>
+              <li class="link position-relative pb-1 cursor-pointer">
+                <a href="#">Products</a>
+              </li>
+              <li class="link position-relative pb-1 cursor-pointer">
+                <a href="#">Hot offers</a>
+              </li>
+              <li class="link position-relative pb-1 cursor-pointer">
+                <a href="#">About Us</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+    </header>
+    <section>
+      <div class="container">
+        <div class="buyingProcess mb-5 d-flex align-center justify-between">
+          <h4 class="uppercase process position-relative activeProcess">
+            <span class="firstZ">1. My bag</span>
+          </h4>
+          <h4 class="uppercase process position-relative text-center">
+            <span class="firstZ">2. Delivery</span>
+          </h4>
+          <h4 class="uppercase process position-relative text-end">
+            <span class="firstZ">3. payment </span>
+          </h4>
+        </div>
+        <div class="cartContainer my-5 py-5 d-flex align-start justify-between">
+          <div class="cartElements w-60 pe-2">
+          </div>
+          <div class="orderSummary w-35 px-3 py-3 border rounded bg-light">
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="cart.js"></script>
 </body>
 </html>
