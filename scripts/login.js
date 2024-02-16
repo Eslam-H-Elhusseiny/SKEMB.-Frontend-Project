@@ -3,7 +3,7 @@
 
 // check if user has user_token in localstorage, if itis,  get values from server and set them to inputs 
 async function remember(){
-    const user_token = localStorage.getItem('user-token');
+    const user_token = localStorage.getItem('skemb-user');
     if (user_token) {
         const req = await fetch('https://dummyjson.com/auth/me', {
             method: 'GET',
@@ -17,7 +17,7 @@ async function remember(){
             document.querySelector('input[name=password]').value = res.password
         }else{
             // if token number expire delete user token and user image from localstorage
-            localStorage.removeItem('user-token');
+            localStorage.removeItem('skemb-user');
             localStorage.removeItem('user-image');
         }
 
@@ -39,7 +39,7 @@ async function authUser(){
         const inputName = ['username', 'password'];
         inputName.forEach(element => {
             if(Object.hasOwnProperty.call(faildRegex, element)){
-                document.querySelector(`input[name=${element}]`).parentElement.nextElementSibling.innerHTML = `<span>${faildRegex[element]}</span>`
+                document.querySelector(`input[name=${element}]`).parentElement.nextElementSibling.innerHTML = `<small style="color:red;font-size:15px">${faildRegex[element]}</small>`
                 delete faildRegex[element]
             }else{
                 document.querySelector(`input[name=${element}]`).parentElement.nextElementSibling.innerHTML = ``
@@ -63,7 +63,7 @@ async function authUser(){
             throw new Error('Please verify your data');
         }else{
             const res = await response.json();
-            localStorage.setItem('user-token', res.token);
+            localStorage.setItem('skemb-user', res.token);
             localStorage.setItem('user-image', res.image);
             window.location.href = '/index.html';
         }
@@ -75,3 +75,18 @@ async function authUser(){
 }; 
 const login_submit = document.querySelector('#login-submit');
 login_submit.addEventListener('submit', authUser);
+
+
+// Hide or show the user's password  (user experience)
+function changeIcon(){
+    const PasswordInput = document.querySelector('input[name=password]');
+    if (PasswordInput.getAttribute('type') == 'password') {
+        PasswordInput.setAttribute('type', 'text')
+        event.target.setAttribute('src', '/icons/show-password.png');
+    }else{
+        PasswordInput.setAttribute('type', 'password');
+        event.target.setAttribute('src', '/icons/password-icon.png');
+    }
+}
+const password_icon = document.getElementById('password-icon');
+password_icon.addEventListener('click', changeIcon);

@@ -1,5 +1,5 @@
 // / *NOTE - if user dosnt login he is cant open this page */
-if (!localStorage.getItem('user-token')) {
+if (!localStorage.getItem('skemb-user')) {
     window.location.href = '/login.html'
 }
 
@@ -8,7 +8,7 @@ async function getCurrentUser(){
     const request = await fetch('https://dummyjson.com/auth/me', {
         method: 'GET',
         headers: {
-            'Authorization': 'Bearer ' + localStorage.getItem('user-token'), 
+            'Authorization': 'Bearer ' + localStorage.getItem('skemb-user'), 
         }, 
     });
     if (request.ok) {
@@ -36,7 +36,7 @@ window.addEventListener('load', getCurrentUser);
 
 /*NOTE - logout */
 const logout = () => {
-    localStorage.removeItem('user-token');
+    localStorage.removeItem('skemb-user');
     localStorage.removeItem('user-image');
     window.location.href = '/index.html';
 }
