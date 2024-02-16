@@ -149,6 +149,8 @@
   padding-block: 2rem;
   padding-inline: 2rem;
   height: 14rem;
+  color: black;
+  /* text-shadow: 2px 2px 2px black, -2px -2px 4px black; */
   /* display: flex;
   align-items: center;
   gap: 2rem; */
@@ -157,16 +159,44 @@
 .cat-circle {
   text-align: center;
   position: relative;
-  width: 10rem;
-  height: 10rem;
+  width: 9rem;
+  height: 9rem;
   aspect-ratio: 1/1;
-  background-color: #ceb17c;
   border-radius: 50%;
+  background-position: center;
+  background-size: contain;
 }
 
 .cat-circle span {
+  opacity: 0;
   position: absolute;
-  font-weight: 700;
+  font-weight: 900;
+  padding: 0.2rem;
+  border-radius: 0.5rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255);
+  transition: var(--transition-short);
+  z-index: 5;
+}
+
+.cat-circle::after {
+  opacity: 0;
+  content: "";
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgba(247, 247, 247, 0.7);
+  transition: var(--transition-short);
+}
+
+.cat-circle:hover::after {
+  opacity: 1;
+}
+
+.cat-circle:hover span {
+  opacity: 1;
 }
 
 /* *ANCHOR - Trending Categories*/
