@@ -68,8 +68,8 @@ async function authUser(){
             window.location.href = '/index.html';
         }
     } catch (error) {
-       document.querySelectorAll('.error').forEach(element => {
-           element.innerHTML = `<span>${error}</span>`
+       document.querySelectorAll('.err').forEach(element => {
+           element.innerHTML = `<small style="color:red;font-size:15px">${error}</small>`
        })
     }
 }; 
