@@ -27,49 +27,30 @@
     <!-- Swiper -->
     <link rel="stylesheet" href="styles/swiper.css" />
     <!-- End Swiper -->
-    <link rel="stylesheet" href="styles/nav-footer.css" />
     <link rel="stylesheet" href="styles/general.css" />
     <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/nav-footer.css" />
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
     <title>SKEMB. | eCommerce Website</title>
   </head>
   <body>
     <header>
       <!-- Offer Alert -->
-      <div class="offer py-1 text-center">
+      <div class="offer hide-on-mobile py-1 text-center">
         <p>
           New Season Coming! Discount 20% For All Products Check It Out Now!
         </p>
       </div>
-      <!-- NavBar -->
-      <nav class="nav-top py-1">
-        <!-- Container -->
 
-        <div class="nav container d-flex align-center justify-between">
-          <a href="#" class="logo">SKEMB<span class="logo-dot">.</span></a>
-          <!-- Search Bar -->
-
-          <form class="search-container d-flex">
-            <input
-              type="text"
-              class="search-input py-1 px-2"
-              id="search-bar"
-              placeholder="Search our store"
-            />
-            <a href="#" class="search-btn py-1 px-2"
-              ><i class="fa-solid fa-magnifying-glass"></i>
-            </a>
-          </form>
-          <div class="nav-icons g-2 d-flex align-center justify-between">
-            <a href="#"> <i class="fa-solid fa-cart-shopping"></i> </a>
-            <a href="#"> <i class="fa-regular fa-user"></i> </a>
-          </div>
-        </div>
-      </nav>
-      <!-- Second Nav -->
-      <nav class="nav-secondary py-1">
-        <div class="nav container">
-          <ul class="nav-links g-2 d-flex">
+      <!-- Sidebar -->
+      <nav class="nav-secondary sidebar py-1">
+        <div class="nav px-3">
+          <ul class="nav-links g-1 d-flex">
+            <li
+              class="hide-sidebar-btn link position-relative pb-1 cursor-pointer"
+            >
+              <a href="#"><i class="fa-solid fa-xmark"></i></a>
+            </li>
             <li class="link position-relative pb-1 cursor-pointer">
               <a href="#">Home</a>
             </li>
@@ -88,6 +69,60 @@
           </ul>
         </div>
       </nav>
+
+      <!-- Nav Container -->
+      <div class="nav-contaienr">
+        <!-- NavBar -->
+        <nav class="nav-top py-1">
+          <!-- Container -->
+
+          <div class="nav container d-flex align-center justify-between">
+            <a href="#" class="logo">SKEMB<span class="logo-dot">.</span></a>
+            <!-- Search Bar -->
+
+            <form class="search-container hide-on-mobile d-flex">
+              <input
+                type="text"
+                class="search-input py-1 px-2"
+                id="search-bar"
+                placeholder="Search our store"
+              />
+              <a href="#" class="search-btn py-1 px-2"
+                ><i class="fa-solid fa-magnifying-glass"></i>
+              </a>
+            </form>
+            <div class="nav-icons g-3 d-flex align-center justify-between">
+              <a href="#"> <i class="fa-solid fa-cart-shopping"></i> </a>
+              <a href="#"> <i class="fa-regular fa-user"></i> </a>
+              <a href="#"><i class="show-sidebar-btn fa-solid fa-bars"></i></a>
+            </div>
+          </div>
+        </nav>
+        <!-- Second Nav -->
+        <nav class="nav-secondary hide-on-mobile py-1">
+          <div class="nav container">
+            <ul class="nav-links g-2 d-flex">
+              <li class="link position-relative pb-1 cursor-pointer">
+                <a href="#">Home</a>
+              </li>
+              <li
+                class="link dropdown-btn position-relative pb-1 cursor-pointer"
+              >
+                <a href="#">Categories</a>
+              </li>
+              <li class="link position-relative pb-1 cursor-pointer">
+                <a href="#">Products</a>
+              </li>
+              <li class="link position-relative pb-1 cursor-pointer">
+                <a href="#">Hot offers</a>
+              </li>
+              <li class="link position-relative pb-1 cursor-pointer">
+                <a href="#">About Us</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
 
       <!-- Slider == -->
       <section class="slider swiper mySwiper">
@@ -347,7 +382,7 @@
     <!-- *ANCHOR -  footer -->
 
     <footer>
-      <div class="container d-grid g-1">
+      <div class="container d-grid g-3">
         <div class="about-us">
           <h3>About Us</h3>
           <p>
@@ -381,7 +416,7 @@
         </div>
         <div class="quick-links quick-links-col-2">
           <ul>
-            <h3>Quick Links</h3>
+            <h3 class="hide-on-mobile">Quick Links</h3>
             <li><a href="#">Wishlist</a></li>
             <li><a href="#">My Account</a></li>
             <li><a href="#">Product Compare</a></li>
@@ -392,10 +427,7 @@
         <div class="news-letter">
           <h3>Newsletter</h3>
           <p>Write Your Email To Know More Information</p>
-          <form
-            action="#"
-            class="newsletter py-1 px-2 w-90 d-flex align-center"
-          >
+          <form action="#" class="newsletter py-1 px-2 d-flex align-center">
             <label for="email">
               <i class="fa-regular fa-envelope"></i>
             </label>

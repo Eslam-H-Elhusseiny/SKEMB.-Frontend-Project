@@ -282,6 +282,12 @@ ul {
 .g-2 {
   gap: 1.5rem;
 }
+.g-3 {
+  gap: 1.75rem;
+}
+.g-4 {
+  gap: 2rem;
+}
 
 /* *ANCHOR - Display Flex */
 .d-flex {
