@@ -1,66 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIGN IN</title>
-    <link rel="stylesheet" href="styles/general.css">
-    <link rel="stylesheet" href="styles/login.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles/general.css" />
+    <link rel="stylesheet" href="styles/style.css" />
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+
 </head>
-<body>
-    <!-- login container contain all element in login page  -->
-    <div class="login-container">
-        <div class="login">
-            <!-- section form and input , error -->
-            <section class="login-form">
-                <form action="post" id="login-submit">
-                    <div class="login-header">
-                        <h1>sign in</h1>
-                    </div>
-                    <div class="login-input">
-                        <div class="input-with-favicon">
+<body style="background-color: #f3efef;">
+    <div class="container d-flex justify-center h-vh align-center">
+        <div class="login-card d-flex w-90 h-85">
+            <section class="form-login d-flex w-50 d-flex flex-col align-center">
+                <div class="text-center mb-3">
+                    <h1 class="animate-charcter">welcome back</h1>
+                </div>
+                <form id="login-submit" action="post" class="w-75">
+                    <div class="form-group mb-3">
+                       <div class="input-group py3">
                             <img src="icons/user.png" alt="Favicon placeholder">
-                            <input type="text" name="username">
+                            <input class="form-control" type="text" name="username">
+                       </div>
+                        <div class="err"><small></small></div>
+                    </div>
+                    <div class="form-group mb-3">
+                        <div class="input-group py3">
+                             <img class="cursor-pointer" id="password-icon" src="icons/password-icon.png" alt="Favicon placeholder">
+                             <input class="form-control" type="password" name="password">
                         </div>
-                        <!-- this element show message who is return if user is not authntaction -->
-                        <div class="error"></div>
-                    </div>
-                    <div class="login-input">
-                        <div class="input-with-favicon">
-                            <img src="icons/password-icon.png" alt="Favicon placeholder">
-                            <input type="password" name="password">
+                         <div class="err"></div>
+                     </div>
+                     <div class="form-group mb-4 d-flex justify-between">
+                        <div class="input-rem">
+                            <input type="checkbox" name="remember-me" id="remember-me">
+                            <label for="remember-me">Remember me</label>
                         </div>
-                        <div class="error"></div>
-                    </div>
-                    <div class="w-100 d-flex g-1 px-2 mt-1">
-                        <a class="font-weight" style="color: rgb(49, 49, 56);" href="#">Sign Up</a>
-                        <a class="font-weight" style="margin-left: auto;color: blue;" href="#">Forget Password</a>
-                    </div>
-                    <div class="login-button w-100">
-                        <input class="rounded w-50 h-100 cursor-pointer" type="submit" value="sign in">
+                        <a class="login-links" href="#">Forget password</a>
+                     </div>
+                     <button type="submit" class="login-btn">login</button>
+                     <hr>
+                     <button type="button" class="login-btn mb-3 btn-login-with"><i class="fa-brands fa-google"></i>  Login With Google</button>
+                     <button type="button" class="login-btn btn-login-with"><i class="fa-brands fa-facebook-f"></i>  Login With Facebook</button>
+                     <hr>
+                     <div class="text-center">
+                        <a class="login-links" href="#">Create an Account!</a>
                     </div>
                 </form>
-                <!-- footer contain icon yahoo gmail facebook -->
-                <footer class="login-form-footer">
-                    <a href="https://www.facebook.com" target="_blank">
-                        <img src="icons/facebook.png" alt="facebook">
-                    </a>
-                    <a href="https://www.yahoo.com" target="_blank">
-                        <img src="icons/yahoo.png" alt="yahoo">
-                    </a>
-                    <a href="https://www.gmail.com" target="_blank">
-                        <img src="icons/gmail.png" alt="gmail">
-                    </a>
-                </footer>
             </section>
-            <!-- section image login page -->
-            <section class="login-desgin">
-                <img src="images/login.jpg" alt="">
-            </section> 
+            <section class="bg-login-image w-50"></section>
         </div>
     </div>
-    <!-- <script src="scripts/login.js"></script> -->
     <script type="module" src="scripts/login.js"></script>
 </body>
 </html>
