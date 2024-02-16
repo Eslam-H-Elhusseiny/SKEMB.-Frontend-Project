@@ -13,26 +13,56 @@ async function getCurrentUser(){
     });
     if (request.ok) {
         const response = await request.json();
-        const image = document.getElementById('user-img');
-        const user_data = document.getElementById('profile-data')
-        image.innerHTML = `<img src="${response.image}" alt="image">`;
-        user_data.innerHTML = `
-            <div class="profile_user_name w-75 text-center rounded mt-3 d-flex align-center justify-center">
-                <h1>${response.firstName}</h1>
-            </div>
-            <div class="container_user_data">
-            <div class="user_data"> <span class="data_title">company : </span> <span class="data_value">${response.company.name}</span></div>
-            <div class="user_data"> <span class="data_title">titel : </span> <span class="data_value">${response.company.title}</span></div>
-                <div class="user_data"> <span class="data_title">email : </span> <span class="data_value">${response.email}</span></div>
-                <div class="user_data"> <span class="data_title">phone : </span> <span class="data_value">${response.phone}</span></div>
-                <div class="user_data"> <span class="data_title">gender : </span> <span class="data_value">${response.gender}</span></div> 
-            </div>
-        `
+        // console.log(response);
+        const user_image = document.querySelector('.profile-card__img img');
+        const user_profile_info = document.getElementById('user-profile__info');
+        user_image.setAttribute('src', response.image);
+        user_profile_info.innerHTML = user_profile_information(response)
     }else{
         window.location.href = '/login.html';
     }
 }
 window.addEventListener('load', getCurrentUser);
+
+//*NOTE -  function return html template
+function user_profile_information(user){
+    return `
+        <div class="profile-card__name">${user.firstName}</div>
+        <div class="profile-card__txt">${user.company.title} from <strong>${user.address.city}</strong></div>
+        <div class="profile-card-loc">
+        <span class="profile-card-loc__txt">
+        ${user.address.address} , ${user.address.city}
+        </span>
+        </div>
+
+        <div class="profile-card-inf">
+        <div class="profile-card-inf__item">
+            <div class="profile-card-inf__title">Company</div>
+            <div class="profile-card-inf__txt">${user.company.name}</div>
+        </div>
+
+        <div class="profile-card-inf__item">
+            <div class="profile-card-inf__title">title</div>
+            <div class="profile-card-inf__txt">${user.company.title}</div>
+        </div>
+
+        <div class="profile-card-inf__item">
+            <div class="profile-card-inf__title">email</div>
+            <div class="profile-card-inf__txt">${user.email}</div>
+        </div>
+
+        <div class="profile-card-inf__item">
+            <div class="profile-card-inf__title">phone</div>
+            <div class="profile-card-inf__txt">${user.phone}</div>
+        </div>
+        <div class="profile-card-inf__item">
+            <div class="profile-card-inf__title">gender</div>
+            <div class="profile-card-inf__txt">${user.gender}</div>
+        </div>
+        </div>
+    `
+}
+
 
 /*NOTE - logout */
 const logout = () => {
