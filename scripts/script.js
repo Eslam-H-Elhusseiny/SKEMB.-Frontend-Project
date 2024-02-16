@@ -27,6 +27,27 @@ const imgArr = [
   "/images/products/p23.png",
   "/images/products/p24.png",
 ];
+
+// Show Sidebar
+const showSidebarBtn = document.querySelector(".show-sidebar-btn");
+
+function showSidebar() {
+  const sidebarEl = document.querySelector(".sidebar");
+  sidebarEl.style.right = "0";
+  sidebarEl.style.display = "block";
+}
+showSidebarBtn.addEventListener("click", showSidebar);
+
+// Hide Sidebar
+const hideSidebarBtn = document.querySelector(".hide-sidebar-btn");
+
+function hideSidebar() {
+  const sidebarEl = document.querySelector(".sidebar");
+  // sidebarEl.style.display = "none";
+  sidebarEl.style.right = "-30rem";
+}
+hideSidebarBtn.addEventListener("click", hideSidebar);
+
 // Fetch All Products
 // *LINK -  API OPTIONS: '?limit= NUM &skip= NUM &select=title,...properties'
 async function fetchProductData(limit = "") {
@@ -37,7 +58,7 @@ async function fetchProductData(limit = "") {
 }
 
 async function displayTrendingProducts() {
-  const productsArr = await fetchProductData("?limit=8");
+  const productsArr = await fetchProductData("?limit=4");
   let i = 0;
   productsArr.forEach((product) => {
     const card = document.createElement("div");

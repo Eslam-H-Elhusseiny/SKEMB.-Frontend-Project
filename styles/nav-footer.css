@@ -49,6 +49,7 @@
 
 .nav-links li {
   position: relative;
+  transition: var(--transition-short);
 }
 
 .nav-links li::after {
@@ -66,6 +67,57 @@
   width: 100%;
 }
 
+.nav-icons {
+  font-size: var(--fsize-400);
+}
+
+/* ======================== */
+/* *ANCHOR -  Side-bar ==== */
+/* ======================== */
+
+.sidebar {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: -16rem;
+  height: 100vh;
+  width: 16rem;
+  background-color: white;
+  z-index: 999;
+  box-shadow: -6px 0px 10px rgba(0, 0, 0, 0.25);
+  transition: var(--transition-short);
+  .nav-links {
+    flex-direction: column;
+  }
+
+  .nav {
+    width: 100%;
+  }
+
+  .nav-links {
+    margin-top: 2rem;
+    font-size: var(--fsize-200);
+  }
+
+  .nav-links li {
+    padding: 0.5rem 1rem;
+  }
+
+  .nav-links li:hover::after {
+    width: 0;
+  }
+
+  .nav-links li:hover {
+    background-color: #f3f3f3;
+  }
+
+  .hide-sidebar-btn {
+    font-size: var(--fsize-400);
+    width: fit-content;
+    padding-inline: 0.5rem;
+  }
+}
+
 /* ====================== */
 /* *ANCHOR -  Footer ==== */
 /* ====================== */
@@ -73,42 +125,42 @@ footer {
   background-color: var(--background-color-grey);
   padding-block: 2.5rem 1rem;
   font-size: var(--fsize-100);
-}
 
-footer .container {
-  max-width: 90rem;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
+  .container {
+    max-width: 90rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
 
-footer h3 {
-  margin-bottom: 1rem;
-  font-size: var(--fsize-300);
-}
+  h3 {
+    margin-bottom: 1rem;
+    font-size: var(--fsize-300);
+  }
 
-footer a {
-  margin-bottom: 1rem;
-  border-bottom: 1px solid transparent;
-}
+  a {
+    margin: 0.5rem;
+    border-bottom: 1px solid transparent;
+  }
 
-footer .quick-links a:hover {
-  border-bottom: 1px solid var(--color-border-dark);
+  .quick-links a:hover {
+    border-bottom: 1px solid var(--color-border-dark);
+  }
 }
 
 .social {
   margin-top: 1rem;
   font-size: var(--fsize-500);
-}
 
-.social a:hover .fa-facebook {
-  color: #1877f2;
-}
+  a:hover .fa-facebook {
+    color: #1877f2;
+  }
 
-.social a:hover .fa-instagram {
-  color: #c32aa3;
-}
+  a:hover .fa-instagram {
+    color: #c32aa3;
+  }
 
-.social a:hover .fa-youtube {
-  color: red;
+  a:hover .fa-youtube {
+    color: red;
+  }
 }
 
 /* Newsletter */
@@ -117,23 +169,24 @@ footer .quick-links a:hover {
   background-color: white;
   border-radius: 50rem;
   border: 1px solid var(--color-border-dark);
-}
+  width: 90%;
 
-.newsletter i {
-  margin-inline: 0.5rem;
-  font-size: var(--fsize-300);
-}
+  i {
+    margin-inline: 0.5rem;
+    font-size: var(--fsize-300);
+  }
 
-.newsletter input {
-  border: none;
-  outline: none;
-}
+  input {
+    border: none;
+    outline: none;
+  }
 
-.newsletter button {
-  background-color: white;
-  aspect-ratio: 1/1;
-  border: 1px solid var(--color-border-dark);
-  border-radius: 5rem;
+  button {
+    background-color: white;
+    aspect-ratio: 1/1;
+    border: 1px solid var(--color-border-dark);
+    border-radius: 5rem;
+  }
 }
 
 .newsletter button i {
@@ -148,13 +201,66 @@ footer .quick-links a:hover {
   padding-top: 1rem;
   margin-top: 1rem;
   border-top: 1px solid var(--color-border-light);
+
+  .heart {
+    color: rgb(255, 14, 14);
+    margin-inline: 3px;
+  }
+
+  .footer-logo {
+    font-weight: var(--fweight-800);
+  }
 }
 
-.copyright .heart {
-  color: rgb(255, 14, 14);
-  margin-inline: 3px;
+/* ==================================== */
+/* Responsive Navbar & Sidebar & Footer */
+
+.show-sidebar-btn {
+  display: none;
 }
 
-.copyright .footer-logo {
-  font-weight: var(--fweight-800);
+@media (max-width: 768px) {
+  /* NAV */
+  .hide-on-mobile {
+    display: none !important;
+  }
+  .show-sidebar-btn {
+    display: block;
+  }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+  }
+  footer .container {
+    grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+  }
+
+  .newsletter {
+    width: 100%;
+  }
+
+  .quick-links-col-2 {
+    margin-top: -2rem;
+  }
+
+  .social {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 430px) {
+  .sidebar {
+    width: 100%;
+  }
+
+  /* FOOTER */
+  footer .container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .payment {
+    width: 100%;
+    object-fit: contain;
+  }
 }
