@@ -86,25 +86,91 @@
     </header>
     <section class="section d-grid product">
       <div class="product-images d-grid">
-        <div class="product-img"></div>
-        <div class="small-images d-flex justify-center mx-auto">
-          <a href="#" class="small-img me-1"></a>
-          <a href="#" class="small-img me-1"></a>
-          <a href="#" class="small-img me-1"></a>
-          <a href="#" class="small-img me-1"></a>
+        <div class="product-image mx-auto">
+          <img class="product-img mx-auto" />
         </div>
+        <div class="small-images d-flex justify-center mx-auto w-75"></div>
       </div>
 
       <div class="product-details d-flex flex-col">
         <h2 class="product-title">PRODUCT TITLE</h2>
-        <img src="images/stars.png" style="width: 5rem" />
-        <h4></h4>
-        <p class="product-desc w-50">
+        <div class="rating-icon py-3">
+          <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+          <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+          <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+          <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+          <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+          <span class="rating mx-2">4.5</span>
+        </div>
+        <!-- <img src="images/stars.png" style="width: 5rem;" /> -->
+
+        <h4>OverView</h4>
+        <p class="product-desc w-50 mb-2">
           Lorem ipsum dolor sit amet consectetur impal adipisicing elit. Alias
           assumenda dolorum doloremque sapiente aliquid aperiam.
         </p>
+        <h4>Size</h4>
+        <div class="sizes mb-2 my-1">
+          <div class="size px-1 py-1">S</div>
+          <div class="size px-1 py-1">M</div>
+          <div class="size px-1 py-1">L</div>
+          <div class="size px-1 py-1">XL</div>
+          <div class="size px-1 py-1">XXL</div>
+        </div>
+
+        <div class="product-color my-1 mb-2">
+          <h4>Color</h4>
+
+          <div class="color-choose my-1">
+            <div>
+              <input
+                data-image="black"
+                type="radio"
+                id="black"
+                name="color"
+                value="black"
+                checked
+              />
+              <label for="black"><span></span></label>
+            </div>
+            <div>
+              <input
+                data-image="blue"
+                type="radio"
+                id="blue"
+                name="color"
+                value="blue"
+                checked
+              />
+              <label for="blue"><span></span></label>
+            </div>
+            <div>
+              <input
+                data-image="gray"
+                type="radio"
+                id="gray"
+                name="color"
+                value="gray"
+              />
+              <label for="gray"><span></span></label>
+            </div>
+            <div>
+              <input
+                data-image="white"
+                type="radio"
+                id="white"
+                name="color"
+                value="white"
+              />
+              <label for="white"><span></span></label>
+            </div>
+          </div>
+        </div>
+
         <h3 class="product-price py-3">EGP 200</h3>
-        <a href="#" class="text-center product-btn ">Add To Cart</a>
+        <a href="index.html?id=12" class="text-center product-btn"
+          >Add To Cart</a
+        >
       </div>
     </section>
 
@@ -112,17 +178,15 @@
       <section class="section">
         <ul class="d-flex reviews-nav">
           <li>
-            <a class="reviews-links" href="#">Description</a>
+            <a class="reviews-links desc active">Description</a>
           </li>
           <li>
-            <a class="reviews-links" href="#">Reviews</a>
+            <a class="reviews-links reviews">Reviews</a>
           </li>
         </ul>
-        <p class="product-desc w-75 py-3">
+        <p class="desc-reviews w-75 py-3">
           Lorem ipsum dolor sit amet consectetur impal adipisicing elit. Alias
-          assumenda dolorum doloremque sapiente aliquid aperiam.Lorem ipsum
-          dolor sit amet consectetur impal adipisicing elit. Alias assumenda
-          dolorum doloremque sapiente aliquid aperiam.
+          assumenda dolorum doloremque sapiente aliquid aperiam.
         </p>
       </section>
 
