@@ -1,5 +1,59 @@
+
+
+async function productOfCategory (category){
+    const productsUrl = "https://dummyjson.com/products/category/";
+    const res = await fetch (`${productsUrl}${category}`);
+    const {products}= await res.json();
+    //console.log(products);
+    return products;
+}
+
+async function displayProductsOfCategory(cat){
+    const cards = document.getElementById('productContainer');
+    cards.innerHTML=""
+    const productsArray = await productOfCategory(cat);
+    // let i =0;
+
+    productsArray.forEach((product) => {
+     
+        const card = document.createElement('div');
+        card.innerHTML = `
+        <!-- Card -->
+        <div class="card px-2 py-2">
+          <div class="card-product position-relative justify-end d-flex flex-col align-center">
+          <img src="${product.images[0]}" alt="${product.title}"/>
+            <a href="#" class="btn cart-btn w-75">Add To Cart</a>
+            <a href="#" class="fav position-absolute py-1 px-2"><i class="fa-regular fa-heart"></i></a>
+            <a href="#" class="fav position-absolute py-1 px-2 fav-solid"><i class="fa-solid fa-heart"></i></a>
+          </div>
+          <div class="card-text px-1">
+            
+            <a href="${product.id}"><h3 class="product-h">${product.title}</h3></a>
+            <p class="product-p">${product.description}</p>
+            <div
+              class="price-colors mt-1 align-center justify-between d-flex"
+            >
+              <h4 class="price-tag">
+                <span class="currency">EGP</span>
+                <span class="price">${product.price * 30}</span>
+              </h4>
+              <div class="colors d-flex">
+                <div
+                  class="color cursor-pointer color1 color cursor-pointer-active"
+                ></div>
+                <div class="color cursor-pointer color2"></div>
+                <div class="color cursor-pointer color3"></div>
+                <div class="color cursor-pointer color4"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+       `;
+       cards.appendChild(card);       
+    });
+}
 // *ANCHOR -  get data of products using api
-fetch("https://dummyjson.com/products/")
+fetch("https://dummyjson.com/products")
   .then((res) => {
     let products = res.json();
     return products;
@@ -13,8 +67,9 @@ fetch("https://dummyjson.com/products/")
         let productItem = data.products[i];
         let productTitle = productItem.title;
         let productDetails = productItem.description ;
-        let productPrice = productItem.price;
+        let productPrice = productItem.price *30 ;
         let productImage = productItem.images[0];
+        let productCat = productItem.category;
         let productId = productItem.id;
 
 
@@ -137,9 +192,9 @@ fetch('https://dummyjson.com/products/categories')
  
     return categories;
   })
-  
 
-// *ANCHOR -  function of creating cards with all its details 
+
+// *ANCHOR -  function of creating sidebar with all its categories 
 
 .then((data) => {
     
@@ -169,6 +224,17 @@ fetch('https://dummyjson.com/products/categories')
         var sideBar = document.getElementsByClassName("side_bar")[0];
         sideBar.appendChild(ulElement);
 
+        document.getElementsByClassName("side_bar_item")[i].addEventListener("click", () => {
+            
+
+            for(let n=0 ; n<20 ; n++){
+                document.getElementsByClassName("side_bar_item")[n].classList.remove("active");
+            }
+ 
+            document.getElementsByClassName("side_bar_item")[i].classList.add("active");
+            displayProductsOfCategory(data[i-1])
+
+          });
 
 
 }    }
