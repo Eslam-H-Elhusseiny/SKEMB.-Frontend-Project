@@ -1,10 +1,20 @@
 window.addEventListener("load", start());
 
 import { productCard } from "./productCard.js";
+import { searchInProduct } from "./search.js";
 
-function start() {
+async function start() {
   crateCategoriesSideBar();
-  displayAllProducts();
+  // displayAllProducts();
+  // ========================================
+  let urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.size != 0) {
+    const cards = document.getElementById("productContainer");
+    await searchInProduct(urlParams, productCard, cards);
+  } else {
+    displayAllProducts();
+  }
+  // ==========================================
 }
 
 // *ANCHOR -  get products of a category using api
@@ -24,7 +34,7 @@ async function displayProductsOfCategory(cat) {
   const cards = document.getElementById("productContainer");
   cards.innerHTML = "";
 
-  productCard(cards ,productsArray , 'all')
+  productCard(cards, productsArray, "all");
 }
 
 // *ANCHOR -  get data of products using api
@@ -43,7 +53,7 @@ async function displayAllProducts() {
   const cards = document.getElementById("productContainer");
   cards.innerHTML = "";
 
-  productCard(cards ,productsArray , 'all')
+  productCard(cards, productsArray, "all");
 }
 
 // *ANCHOR -  get data of categoties using api
