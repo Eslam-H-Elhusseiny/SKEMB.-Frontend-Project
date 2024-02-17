@@ -1,3 +1,4 @@
+import { productCard } from "./productCard.js";
 // Variables
 const productsGridEl = document.querySelector(".products-grid");
 const productCardEl = document.querySelector(".card");
@@ -62,44 +63,7 @@ async function fetchProductData(limit = "") {
 
 async function displayProducts(limit = "") {
   let productsArr = await fetchProductData(limit);
-  let i = 0;
-  productsArr.forEach((product) => {
-    const card = document.createElement("div");
-    card.innerHTML = `
-      <!-- Card -->
-
-      <div class="card px-2 py-2">
-        <div class="card-product position-relative justify-end d-flex flex-col align-center">
-          <img src="${imgArr[i] ? imgArr[i++] : product.images[0]}"
-            alt="${product.title}" />
-          <a href="#" class="btn cart-btn w-85">Add To Cart</a>
-          <a href="#" class="fav position-absolute py-1 px-2"><i class="fa-regular fa-heart"></i></a>
-          <a href="#" class="fav position-absolute py-1 px-2 fav-solid"><i class="fa-solid fa-heart"></i></a>
-        </div>
-        <div class="card-text px-1">
-          <a href="${product.category}"
-            class="product-cat mt-4">${product.category}</a>
-          <a href="${product.id}" class="product-h mb-1">${product.title}</a>
-          <p class="product-p">${product.description} </p>
-          <div class="price-colors my-1 align-center justify-between d-flex">
-            <h4 class="price-tag">
-              <span class="currency">EGP</span>
-              <span class="price">${product.price * 30}</span>
-            </h4>
-            <div class="colors d-flex">
-              <div
-                class="color cursor-pointer color1 color color-active"
-              ></div>
-              <div class="color cursor-pointer color2"></div>
-              <div class="color cursor-pointer color3"></div>
-              <div class="color cursor-pointer color4"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-  `;
-    productsGridEl.appendChild(card);
-  });
+  productCard(productsGridEl ,productsArr , 'home' , imgArr)
 }
 
 function displayTrendingProducts() {
