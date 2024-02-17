@@ -117,6 +117,10 @@
     background-color: #f3f3f3;
   }
 
+  .nav-links a {
+    width: 100%;
+  }
+
   .hide-sidebar-btn {
     font-size: var(--fsize-400);
     width: fit-content;
