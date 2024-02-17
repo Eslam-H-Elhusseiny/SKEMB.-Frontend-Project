@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -25,50 +25,63 @@
     <link rel="stylesheet" href="styles/login.css" />
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
     <title>login</title>
-
-</head>
-<body style="background-color: #f3efef;">
-    <div class="container d-flex justify-center h-vh align-center">
-        <div class="login-card d-flex w-90 h-85">
-            <section class="form-login d-flex w-50 d-flex flex-col align-center">
-                <div class="text-center mb-3">
-                    <h1 class="animate-charcter">welcome back</h1>
-                </div>
-                <form id="login-submit" action="post" class="w-75">
-                    <div class="form-group mb-3">
-                       <div class="input-group py3">
-                            <img src="icons/user.png" alt="Favicon placeholder">
-                            <input class="form-control" type="text" name="username">
-                       </div>
-                        <div class="err"></div>
-                    </div>
-                    <div class="form-group mb-3">
-                        <div class="input-group py3">
-                             <img class="cursor-pointer" id="password-icon" src="icons/password-icon.png" alt="Favicon placeholder">
-                             <input class="form-control" type="password" name="password">
-                        </div>
-                         <div class="err"></div>
-                     </div>
-                     <div class="form-group mb-4 d-flex justify-between">
-                        <div class="input-rem">
-                            <input type="checkbox" name="remember-me" id="remember-me">
-                            <label for="remember-me">Remember me</label>
-                        </div>
-                        <a class="login-links" href="#">Forget password</a>
-                     </div>
-                     <button type="submit" class="login-btn">login</button>
-                     <hr>
-                     <button type="button" class="login-btn mb-3 btn-login-with"><i class="fa-brands fa-google"></i>  Login With Google</button>
-                     <button type="button" class="login-btn btn-login-with"><i class="fa-brands fa-facebook-f"></i>  Login With Facebook</button>
-                     <hr>
-                     <div class="text-center">
-                        <a class="login-links" href="#">Create an Account!</a>
-                    </div>
-                </form>
-            </section>
-            <section class="bg-login-image w-50"></section>
-        </div>
+  </head>
+  <body>
+    <div class="container d-flex justify-center align-center">
+      <div class="login-card d-flex w-90 h-85">
+        <section class="form-login d-flex w-50 d-flex flex-col align-center">
+          <div class="text-center mb-3">
+            <h1 class="animate-charcter">Welcome Back</h1>
+          </div>
+          <form id="login-submit" action="post" class="w-75">
+            <div class="form-group mb-3">
+              <div class="input-group py3">
+                <i class="fa-solid fa-user"></i>
+                <input
+                  class="form-control"
+                  type="text"
+                  name="username"
+                  placeholder="Enter Your Username"
+                />
+              </div>
+              <div class="err"></div>
+            </div>
+            <div class="form-group mb-3">
+              <div class="input-group py3">
+                <i class="fa-solid fa-lock"></i>
+                <input
+                  class="form-control"
+                  type="password"
+                  name="password"
+                  placeholder="Enter Your Password"
+                />
+              </div>
+              <div class="err"></div>
+            </div>
+            <div class="form-group mb-4 d-flex justify-between">
+              <div class="input-rem">
+                <input type="checkbox" name="remember-me" id="remember-me" />
+                <label for="remember-me">Remember Me</label>
+              </div>
+              <a class="login-links" href="#">Forget Password</a>
+            </div>
+            <button type="submit" class="login-btn">Login</button>
+            <hr />
+            <button type="button" class="login-btn mb-3 btn-login-with">
+              <i class="fa-brands fa-google"></i> Login With Google
+            </button>
+            <button type="button" class="login-btn btn-login-with">
+              <i class="fa-brands fa-facebook-f"></i> Login With Facebook
+            </button>
+            <hr />
+            <div class="text-center">
+              <a class="login-links" href="#">Create an Account!</a>
+            </div>
+          </form>
+        </section>
+        <section class="bg-login-image w-50"></section>
+      </div>
     </div>
     <script type="module" src="scripts/login.js"></script>
-</body>
+  </body>
 </html>

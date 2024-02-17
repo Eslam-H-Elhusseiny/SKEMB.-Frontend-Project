@@ -1,32 +1,31 @@
-window.addEventListener("load", start())
+window.addEventListener("load", start());
 
-function start (){
-    crateCategoriesSideBar();
-    displayAllProducts();
+function start() {
+  crateCategoriesSideBar();
+  displayAllProducts();
 }
 
 // *ANCHOR -  get products of a category using api
 
-async function productOfCategory (category){
-    const productsUrl = "https://dummyjson.com/products/category/";
-    const res = await fetch (`${productsUrl}${category}`);
-    const {products}= await res.json();
-    //console.log(products);
-    return products;
+async function productOfCategory(category) {
+  const productsUrl = "https://dummyjson.com/products/category/";
+  const res = await fetch(`${productsUrl}${category}`);
+  const { products } = await res.json();
+  //console.log(products);
+  return products;
 }
 
 // *ANCHOR -  display Products Of Category
 
-async function displayProductsOfCategory(cat){
-    const cards = document.getElementById('productContainer');
-    cards.innerHTML=""
-    const productsArray = await productOfCategory(cat);
-    // let i =0;
+async function displayProductsOfCategory(cat) {
+  const cards = document.getElementById("productContainer");
+  cards.innerHTML = "";
+  const productsArray = await productOfCategory(cat);
+  // let i =0;
 
-    productsArray.forEach((product) => {
-     
-        const card = document.createElement('div');
-        card.innerHTML = `
+  productsArray.forEach((product) => {
+    const card = document.createElement("div");
+    card.innerHTML = `
         <!-- Card -->
         <div class="card px-2 py-2">
           <div class="card-product position-relative justify-end d-flex flex-col align-center">
@@ -37,7 +36,9 @@ async function displayProductsOfCategory(cat){
           </div>
           <div class="card-text px-1">
             
-            <a href="cart.html?id=${product.id}"><h3 class="product-h">${product.title}</h3></a>
+            <a href="cart.html?id=${product.id}"><h3 class="product-h">${
+      product.title
+    }</h3></a>
             <p class="product-p">${product.description}</p>
             <div
               class="price-colors mt-1 align-center justify-between d-flex"
@@ -58,31 +59,30 @@ async function displayProductsOfCategory(cat){
           </div>
         </div>
        `;
-       cards.appendChild(card);       
-    });
+    cards.appendChild(card);
+  });
 }
 
 // *ANCHOR -  get data of products using api
 
-async function allproducts (){
-    const res = await fetch ("https://dummyjson.com/products");
-    const {products}= await res.json();
-    //console.log(products);
-    return products;
+async function allproducts() {
+  const res = await fetch("https://dummyjson.com/products");
+  const { products } = await res.json();
+  //console.log(products);
+  return products;
 }
 
-// *ANCHOR -  function of creating cards of all products with all its details 
+// *ANCHOR -  function of creating cards of all products with all its details
 
-async function displayAllProducts(){
-    const cards = document.getElementById('productContainer');
-    cards.innerHTML=""
-    const productsArray = await allproducts();
-    // let i =0;
+async function displayAllProducts() {
+  const cards = document.getElementById("productContainer");
+  cards.innerHTML = "";
+  const productsArray = await allproducts();
+  // let i =0;
 
-    productsArray.forEach((product) => {
-     
-        const card = document.createElement('div');
-        card.innerHTML = `
+  productsArray.forEach((product) => {
+    const card = document.createElement("div");
+    card.innerHTML = `
         <!-- Card -->
         <div class="card px-2 py-2">
           <div class="card-product position-relative justify-end d-flex flex-col align-center">
@@ -93,7 +93,9 @@ async function displayAllProducts(){
           </div>
           <div class="card-text px-1">
             
-            <a href="${product.id}"><h3 class="product-h">${product.title}</h3></a>
+            <a href="${product.id}"><h3 class="product-h">${
+      product.title
+    }</h3></a>
             <p class="product-p">${product.description}</p>
             <div
               class="price-colors mt-1 align-center justify-between d-flex"
@@ -114,74 +116,72 @@ async function displayAllProducts(){
           </div>
         </div>
        `;
-       cards.appendChild(card);       
-    });
+    cards.appendChild(card);
+  });
 }
-
 
 // *ANCHOR -  get data of categoties using api
 
-async function allCategories (){
-    const res = await fetch ("https://dummyjson.com/products/categories");
-    const categories= await res.json();
-    //console.log(products);
-    console.log(categories);
+async function allCategories() {
+  const res = await fetch("https://dummyjson.com/products/categories");
+  const categories = await res.json();
+  //console.log(products);
+  console.log(categories);
 
-    return categories;
+  return categories;
+}
 
+// *ANCHOR -  function of creating sidebar with all its categories
+
+async function crateCategoriesSideBar() {
+  // const cards = document.getElementById('productContainer');
+  // cards.innerHTML=""
+  const categoriesArray = await allCategories();
+  // console.log(categoriesArray);
+  for (let i = 0; i < 20; i++) {
+    let category = categoriesArray[i];
+
+    // Create the <ul> element
+    var ulElement = document.createElement("ul");
+
+    // Create the <li> element
+    var liElement = document.createElement("li");
+    liElement.classList.add(
+      "link",
+      "position-relative",
+      "pb-1",
+      "cursor-pointer",
+      "side_bar_item"
+    );
+
+    // Create the <a> element
+    var aElement = document.createElement("a");
+    aElement.href = "#";
+    aElement.textContent = category;
+
+    // Append the <a> element to the <li> element
+    liElement.appendChild(aElement);
+
+    // Append the <ul> element to the document body (or any other desired parent element)
+    let catSidebar = document.querySelector(".cat-sidebar");
+    catSidebar.appendChild(liElement);
+
+    document
+      .getElementsByClassName("side_bar_item")
+      [i].addEventListener("click", () => {
+        for (let n = 0; n < 20; n++) {
+          document
+            .getElementsByClassName("side_bar_item")
+            [n].classList.remove("active");
+        }
+
+        document
+          .getElementsByClassName("side_bar_item")
+          [i].classList.add("active");
+        displayProductsOfCategory(categoriesArray[i - 1]);
+      });
   }
-  
-  
-// *ANCHOR -  function of creating sidebar with all its categories 
-  
-  async function crateCategoriesSideBar(){
-    // const cards = document.getElementById('productContainer');
-    // cards.innerHTML=""
-    const categoriesArray = await allCategories();
-    // console.log(categoriesArray);
-     for(let i=0 ; i<20 ; i++){
-  
-      let category = categoriesArray[i];
-  
-      // Create the <ul> element
-      var ulElement = document.createElement("ul");
-  
-      // Create the <li> element
-      var liElement = document.createElement("li");
-      liElement.classList.add("link", "position-relative", "pb-1", "cursor-pointer", "side_bar_item");
-  
-      // Create the <a> element
-      var aElement = document.createElement("a");
-      aElement.href = "#";
-      aElement.textContent = category;
-  
-      // Append the <a> element to the <li> element
-      liElement.appendChild(aElement);
-  
-      // Append the <li> element to the <ul> element
-      ulElement.appendChild(liElement);
-  
-      // Append the <ul> element to the document body (or any other desired parent element)
-      var sideBar = document.getElementsByClassName("side_bar")[0];
-      sideBar.appendChild(ulElement);
-  
-      document.getElementsByClassName("side_bar_item")[i].addEventListener("click", () => {
-          
-  
-          for(let n=0 ; n<20 ; n++){
-              document.getElementsByClassName("side_bar_item")[n].classList.remove("active");
-          }
-  
-          document.getElementsByClassName("side_bar_item")[i].classList.add("active");
-          displayProductsOfCategory(categoriesArray[i-1])
-  
-        });
-  }  
- }
+}
 
- const categoryAll = document.getElementsByClassName("side_bar_item_all")[0];
- categoryAll.addEventListener("click", displayAllProducts);
-
-
-
-
+const categoryAll = document.getElementsByClassName("side_bar_item_all")[0];
+categoryAll.addEventListener("click", displayAllProducts);

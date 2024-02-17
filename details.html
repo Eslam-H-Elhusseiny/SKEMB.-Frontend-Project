@@ -25,57 +25,39 @@
     <!-- Styles -->
     <link rel="stylesheet" href="styles/general.css" />
     <link rel="stylesheet" href="styles/details.css" />
+    <link rel="stylesheet" href="styles/nav-footer.css" />
 
     <title>SKEMB. | Product details</title>
   </head>
   <body>
     <header>
       <!-- Offer Alert -->
-      <div class="offer py-1 text-center">
+      <div class="offer hide-on-mobile py-1 text-center">
         <p>
           New Season Coming! Discount 20% For All Products Check It Out Now!
         </p>
       </div>
-      <!-- NavBar -->
-      <nav class="nav-top py-1">
-        <!-- Container -->
 
-        <div class="nav container d-flex align-center justify-between">
-          <a href="#" class="logo">SKEMB<span class="logo-dot">.</span></a>
-          <!-- Search Bar -->
-
-          <form class="search-container d-flex">
-            <input
-              type="text"
-              class="search-input py-1 px-2"
-              id="search-bar"
-              placeholder="Search our store"
-            />
-            <a href="#" class="search-btn py-1 px-2"
-              ><i class="fa-solid fa-magnifying-glass"></i>
-            </a>
-          </form>
-          <div class="nav-icons g-2 d-flex align-center justify-between">
-            <a href="#"> <i class="fa-solid fa-cart-shopping"></i> </a>
-            <a href="#"> <i class="fa-regular fa-user"></i> </a>
-          </div>
-        </div>
-      </nav>
-      <!-- Second Nav -->
-      <nav class="nav-secondary py-1">
-        <div class="nav container">
-          <ul class="nav-links g-2 d-flex">
-            <li class="link position-relative pb-1 cursor-pointer">
-              <a href="#">Home</a>
+      <!-- Sidebar -->
+      <nav class="nav-secondary sidebar py-1">
+        <div class="nav px-3">
+          <ul class="nav-links g-1 d-flex">
+            <li
+              class="hide-sidebar-btn link position-relative pb-1 cursor-pointer"
+            >
+              <a href="#"><i class="fa-solid fa-xmark"></i></a>
             </li>
             <li class="link position-relative pb-1 cursor-pointer">
-              <a href="#">Categories</a>
+              <a href="index.html">Home</a>
+            </li>
+            <li class="link dropdown-btn position-relative pb-1 cursor-pointer">
+              <a href="#categories">Categories</a>
             </li>
             <li class="link position-relative pb-1 cursor-pointer">
-              <a href="#">Products</a>
+              <a href="all_products.html">Products</a>
             </li>
             <li class="link position-relative pb-1 cursor-pointer">
-              <a href="#">Hot offers</a>
+              <a href="all_products.html">Hot offers</a>
             </li>
             <li class="link position-relative pb-1 cursor-pointer">
               <a href="#">About Us</a>
@@ -83,223 +65,287 @@
           </ul>
         </div>
       </nav>
-    </header>
-    <section class="section d-grid product">
-      <div class="product-images d-grid">
-        <div class="product-image mx-auto">
-          <img class="product-img mx-auto" />
-        </div>
-        <div class="small-images d-flex justify-center mx-auto w-75"></div>
-      </div>
 
-      <div class="product-details d-flex flex-col">
-        <h2 class="product-title">PRODUCT TITLE</h2>
-        <div class="rating-icon py-3">
-          <i class="fa-solid fa-star" style="color: #ffd43b"></i>
-          <i class="fa-solid fa-star" style="color: #ffd43b"></i>
-          <i class="fa-solid fa-star" style="color: #ffd43b"></i>
-          <i class="fa-solid fa-star" style="color: #ffd43b"></i>
-          <i class="fa-solid fa-star" style="color: #ffd43b"></i>
-          <span class="rating mx-2">4.5</span>
-        </div>
-        <h4>OverView</h4>
-        <p class="product-desc w-50 mb-2">
-          Lorem ipsum dolor sit amet consectetur impal adipisicing elit. Alias
-          assumenda dolorum doloremque sapiente aliquid aperiam.
-        </p>
-        <h4>Size</h4>
-        <div class="sizes mb-2 my-1">
-          <div class="size px-1 py-1">S</div>
-          <div class="size px-1 py-1">M</div>
-          <div class="size px-1 py-1">L</div>
-          <div class="size px-1 py-1">XL</div>
-          <div class="size px-1 py-1">XXL</div>
-        </div>
+      <!-- Nav Container -->
+      <div class="nav-contaienr">
+        <!-- NavBar -->
+        <nav class="nav-top py-1">
+          <!-- Container -->
 
-        <div class="product-color my-1 mb-2">
-          <h4>Color</h4>
+          <div class="nav container d-flex align-center justify-between">
+            <a href="index.html" class="logo"
+              >SKEMB<span class="logo-dot">.</span></a
+            >
+            <!-- Search Bar -->
 
-          <div class="color-choose my-1">
-            <div>
+            <form class="search-container hide-on-mobile d-flex">
               <input
-                data-image="black"
-                type="radio"
-                id="black"
-                name="color"
-                value="black"
-                checked
+                type="text"
+                class="search-input py-1 px-2"
+                id="search-bar"
+                placeholder="Search our store"
               />
-              <label for="black"><span></span></label>
-            </div>
-            <div>
-              <input
-                data-image="blue"
-                type="radio"
-                id="blue"
-                name="color"
-                value="blue"
-                checked
-              />
-              <label for="blue"><span></span></label>
-            </div>
-            <div>
-              <input
-                data-image="gray"
-                type="radio"
-                id="gray"
-                name="color"
-                value="gray"
-              />
-              <label for="gray"><span></span></label>
-            </div>
-            <div>
-              <input
-                data-image="white"
-                type="radio"
-                id="white"
-                name="color"
-                value="white"
-              />
-              <label for="white"><span></span></label>
+              <a href="#" class="search-btn py-1 px-2"
+                ><i class="fa-solid fa-magnifying-glass"></i>
+              </a>
+            </form>
+            <div class="nav-icons g-3 d-flex align-center justify-between">
+              <a href="#"> <i class="fa-solid fa-cart-shopping"></i> </a>
+              <a href="#"> <i class="fa-regular fa-user"></i> </a>
+              <a href="#"><i class="show-sidebar-btn fa-solid fa-bars"></i></a>
             </div>
           </div>
+        </nav>
+        <!-- Second Nav -->
+        <nav class="nav-secondary hide-on-mobile py-1">
+          <div class="nav container">
+            <ul class="nav-links g-2 d-flex">
+              <li class="link position-relative pb-1 cursor-pointer">
+                <a href="index.html">Home</a>
+              </li>
+              <li
+                class="link dropdown-btn position-relative pb-1 cursor-pointer"
+              >
+                <a href="#categories">Categories</a>
+              </li>
+              <li class="link position-relative pb-1 cursor-pointer">
+                <a href="all_products.html">Products</a>
+              </li>
+              <li class="link position-relative pb-1 cursor-pointer">
+                <a href="all_products.html">Hot offers</a>
+              </li>
+              <li class="link position-relative pb-1 cursor-pointer">
+                <a href="#">About Us</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="section d-grid product">
+        <div class="product-images d-grid">
+          <div class="product-image mx-auto">
+            <img class="product-img mx-auto" />
+          </div>
+          <div class="small-images d-flex justify-center mx-auto w-75"></div>
         </div>
 
-        <h3 class="product-price py-3">EGP 200</h3>
-        <a href="index.html?id=12" class="text-center product-btn"
-          >Add To Cart</a
-        >
-      </div>
-    </section>
+        <div class="product-details d-flex flex-col">
+          <h2 class="product-title">PRODUCT TITLE</h2>
+          <div class="rating-icon py-3">
+            <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+            <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+            <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+            <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+            <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+            <span class="rating mx-2">4.5</span>
+          </div>
+          <h4>OverView</h4>
+          <p class="product-desc w-50 mb-2">
+            Lorem ipsum dolor sit amet consectetur impal adipisicing elit. Alias
+            assumenda dolorum doloremque sapiente aliquid aperiam.
+          </p>
+          <h4>Size</h4>
+          <div class="sizes mb-2 my-1">
+            <div class="size px-1 py-1">S</div>
+            <div class="size px-1 py-1">M</div>
+            <div class="size px-1 py-1">L</div>
+            <div class="size px-1 py-1">XL</div>
+            <div class="size px-1 py-1">XXL</div>
+          </div>
 
-    <div class="container">
-      <section class="section">
-        <ul class="d-flex reviews-nav">
-          <li>
-            <a class="reviews-links desc active">Description</a>
-          </li>
-          <li>
-            <a class="reviews-links reviews">Reviews</a>
-          </li>
-        </ul>
-        <p class="desc-reviews w-75 py-3">
-          Lorem ipsum dolor sit amet consectetur impal adipisicing elit. Alias
-          assumenda dolorum doloremque sapiente aliquid aperiam.
-        </p>
+          <div class="product-color my-1 mb-2">
+            <h4>Color</h4>
+
+            <div class="color-choose my-1">
+              <div>
+                <input
+                  data-image="black"
+                  type="radio"
+                  id="black"
+                  name="color"
+                  value="black"
+                  checked
+                />
+                <label for="black"><span></span></label>
+              </div>
+              <div>
+                <input
+                  data-image="blue"
+                  type="radio"
+                  id="blue"
+                  name="color"
+                  value="blue"
+                  checked
+                />
+                <label for="blue"><span></span></label>
+              </div>
+              <div>
+                <input
+                  data-image="gray"
+                  type="radio"
+                  id="gray"
+                  name="color"
+                  value="gray"
+                />
+                <label for="gray"><span></span></label>
+              </div>
+              <div>
+                <input
+                  data-image="white"
+                  type="radio"
+                  id="white"
+                  name="color"
+                  value="white"
+                />
+                <label for="white"><span></span></label>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="product-price py-3">EGP 200</h3>
+          <a href="index.html?id=12" class="text-center product-btn"
+            >Add To Cart</a
+          >
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="container">
+          <ul class="d-flex reviews-nav">
+            <li>
+              <a class="reviews-links desc active">Description</a>
+            </li>
+            <li>
+              <a class="reviews-links reviews">Reviews</a>
+            </li>
+          </ul>
+          <p class="desc-reviews w-75 py-3">
+            Lorem ipsum dolor sit amet consectetur impal adipisicing elit. Alias
+            assumenda dolorum doloremque sapiente aliquid aperiam.
+          </p>
+        </div>
       </section>
 
       <section class="section related-products">
-        <h3>RELATED PRODUCTS</h3>
-        <div class="products-grid d-grid py-5">
-          <!-- Card -->
-          <div class="card px-2 py-2">
-            <div
-              class="card-product position-relative justify-end d-flex flex-col align-center"
-            >
-              <a href="#" class="btn cart-btn w-75">Add To Cart</a>
-              <a href="#" class="fav position-absolute py-1 px-2"
-                ><i class="fa-regular fa-heart"></i
-              ></a>
-              <a href="#" class="fav position-absolute py-1 px-2 fav-solid"
-                ><i class="fa-solid fa-heart"></i
-              ></a>
-            </div>
-            <div class="card-text px-1">
-              <h3 class="product-h">Jackets</h3>
-              <p class="product-p">Lorem ipsum dolor sit doru ipsum dolor.</p>
+        <div class="container">
+          <h3>RELATED PRODUCTS</h3>
+          <div class="products-grid d-grid py-5">
+            <!-- Card -->
+            <div class="card px-2 py-2">
               <div
-                class="price-colors mt-1 align-center justify-between d-flex"
+                class="card-product position-relative justify-end d-flex flex-col align-center"
               >
-                <h4 class="price-tag">
-                  <span class="currency">EGP</span>
-                  <span class="price">799</span>
-                </h4>
-                <div class="colors d-flex">
-                  <div
-                    class="color cursor-pointer color1 color cursor-pointer-active"
-                  ></div>
-                  <div class="color cursor-pointer color2"></div>
-                  <div class="color cursor-pointer color3"></div>
-                  <div class="color cursor-pointer color4"></div>
+                <a href="#" class="btn cart-btn w-75">Add To Cart</a>
+                <a href="#" class="fav position-absolute py-1 px-2"
+                  ><i class="fa-regular fa-heart"></i
+                ></a>
+                <a href="#" class="fav position-absolute py-1 px-2 fav-solid"
+                  ><i class="fa-solid fa-heart"></i
+                ></a>
+              </div>
+              <div class="card-text px-1">
+                <h3 class="product-h">Jackets</h3>
+                <p class="product-p">Lorem ipsum dolor sit doru ipsum dolor.</p>
+                <div
+                  class="price-colors mt-1 align-center justify-between d-flex"
+                >
+                  <h4 class="price-tag">
+                    <span class="currency">EGP</span>
+                    <span class="price">799</span>
+                  </h4>
+                  <div class="colors d-flex">
+                    <div
+                      class="color cursor-pointer color1 color cursor-pointer-active"
+                    ></div>
+                    <div class="color cursor-pointer color2"></div>
+                    <div class="color cursor-pointer color3"></div>
+                    <div class="color cursor-pointer color4"></div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <!-- Card -->
-          <div class="card px-2 py-2">
-            <div
-              class="card-product position-relative justify-end d-flex flex-col align-center"
-            >
-              <a href="#" class="btn cart-btn w-75">Add To Cart</a>
-              <a href="#" class="fav position-absolute py-1 px-2"
-                ><i class="fa-regular fa-heart"></i
-              ></a>
-              <a href="#" class="fav position-absolute py-1 px-2 fav-solid"
-                ><i class="fa-solid fa-heart"></i
-              ></a>
-            </div>
-            <div class="card-text px-1">
-              <h3 class="product-h">Jackets</h3>
-              <p class="product-p">Lorem ipsum dolor sit doru ipsum dolor.</p>
+            <!-- Card -->
+            <div class="card px-2 py-2">
               <div
-                class="price-colors mt-1 align-center justify-between d-flex"
+                class="card-product position-relative justify-end d-flex flex-col align-center"
               >
-                <h4 class="price-tag">
-                  <span class="currency">EGP</span>
-                  <span class="price">799</span>
-                </h4>
-                <div class="colors d-flex">
-                  <div
-                    class="color cursor-pointer color1 color cursor-pointer-active"
-                  ></div>
-                  <div class="color cursor-pointer color2"></div>
-                  <div class="color cursor-pointer color3"></div>
-                  <div class="color cursor-pointer color4"></div>
+                <a href="#" class="btn cart-btn w-75">Add To Cart</a>
+                <a href="#" class="fav position-absolute py-1 px-2"
+                  ><i class="fa-regular fa-heart"></i
+                ></a>
+                <a href="#" class="fav position-absolute py-1 px-2 fav-solid"
+                  ><i class="fa-solid fa-heart"></i
+                ></a>
+              </div>
+              <div class="card-text px-1">
+                <h3 class="product-h">Jackets</h3>
+                <p class="product-p">Lorem ipsum dolor sit doru ipsum dolor.</p>
+                <div
+                  class="price-colors mt-1 align-center justify-between d-flex"
+                >
+                  <h4 class="price-tag">
+                    <span class="currency">EGP</span>
+                    <span class="price">799</span>
+                  </h4>
+                  <div class="colors d-flex">
+                    <div
+                      class="color cursor-pointer color1 color cursor-pointer-active"
+                    ></div>
+                    <div class="color cursor-pointer color2"></div>
+                    <div class="color cursor-pointer color3"></div>
+                    <div class="color cursor-pointer color4"></div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <!-- Card -->
-          <div class="card px-2 py-2">
-            <div
-              class="card-product position-relative justify-end d-flex flex-col align-center"
-            >
-              <a href="#" class="btn cart-btn w-75">Add To Cart</a>
-              <a href="#" class="fav position-absolute py-1 px-2"
-                ><i class="fa-regular fa-heart"></i
-              ></a>
-              <a href="#" class="fav position-absolute py-1 px-2 fav-solid"
-                ><i class="fa-solid fa-heart"></i
-              ></a>
-            </div>
-            <div class="card-text px-1">
-              <h3 class="product-h">Jackets</h3>
-              <p class="product-p">Lorem ipsum dolor sit doru ipsum dolor.</p>
+            <!-- Card -->
+            <div class="card px-2 py-2">
               <div
-                class="price-colors mt-1 align-center justify-between d-flex"
+                class="card-product position-relative justify-end d-flex flex-col align-center"
               >
-                <h4 class="price-tag">
-                  <span class="currency">EGP</span>
-                  <span class="price">799</span>
-                </h4>
-                <div class="colors d-flex">
-                  <div
-                    class="color cursor-pointer color1 color cursor-pointer-active"
-                  ></div>
-                  <div class="color cursor-pointer color2"></div>
-                  <div class="color cursor-pointer color3"></div>
-                  <div class="color cursor-pointer color4"></div>
+                <a href="#" class="btn cart-btn w-75">Add To Cart</a>
+                <a href="#" class="fav position-absolute py-1 px-2"
+                  ><i class="fa-regular fa-heart"></i
+                ></a>
+                <a href="#" class="fav position-absolute py-1 px-2 fav-solid"
+                  ><i class="fa-solid fa-heart"></i
+                ></a>
+              </div>
+              <div class="card-text px-1">
+                <h3 class="product-h">Jackets</h3>
+                <p class="product-p">Lorem ipsum dolor sit doru ipsum dolor.</p>
+                <div
+                  class="price-colors mt-1 align-center justify-between d-flex"
+                >
+                  <h4 class="price-tag">
+                    <span class="currency">EGP</span>
+                    <span class="price">799</span>
+                  </h4>
+                  <div class="colors d-flex">
+                    <div
+                      class="color cursor-pointer color1 color cursor-pointer-active"
+                    ></div>
+                    <div class="color cursor-pointer color2"></div>
+                    <div class="color cursor-pointer color3"></div>
+                    <div class="color cursor-pointer color4"></div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-    </div>
+    </main>
+
+    <!-- ================= -->
+    <!-- *ANCHOR -  footer -->
+
     <footer>
-      <div class="container d-grid g-1">
+      <div class="container d-grid g-3">
         <div class="about-us">
           <h3>About Us</h3>
           <p>
@@ -333,7 +379,7 @@
         </div>
         <div class="quick-links quick-links-col-2">
           <ul>
-            <h3>Quick Links</h3>
+            <h3 class="hide-on-mobile">Quick Links</h3>
             <li><a href="#">Wishlist</a></li>
             <li><a href="#">My Account</a></li>
             <li><a href="#">Product Compare</a></li>
@@ -344,10 +390,7 @@
         <div class="news-letter">
           <h3>Newsletter</h3>
           <p>Write Your Email To Know More Information</p>
-          <form
-            action="#"
-            class="newsletter py-1 px-2 w-90 d-flex align-center"
-          >
+          <form action="#" class="newsletter py-1 px-2 d-flex align-center">
             <label for="email">
               <i class="fa-regular fa-envelope"></i>
             </label>
@@ -361,7 +404,11 @@
               <i class="fa-solid fa-paper-plane"></i>
             </button>
           </form>
-          <img src="images/payment.png" class="payment" alt="payment methods" />
+          <img
+            src="/assets/images/payment.png"
+            class="payment"
+            alt="payment methods"
+          />
         </div>
       </div>
       <p class="copyright text-center pt-3">
