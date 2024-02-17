@@ -9,23 +9,11 @@ const catImgArr = [
   "/assets/images/categories/c8.png",
   "/assets/images/categories/c9.png",
   "/assets/images/categories/c10.png",
-];
-
-const catArr = [
-  "Smartphones",
-  "Laptops",
-  "Fragrances",
-  "Skincare",
-  "Groceries",
-  "Home Decor",
-  "Furniture",
-  "Furniture",
-  "Furniture",
-  "Furniture",
-  "Furniture",
-  "Furniture",
-  "Furniture",
-  "Furniture",
+  "/assets/images/categories/c11.png",
+  "/assets/images/categories/c12.png",
+  "/assets/images/categories/c13.png",
+  "/assets/images/categories/c14.png",
+  "/assets/images/categories/c15.png",
 ];
 
 function displayCategoriesCircle() {
