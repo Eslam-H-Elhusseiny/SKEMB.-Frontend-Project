@@ -5,7 +5,7 @@ export function username_validate(username){
     if (usernameRegex.test(username) ) {
         return true;
     }else{
-        faildRegex['username'] = 'please insert correct username ...';
+        faildRegex['username'] = '&#9888; please insert correct username';
         return false;
     }
 }
@@ -15,7 +15,7 @@ export function password_validate(password){
      if (passwordRegex.test(password) ) {
         return true;
     }else{
-        faildRegex['password'] = 'please insert correct password ...';
+        faildRegex['password'] = '&#9888; please insert correct password';
         return false;
     }
 }

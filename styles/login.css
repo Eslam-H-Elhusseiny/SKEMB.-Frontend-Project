@@ -41,11 +41,20 @@ body {
 .login-card {
   box-shadow: 2px 8px 16px 0px rgba(0, 0, 0, 0.15);
 }
+.input-group {
+  position: relative;
+}
+.input-group .icon {
+  position: absolute;
+  left: 10px; /* Adjust to position your icon properly */
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
 
 .login-btn {
   width: 100%;
   padding: 0.5rem 2rem;
-  /* height: calc(1.5emvar(--fsize-200) + 2px); */
   font-size: var(--fsize-200);
   font-weight: var(--fweight-500);
   line-height: 1.5;

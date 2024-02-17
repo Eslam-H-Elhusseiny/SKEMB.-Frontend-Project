@@ -82,20 +82,26 @@
             >
             <!-- Search Bar -->
 
-            <form class="search-container hide-on-mobile d-flex">
+            <form
+              id="#search-product"
+              class="search-container hide-on-mobile d-flex"
+            >
               <input
                 type="text"
                 class="search-input py-1 px-2"
                 id="search-bar"
                 placeholder="Search our store"
+                name="search-product"
               />
-              <a href="#" class="search-btn py-1 px-2"
-                ><i class="fa-solid fa-magnifying-glass"></i>
-              </a>
+              <button class="search-btn py-2 px-2 cursor-pointer">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
             </form>
             <div class="nav-icons g-3 d-flex align-center justify-between">
               <a href="#"> <i class="fa-solid fa-cart-shopping"></i> </a>
-              <a href="#"> <i class="fa-regular fa-user"></i> </a>
+              <a id="user-image-profile" href="#">
+                <i class="fa-regular fa-user"></i>
+              </a>
               <a href="#"><i class="show-sidebar-btn fa-solid fa-bars"></i></a>
             </div>
           </div>
@@ -459,5 +465,6 @@
     <script src="scripts/library/swiper.js"></script>
     <script src="scripts/home.js"></script>
     <script src="scripts/products.js"></script>
+    <script src="scripts/main.js"></script>
   </body>
 </html>
