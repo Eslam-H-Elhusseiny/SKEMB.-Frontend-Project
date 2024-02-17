@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:styles/details.css
-=======
->>>>>>> update
 /* Section Heading */
 
 .section-heading {
@@ -53,10 +48,6 @@
   transition-delay: 0.5s;
 }
 
-<<<<<<< HEAD
-=======
->>>>>>> update:styles/home.css
->>>>>>> update
 /* ====================== */
 /* *ANCHOR - Header ===== */
 /* ====================== */
@@ -68,16 +59,6 @@
   font-size: var(--fsize-clamp-100);
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:styles/details.css
-/* Product-details */
-
-.product {
-  padding-top: 2rem;
-  grid-template-columns: 1.5fr 1fr;
-=======
->>>>>>> update
 /* *ANCHOR - SLIDER */
 .slider {
   color: white;
@@ -98,7 +79,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-<<<<<<< HEAD
 }
 
 .slider-content {
@@ -107,72 +87,6 @@
   z-index: 3;
 }
 
-=======
->>>>>>> update:styles/home.css
-}
-
-.product-images {
-  padding-top: 2rem;
-  grid-template-rows: 3fr 1fr;
-  column-gap: 10rem;
-}
-
-<<<<<<< HEAD:styles/details.css
-.product-img {
-  aspect-ratio: 1/1;
-  height: 45vh;
-}
-.small-images {
-  width: 60%;
-  align-items: center;
-}
-.small-img {
-  aspect-ratio: 1/1;
-  width: 20%;
-  height: 75%;
-  border: 1px solid var(--color-border-dark);
-  background-image: url("/images/jacket-1.jpg");
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  &:hover {
-    cursor: pointer;
-  }
-}
-
-.product-title {
-  border-bottom: 1px solid var(--color-border-dark);
-}
-
-.product-details {
-  padding-top: 2rem;
-  justify-content: space-evenly;
-  align-items: flex-start;
-}
-
-.sizes {
-  display: grid;
-  color: var(--text-color-dark);
-  grid-template-columns: repeat(auto-fill, 2rem);
-  width: 80%;
-  grid-gap: 0.4rem;
-  text-align: center;
-  &:hover {
-    cursor: pointer;
-  }
-}
-
-.size {
-  border: 1px solid var(--color-border-dark);
-  font-size: var(--fsize-100);
-  text-align: center;
-  &:hover {
-    background-color: var(--color-accent);
-    color: var(--background-color-grey);
-    transition: all 0.4s ease-in-out;
-  }
-=======
->>>>>>> update
 .slider-heading {
   font-size: var(--fsize-clamp-900);
   font-weight: var(--fweight-900);
@@ -223,24 +137,12 @@
 
 .section-btn {
   margin-top: 5rem;
-<<<<<<< HEAD
 }
 
 /* ===================== */
 /* *ANCHOR -  MAIN ===== */
 /* ===================== */
 
-=======
->>>>>>> update:styles/home.css
-}
-
-/* Product-Colo  */
-
-<<<<<<< HEAD:styles/details.css
-.color-choose div {
-  display: inline-block;
-=======
->>>>>>> update
 /* *ANCHOR -  All Categories*/
 
 .all-cat {
@@ -300,7 +202,6 @@
 /* *ANCHOR - Trending Categories*/
 .categories-trend {
   background-color: var(--background-color-grey);
-<<<<<<< HEAD
 }
 
 .cat-grid {
@@ -321,15 +222,15 @@
 }
 
 .cat-card.tv {
-  background: url(/images/cat1.png);
+  background: url(/assets/images/cat1.png);
 }
 
 .cat-card.hp {
-  background: url(/images/cat2.png);
+  background: url(/assets/images/cat2.png);
 }
 
 .cat-card.pods {
-  background: url(/images/cat3.png);
+  background: url(/assets/images/cat3.png);
 }
 
 .cat-card.cc {
@@ -363,89 +264,6 @@
 .products-grid {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 4rem 2rem;
-=======
->>>>>>> update:styles/home.css
-}
-
-.color-choose input[type="radio"] {
-  display: none;
-}
-
-.color-choose input[type="radio"] + label span {
-  display: inline-block;
-  width:1.5rem;
-  height:1.5rem;
-  margin: -1px 4px 0 0;
-  vertical-align: middle;
-  cursor: pointer;
-  border-radius: 50%;
-  border: 1px solid var(--color-border-dark);
-}
-
-.color-choose input[type="radio"]#black + label span {
-  background-color: black;
-}
-.color-choose input[type="radio"]#blue + label span {
-  background-color: blue;
-}
-.color-choose input[type="radio"]#gray + label span {
-  background-color: gray;
-}
-.color-choose input[type="radio"]#white + label span {
-  background-color: white;
-}
-
-.color-choose input[type="radio"]:checked + label span {
-  background-image: url(images/check-icn.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.product-price {
-  font-size: var(--fsize-500);
-  font-weight: var(--fweight-800);
-}
-.product-btn {
-  padding: 0.5rem 1.5rem;
-  border-radius: 45rem;
-  border: 1px solid var(--color-border-dark);
-  width: 50%;
-}
-
-.product-btn:hover {
-  background-color: var(--color-accent);
-  transition: var(--transition-mid);
-}
-
-.product-desc {
-  text-align: justify;
-}
-
-/* Reviews */
-
-.reviews-nav {
-  border-bottom: 1px solid var(--color-border-dark);
-}
-
-li {
-  margin-right: 3rem;
-}
-
-.reviews-links:hover {
-  color: var(--color-accent);
-  cursor: pointer;
-}
-
-.active {
-  color: #eba030;
-  font-weight: var(--fweight-800);
-}
-
-/* Related-Products */
-.products-grid {
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 2rem 2rem;
->>>>>>> update
 }
 
 .card {
@@ -461,20 +279,8 @@ li {
 .card-product img {
   position: relative;
   aspect-ratio: 1/1;
-<<<<<<< HEAD
   width: 100%;
   object-fit: cover;
-=======
-<<<<<<< HEAD:styles/details.css
-  background-image: url(/images/jacket-1.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-=======
-  width: 100%;
-  object-fit: cover;
->>>>>>> update:styles/home.css
->>>>>>> update
 }
 
 .card:hover .cart-btn,
@@ -574,24 +380,11 @@ li {
   background-color: maroon;
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:styles/details.css
-/* ====================== */
-/* *ANCHOR -  Footer ==== */
-/* ====================== */
-footer {
-=======
->>>>>>> update
 /* =========================== */
 
 /* *ANCHOR -  Sale Section */
 
 .sale {
-<<<<<<< HEAD
-=======
->>>>>>> update:styles/home.css
->>>>>>> update
   background-color: var(--background-color-grey);
 }
 
@@ -610,7 +403,7 @@ footer {
 }
 
 .sale-card1 {
-  background-image: url(/images/sale1.jpg);
+  background-image: url(/assets/images/sale1.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -618,7 +411,7 @@ footer {
 }
 
 .sale-card2 {
-  background-image: url(/images/sale2.jpg);
+  background-image: url(/assets/images/sale2.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -627,11 +420,11 @@ footer {
 }
 
 .sale-card1:hover {
-  background-image: url(/images/sale1-v2.jpg);
+  background-image: url(/assets/images/sale1-v2.jpg);
 }
 
 .sale-card2:hover {
-  background-image: url(/images/sale2-v2.jpg);
+  background-image: url(/assets/images/sale2-v2.jpg);
 }
 
 .sale-text {
@@ -671,134 +464,6 @@ footer {
 .box:hover {
   translate: 0 -1.5rem;
 }
-<<<<<<< HEAD
-
-
-/* NOTE login page style */
-.form-login{
-  background-color: var(--background-color);
-  padding-block: 5em;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15);
-}
-.form-control {
-  display: block;
-  width: 100%;
-  height: calc(1.5em + 1rem + 2px);
-  padding: 0.375rem 2rem;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #1c1d1f;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid #d1d3e2;
-  border-radius: 0.35rem;
-}
-.login-btn{
-  width: 100%;
-  height: calc(1.5em + 1rem + 2px);
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 1.5;
-  color: #eaebf0;
-  background-color: #161616;
-  background-clip: padding-box;
-  border: 1px solid #d1d3e2;
-  border-radius: 0.35rem;
-  cursor: pointer;
-}
-hr{
-  margin-top: 1rem;
-    margin-bottom: 1rem;
-    border: 0;
-    border-top: 1px solid rgba(0,0,0,.1);
-}
-.btn-login-with{
-  background-color: var(--background-color);
-  color: black;
-  font-size: 0.9em;
-}
-.login-links{
-  color : #4e73df;
-  font-size: 80%;
-  font-weight: 400;
-}
-.login-links:hover{
-  border-bottom: solid #4e73df 1px;
-}
-/* add icon to input as a placeholder  */
-.input-group {
-  position: relative;
-}
-.input-group img {
-  position: absolute;
-  left: 8px; 
-  top: 50%;
-  transform: translateY(-50%);
-  width: 20px;
-  height: auto;
-  z-index: 1;
-}
-
-/* section image  */
-.bg-login-image {
-  background: url(https://images.unsplash.com/photo-1544816155-12df9643f363?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGUlMjBjb21tZXJjZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60);
-  background-position: center;
-  background-size: cover;
-}
-
-
-/* animation animate charcter  */
-.animate-charcter
-{
-  text-transform: uppercase;
-  background-image: linear-gradient(
-    -225deg,
-    #0303f8  0%,
-    #19dd0f  29%,
-    #f3ef0d 67%,
-    #383535 50%
-  );
-  background-size: auto auto;
-  background-clip: border-box;
-  background-size: 200% auto;
-  color: #fff;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: textclip 2s linear infinite;
-  display: inline-block;
-  font-size: 30px;
-}
-@keyframes textclip {
-  to {
-    background-position: 200% center;
-  }
-}
-
-@media (max-width : 990px){
-  .bg-login-image{
-    display: none;
-  }
-  .form-login{
-    width: 80%;
-  }
-  .login-card{
-    justify-content: center;
-  }
-}
-@media (max-width : 600px){
-  .form-login{
-    width: 100%;
-  }
-}
-/*NOTE end login page style  */
-=======
-<<<<<<< HEAD:styles/details.css
-=======
->>>>>>> update
-
-
 
 /* ===================== */
 /* ===== Animation ===== */
@@ -876,7 +541,3 @@ hr{
     text-align: center;
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> update:styles/home.css
->>>>>>> update

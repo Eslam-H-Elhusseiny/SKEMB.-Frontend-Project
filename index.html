@@ -27,60 +27,41 @@
     <!-- Swiper -->
     <link rel="stylesheet" href="styles/swiper.css" />
     <!-- End Swiper -->
-
     <link rel="stylesheet" href="styles/general.css" />
-    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/home.css" />
+    <link rel="stylesheet" href="styles/nav-footer.css" />
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
     <title>SKEMB. | eCommerce Website</title>
   </head>
   <body>
     <header>
       <!-- Offer Alert -->
-      <div class="offer py-1 text-center">
+      <div class="offer hide-on-mobile py-1 text-center">
         <p>
           New Season Coming! Discount 20% For All Products Check It Out Now!
         </p>
       </div>
-      <!-- NavBar -->
-      <nav class="nav-top py-1">
-        <!-- Container -->
 
-        <div class="nav container d-flex align-center justify-between">
-          <a href="#" class="logo">SKEMB<span class="logo-dot">.</span></a>
-          <!-- Search Bar -->
-
-          <form class="search-container d-flex">
-            <input
-              type="text"
-              class="search-input py-1 px-2"
-              id="search-bar"
-              placeholder="Search our store"
-            />
-            <a href="#" class="search-btn py-1 px-2"
-              ><i class="fa-solid fa-magnifying-glass"></i>
-            </a>
-          </form>
-          <div class="nav-icons g-2 d-flex align-center justify-between">
-            <a href="#"> <i class="fa-solid fa-cart-shopping"></i> </a>
-            <a id="user-image-profile" href="#"> <i class="fa-regular fa-user"></i> </a>
-          </div>
-        </div>
-      </nav>
-      <!-- Second Nav -->
-      <nav class="nav-secondary py-1">
-        <div class="nav container">
-          <ul class="nav-links g-2 d-flex">
-            <li class="link position-relative pb-1 cursor-pointer">
-              <a href="#">Home</a>
+      <!-- Sidebar -->
+      <nav class="nav-secondary sidebar py-1">
+        <div class="nav px-3">
+          <ul class="nav-links g-1 d-flex">
+            <li
+              class="hide-sidebar-btn link position-relative pb-1 cursor-pointer"
+            >
+              <a href="#"><i class="fa-solid fa-xmark"></i></a>
             </li>
             <li class="link position-relative pb-1 cursor-pointer">
-              <a href="#">Categories</a>
+              <a href="index.html">Home</a>
+            </li>
+            <li class="link dropdown-btn position-relative pb-1 cursor-pointer">
+              <a href="#categories">Categories</a>
             </li>
             <li class="link position-relative pb-1 cursor-pointer">
-              <a href="#">Products</a>
+              <a href="all_products.html">Products</a>
             </li>
             <li class="link position-relative pb-1 cursor-pointer">
-              <a href="#">Hot offers</a>
+              <a href="all_products.html">Hot offers</a>
             </li>
             <li class="link position-relative pb-1 cursor-pointer">
               <a href="#">About Us</a>
@@ -89,38 +70,91 @@
         </div>
       </nav>
 
+      <!-- Nav Container -->
+      <div class="nav-contaienr">
+        <!-- NavBar -->
+        <nav class="nav-top py-1">
+          <!-- Container -->
+
+          <div class="nav container d-flex align-center justify-between">
+            <a href="index.html" class="logo"
+              >SKEMB<span class="logo-dot">.</span></a
+            >
+            <!-- Search Bar -->
+
+            <form class="search-container hide-on-mobile d-flex">
+              <input
+                type="text"
+                class="search-input py-1 px-2"
+                id="search-bar"
+                placeholder="Search our store"
+              />
+              <a href="#" class="search-btn py-1 px-2"
+                ><i class="fa-solid fa-magnifying-glass"></i>
+              </a>
+            </form>
+            <div class="nav-icons g-3 d-flex align-center justify-between">
+              <a href="#"> <i class="fa-solid fa-cart-shopping"></i> </a>
+              <a href="#"> <i class="fa-regular fa-user"></i> </a>
+              <a href="#"><i class="show-sidebar-btn fa-solid fa-bars"></i></a>
+            </div>
+          </div>
+        </nav>
+        <!-- Second Nav -->
+        <nav class="nav-secondary hide-on-mobile py-1">
+          <div class="nav container">
+            <ul class="nav-links g-2 d-flex">
+              <li class="link position-relative pb-1 cursor-pointer">
+                <a href="index.html">Home</a>
+              </li>
+              <li
+                class="link dropdown-btn position-relative pb-1 cursor-pointer"
+              >
+                <a href="#categories">Categories</a>
+              </li>
+              <li class="link position-relative pb-1 cursor-pointer">
+                <a href="all_products.html">Products</a>
+              </li>
+              <li class="link position-relative pb-1 cursor-pointer">
+                <a href="all_products.html">Hot offers</a>
+              </li>
+              <li class="link position-relative pb-1 cursor-pointer">
+                <a href="#">About Us</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
       <!-- Slider == -->
       <section class="slider swiper mySwiper">
         <div class="swiper-wrapper">
           <div class="slide swiper-slide">
-            <img src="images/slide1.jpg" alt="" />
+            <img src="/assets/images/slide1.jpg" alt="" />
           </div>
           <div class="slide swiper-slide">
-            <img src="images/slide2.jpg" alt="" />
+            <img src="/assets/images/slide2.jpg" alt="" />
           </div>
           <div class="slide swiper-slide">
-            <img src="images/slide3.jpg" alt="" />
+            <img src="/assets/images/slide3.jpg" alt="" />
           </div>
           <div class="slide swiper-slide">
-            <img src="images/slide4.jpg" alt="" />
+            <img src="/assets/images/slide4.jpg" alt="" />
           </div>
           <div class="slide swiper-slide">
-            <img src="images/slide5.jpg" alt="" />
+            <img src="/assets/images/slide5.jpg" alt="" />
           </div>
           <div class="slide swiper-slide">
-            <img src="images/slide6.jpg" alt="" />
+            <img src="/assets/images/slide6.jpg" alt="" />
           </div>
         </div>
         <div class="slider-content text-center absolute-center">
-          <h1 class="slider-heading">
-            Better Way To Start <br />
-            The Shopping
-          </h1>
+          <h1 class="slider-heading">Better Way To Start The Shopping</h1>
           <p class="slider-text">
             Discover best seller items on SKEMB. <br />You can have anything you
             want in the world.
           </p>
-          <a href="#trending-cat" class="slider-btn"
+          <a href="#trending-cat" class="slider-btn btn-more btn-white"
             >Discover More &nbsp;
             <i class="fa-solid fa-arrow-right-long"></i>
           </a>
@@ -133,325 +167,158 @@
     <!-- ==================== -->
     <!-- *ANCHOR -  MAIN ==== -->
     <!-- ==================== -->
-
     <main class="main-section">
-      <!-- *ANCHOR -  Categories -->
+      <section id="categories" class="all-categories section">
+        <h2 class="section-heading px-3 py-2 position-relative mx-auto w-fit">
+          All Categories
+        </h2>
+        <div class="all-cat swiper mySwiper2">
+          <div class="swiper-wrapper cat-wrapper">
+            <a href="#" class="cat-circle swiper-slide">
+              <span class="cat-name absolute-center">Smartphones</span>
+            </a>
+            <a href="#" class="cat-circle swiper-slide">
+              <span class="cat-name absolute-center">Laptops</span>
+            </a>
+            <a href="#" class="cat-circle swiper-slide">
+              <span class="cat-name absolute-center">Fragrances</span>
+            </a>
+            <a href="#" class="cat-circle swiper-slide">
+              <span class="cat-name absolute-center">Skincare</span>
+            </a>
+            <a href="#" class="cat-circle swiper-slide">
+              <span class="cat-name absolute-center">Groceries</span>
+            </a>
+            <a href="#" class="cat-circle swiper-slide">
+              <span class="cat-name absolute-center">Home Decor</span>
+            </a>
+            <a href="#" class="cat-circle swiper-slide">
+              <span class="cat-name absolute-center">Furniture</span>
+            </a>
+            <a href="#" class="cat-circle swiper-slide">
+              <span class="cat-name absolute-center">Women's Clothing</span>
+            </a>
+            <a href="#" class="cat-circle swiper-slide">
+              <span class="cat-name absolute-center">Women's Shoes</span>
+            </a>
+            <a href="#" class="cat-circle swiper-slide">
+              <span class="cat-name absolute-center">Men's Clothing</span>
+            </a>
+            <a href="#" class="cat-circle swiper-slide">
+              <span class="cat-name absolute-center">Men's Shoes</span>
+            </a>
+            <a href="#" class="cat-circle swiper-slide">
+              <span class="cat-name absolute-center">Men's Watches</span>
+            </a>
+            <a href="#" class="cat-circle swiper-slide">
+              <span class="cat-name absolute-center">Women's Bags</span>
+            </a>
+            <a href="#" class="cat-circle swiper-slide">
+              <span class="cat-name absolute-center">Women's Jewellery</span>
+            </a>
+            <a href="#" class="cat-circle swiper-slide">
+              <span class="cat-name absolute-center">Sunglasses</span>
+            </a>
+            <a href="#" class="cat-circle swiper-slide">
+              <span class="cat-name absolute-center">Laptops</span>
+            </a>
+          </div>
+          <!-- <div class="swiper-pagination catination"></div> -->
+        </div>
+      </section>
+
+      <!-- *ANCHOR -  Trending Categories -->
 
       <section id="trending-cat" class="categories-trend section">
-        <h2
-          class="section-heading px-3 py-2 position-relative mx-auto my-7 w-fit"
-        >
+        <h2 class="section-heading px-3 py-2 position-relative mx-auto w-fit">
           Trending Categories
         </h2>
 
         <div class="container">
-          <div class="cat-grid d-grid align-center justify-between">
+          <!-- Categories Grid -->
+          <div class="cat-grid d-grid">
             <!-- card -->
 
-            <div class="cat-card d-flex flex-col rounded px-3 py-3 cc tv">
+            <div class="cat-card rounded px-3 py-3 cc tv">
               <div class="inner-card">
-                <h3>OLED TVs</h3>
-                <p>Exclusive TV deals until December 31</p>
+                <h3>Smartphones</h3>
+                <p>Exclusive deals on smartphones until February 29</p>
                 <a href="#" class="cat-btn tv">Shop Now</a>
               </div>
             </div>
             <!-- card -->
 
-            <div class="cat-card flex-col rounded d-flex px-3 py-3 cc hp">
+            <div class="cat-card rounded px-3 py-3 cc hp">
               <div class="inner-card">
-                <h3>Headphones</h3>
-                <p>Look through Our selection of headphoness</p>
+                <h3>Laptops</h3>
+                <p>Look through our selection of laptops</p>
                 <a href="#" class="cat-btn">Shop Now</a>
               </div>
             </div>
             <!-- card -->
 
-            <div class="cat-card flex-col rounded d-flex px-3 py-3 cc pods">
+            <div class="cat-card rounded px-3 py-3 cc pods">
               <div class="inner-card">
-                <h3>Airpods</h3>
-                <p>Explore our brand-now Airpods off</p>
+                <h3>Shoes</h3>
+                <p>Explore our brand-new Sneakers & Shoes collection</p>
                 <a href="#" class="cat-btn">Shop Now</a>
               </div>
             </div>
           </div>
+
+          <div class="text-center">
+            <a href="#" class="section-btn btn-more btn-dark"
+              >View More &nbsp;
+              <i class="fa-solid fa-arrow-right-long"></i>
+            </a>
+          </div>
         </div>
       </section>
+      <!-- End Categories -->
 
-      <!-- *ANCHOR - Cards Grid -->
+      <!-- *ANCHOR - Products Cards Grid -->
 
       <section class="section">
-        <h2
-          class="section-heading px-3 py-2 position-relative mx-auto my-7 w-fit"
-        >
+        <h2 class="section-heading px-3 py-2 position-relative mx-auto w-fit">
           Trending Products
         </h2>
         <div class="container products-grid d-grid">
           <!-- 
 
-
         -->
 
           <!-- Card -->
-          <div class="card px-2 py-2">
-            <div
-              class="card-product position-relative justify-end d-flex flex-col align-center"
-            >
-              <a href="#" class="btn cart-btn w-75">Add To Cart</a>
-              <a href="#" class="fav position-absolute py-1 px-2"
-                ><i class="fa-regular fa-heart"></i
-              ></a>
-              <a href="#" class="fav position-absolute py-1 px-2 fav-solid"
-                ><i class="fa-solid fa-heart"></i
-              ></a>
-            </div>
-            <div class="card-text px-1">
-              <h3 class="product-h">Jackets</h3>
-              <p class="product-p">Lorem ipsum dolor sit doru ipsum dolor.</p>
-              <div
-                class="price-colors mt-1 align-center justify-between d-flex"
-              >
-                <h4 class="price">$45</h4>
-                <div class="colors d-flex">
-                  <div
-                    class="color cursor-pointer color1 color cursor-pointer-active"
-                  ></div>
-                  <div class="color cursor-pointer color2"></div>
-                  <div class="color cursor-pointer color3"></div>
-                  <div class="color cursor-pointer color4"></div>
-                </div>
-              </div>
-            </div>
+        </div>
+        <div class="text-center">
+          <a href="#" class="section-btn btn-more btn-dark"
+            >View More &nbsp;
+            <i class="fa-solid fa-arrow-right-long"></i>
+          </a>
+        </div>
+      </section>
+
+      <!-- *ANCHOR - Sale -->
+
+      <section class="sale section">
+        <h2 class="section-heading px-3 py-2 position-relative mx-auto w-fit">
+          Limited Sale
+        </h2>
+        <div class="sale-grid">
+          <div class="sale-card sale-card1">
+            <h3 class="sale-cat-heading">Fragrances</h3>
+            <p class="sale-text">
+              Winter Sale <br />
+              50% Off On All Fragrances!
+            </p>
+            <a href="#" class="sale-btn btn-more btn-dark">Shop Now</a>
           </div>
-
-          <!-- Card -->
-
-          <div class="card px-2 py-2">
-            <div
-              class="card-product position-relative justify-end d-flex flex-col align-center"
-            >
-              <a href="#" class="btn cart-btn w-75">Add To Cart</a>
-              <a href="#" class="fav position-absolute py-1 px-2"
-                ><i class="fa-regular fa-heart"></i
-              ></a>
-              <a href="#" class="fav position-absolute py-1 px-2 fav-solid"
-                ><i class="fa-solid fa-heart"></i
-              ></a>
-            </div>
-            <div class="card-text px-1">
-              <h3 class="product-h">Jackets</h3>
-              <p class="product-p">Lorem ipsum dolor sit doru ipsum dolor.</p>
-              <div
-                class="price-colors mt-1 align-center justify-between d-flex"
-              >
-                <h4 class="price">$45</h4>
-                <div class="colors d-flex">
-                  <div class="color cursor-pointer color1"></div>
-                  <div class="color cursor-pointer color2"></div>
-                  <div class="color cursor-pointer color3"></div>
-                  <div
-                    class="color cursor-pointer color4 color cursor-pointer-active"
-                  ></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card -->
-
-          <div class="card px-2 py-2">
-            <div
-              class="card-product position-relative justify-end d-flex flex-col align-center"
-            >
-              <a href="#" class="btn cart-btn w-75">Add To Cart</a>
-              <a href="#" class="fav position-absolute py-1 px-2"
-                ><i class="fa-regular fa-heart"></i
-              ></a>
-              <a href="#" class="fav position-absolute py-1 px-2 fav-solid"
-                ><i class="fa-solid fa-heart"></i
-              ></a>
-            </div>
-            <div class="card-text px-1">
-              <h3 class="product-h">Jackets</h3>
-              <p class="product-p">Lorem ipsum dolor sit doru ipsum dolor.</p>
-              <div
-                class="price-colors mt-1 align-center justify-between d-flex"
-              >
-                <h4 class="price">$45</h4>
-                <div class="colors d-flex">
-                  <div
-                    class="color cursor-pointer color1 color cursor-pointer-active"
-                  ></div>
-                  <div class="color cursor-pointer color2"></div>
-                  <div class="color cursor-pointer color3"></div>
-                  <div class="color cursor-pointer color4"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card -->
-
-          <div class="card px-2 py-2">
-            <div
-              class="card-product position-relative justify-end d-flex flex-col align-center"
-            >
-              <a href="#" class="btn cart-btn w-75">Add To Cart</a>
-              <a href="#" class="fav position-absolute py-1 px-2"
-                ><i class="fa-regular fa-heart"></i
-              ></a>
-              <a href="#" class="fav position-absolute py-1 px-2 fav-solid"
-                ><i class="fa-solid fa-heart"></i
-              ></a>
-            </div>
-            <div class="card-text px-1">
-              <h3 class="product-h">Jackets</h3>
-              <p class="product-p">Lorem ipsum dolor sit doru ipsum dolor.</p>
-              <div
-                class="price-colors mt-1 align-center justify-between d-flex"
-              >
-                <h4 class="price">$45</h4>
-                <div class="colors d-flex">
-                  <div class="color cursor-pointer color1"></div>
-                  <div
-                    class="color cursor-pointer color2 color cursor-pointer-active"
-                  ></div>
-                  <div class="color cursor-pointer color3"></div>
-                  <div class="color cursor-pointer color4"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card -->
-
-          <div class="card px-2 py-2">
-            <div
-              class="card-product position-relative justify-end d-flex flex-col align-center"
-            >
-              <a href="#" class="btn cart-btn w-75">Add To Cart</a>
-              <a href="#" class="fav position-absolute py-1 px-2"
-                ><i class="fa-regular fa-heart"></i
-              ></a>
-              <a href="#" class="fav position-absolute py-1 px-2 fav-solid"
-                ><i class="fa-solid fa-heart"></i
-              ></a>
-            </div>
-            <div class="card-text px-1">
-              <h3 class="product-h">Jackets</h3>
-              <p class="product-p">Lorem ipsum dolor sit doru ipsum dolor.</p>
-              <div
-                class="price-colors mt-1 align-center justify-between d-flex"
-              >
-                <h4 class="price">$45</h4>
-                <div class="colors d-flex">
-                  <div
-                    class="color cursor-pointer color1 color cursor-pointer-active"
-                  ></div>
-                  <div class="color cursor-pointer color2"></div>
-                  <div class="color cursor-pointer color3"></div>
-                  <div class="color cursor-pointer color4"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card -->
-
-          <div class="card px-2 py-2">
-            <div
-              class="card-product position-relative justify-end d-flex flex-col align-center"
-            >
-              <a href="#" class="btn cart-btn w-75">Add To Cart</a>
-              <a href="#" class="fav position-absolute py-1 px-2"
-                ><i class="fa-regular fa-heart"></i
-              ></a>
-              <a href="#" class="fav position-absolute py-1 px-2 fav-solid"
-                ><i class="fa-solid fa-heart"></i
-              ></a>
-            </div>
-            <div class="card-text px-1">
-              <h3 class="product-h">Jackets</h3>
-              <p class="product-p">Lorem ipsum dolor sit doru ipsum dolor.</p>
-              <div
-                class="price-colors mt-1 align-center justify-between d-flex"
-              >
-                <h4 class="price">$45</h4>
-                <div class="colors d-flex">
-                  <div class="color cursor-pointer color1"></div>
-                  <div class="color cursor-pointer color2"></div>
-                  <div
-                    class="color cursor-pointer color3 color cursor-pointer-active"
-                  ></div>
-                  <div class="color cursor-pointer color4"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card -->
-
-          <div class="card px-2 py-2">
-            <div
-              class="card-product position-relative justify-end d-flex flex-col align-center"
-            >
-              <a href="#" class="btn cart-btn w-75">Add To Cart</a>
-              <a href="#" class="fav position-absolute py-1 px-2"
-                ><i class="fa-regular fa-heart"></i
-              ></a>
-              <a href="#" class="fav position-absolute py-1 px-2 fav-solid"
-                ><i class="fa-solid fa-heart"></i
-              ></a>
-            </div>
-            <div class="card-text px-1">
-              <h3 class="product-h">Jackets</h3>
-              <p class="product-p">Lorem ipsum dolor sit doru ipsum dolor.</p>
-              <div
-                class="price-colors mt-1 align-center justify-between d-flex"
-              >
-                <h4 class="price">$45</h4>
-                <div class="colors d-flex">
-                  <div class="color cursor-pointer color1"></div>
-                  <div class="color cursor-pointer color2"></div>
-                  <div class="color cursor-pointer color3"></div>
-                  <div
-                    class="color cursor-pointer color4 color cursor-pointer-active"
-                  ></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card -->
-
-          <div class="card px-2 py-2">
-            <div
-              class="card-product position-relative justify-end d-flex flex-col align-center"
-            >
-              <a href="#" class="btn cart-btn w-75">Add To Cart</a>
-              <a href="#" class="fav position-absolute py-1 px-2"
-                ><i class="fa-regular fa-heart"></i
-              ></a>
-              <a href="#" class="fav position-absolute py-1 px-2 fav-solid"
-                ><i class="fa-solid fa-heart"></i
-              ></a>
-            </div>
-            <div class="card-text px-1">
-              <h3 class="product-h">Jackets</h3>
-              <p class="product-p">Lorem ipsum dolor sit doru ipsum dolor.</p>
-              <div
-                class="price-colors mt-1 align-center justify-between d-flex"
-              >
-                <h4 class="price">$45</h4>
-                <div class="colors d-flex">
-                  <div class="color cursor-pointer color1"></div>
-                  <div
-                    class="color cursor-pointer color2 color cursor-pointer-active"
-                  ></div>
-                  <div class="color cursor-pointer color3"></div>
-                  <div class="color cursor-pointer color4"></div>
-                </div>
-              </div>
-            </div>
+          <div class="sale-card sale-card2">
+            <h3 class="sale-cat-heading">Electronics</h3>
+            <p class="sale-text sale-text-white">
+              Limited Time Sale <br />
+              Up To 10% On Laptops & Phones
+            </p>
+            <a href="#" class="sale-btn btn-more btn-white">Shop Now</a>
           </div>
         </div>
       </section>
@@ -459,9 +326,7 @@
       <!-- *ANCHOR - Our Services -->
 
       <section class="our-services section">
-        <h2
-          class="section-heading px-3 py-2 position-relative mx-auto my-7 w-fit"
-        >
+        <h2 class="section-heading px-3 py-2 position-relative mx-auto w-fit">
           Our Services
         </h2>
         <div class="container">
@@ -505,6 +370,12 @@
               </div>
             </div>
           </div>
+          <div class="text-center">
+            <a href="#" class="section-btn btn-more btn-dark"
+              >Learn More &nbsp;
+              <i class="fa-solid fa-arrow-right-long"></i>
+            </a>
+          </div>
         </div>
       </section>
     </main>
@@ -513,7 +384,7 @@
     <!-- *ANCHOR -  footer -->
 
     <footer>
-      <div class="container d-grid g-1">
+      <div class="container d-grid g-3">
         <div class="about-us">
           <h3>About Us</h3>
           <p>
@@ -547,7 +418,7 @@
         </div>
         <div class="quick-links quick-links-col-2">
           <ul>
-            <h3>Quick Links</h3>
+            <h3 class="hide-on-mobile">Quick Links</h3>
             <li><a href="#">Wishlist</a></li>
             <li><a href="#">My Account</a></li>
             <li><a href="#">Product Compare</a></li>
@@ -558,10 +429,7 @@
         <div class="news-letter">
           <h3>Newsletter</h3>
           <p>Write Your Email To Know More Information</p>
-          <form
-            action="#"
-            class="newsletter py-1 px-2 w-90 d-flex align-center"
-          >
+          <form action="#" class="newsletter py-1 px-2 d-flex align-center">
             <label for="email">
               <i class="fa-regular fa-envelope"></i>
             </label>
@@ -575,7 +443,11 @@
               <i class="fa-solid fa-paper-plane"></i>
             </button>
           </form>
-          <img src="images/payment.png" class="payment" alt="payment methods" />
+          <img
+            src="/assets/images/payment.png"
+            class="payment"
+            alt="payment methods"
+          />
         </div>
       </div>
       <p class="copyright text-center pt-3">
@@ -584,7 +456,8 @@
       </p>
     </footer>
     <!-- Swiper Library -->
-    <script src="/scripts/library/swiper.js"></script>
-    <script src="scripts/script.js"></script>
+    <script src="scripts/library/swiper.js"></script>
+    <script src="scripts/home.js"></script>
+    <script src="scripts/products.js"></script>
   </body>
 </html>

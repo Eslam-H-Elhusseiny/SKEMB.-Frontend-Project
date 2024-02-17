@@ -19,56 +19,38 @@
     />
     <link rel="stylesheet" href="styles/cart.css" />
     <link rel="stylesheet" href="styles/general.css" />
+    <link rel="stylesheet" href="styles/nav-footer.css" />
     <title>SKEMB. | My Cart</title>
   </head>
   <body>
     <header>
       <!-- Offer Alert -->
-      <div class="offer py-1 text-center">
+      <div class="offer hide-on-mobile py-1 text-center">
         <p>
           New Season Coming! Discount 20% For All Products Check It Out Now!
         </p>
       </div>
-      <!-- NavBar -->
-      <nav class="nav-top py-1">
-        <!-- Container -->
 
-        <div class="nav container d-flex align-center justify-between">
-          <a href="#" class="logo">SKEMB<span class="logo-dot">.</span></a>
-          <!-- Search Bar -->
-
-          <form class="search-container d-flex">
-            <input
-              type="text"
-              class="search-input py-1 px-2"
-              id="search-bar"
-              placeholder="Search our store"
-            />
-            <a href="#" class="search-btn py-1 px-2"
-              ><i class="fa-solid fa-magnifying-glass"></i>
-            </a>
-          </form>
-          <div class="nav-icons g-2 d-flex align-center justify-between">
-            <a href="#"> <i class="fa-solid fa-cart-shopping"></i> </a>
-            <a href="#"> <i class="fa-regular fa-user"></i> </a>
-          </div>
-        </div>
-      </nav>
-      <!-- Second Nav -->
-      <nav class="nav-secondary py-1">
-        <div class="nav container">
-          <ul class="nav-links g-2 d-flex">
-            <li class="link position-relative pb-1 cursor-pointer">
-              <a href="#">Home</a>
+      <!-- Sidebar -->
+      <nav class="nav-secondary sidebar py-1">
+        <div class="nav px-3">
+          <ul class="nav-links g-1 d-flex">
+            <li
+              class="hide-sidebar-btn link position-relative pb-1 cursor-pointer"
+            >
+              <a href="#"><i class="fa-solid fa-xmark"></i></a>
             </li>
             <li class="link position-relative pb-1 cursor-pointer">
-              <a href="#">Categories</a>
+              <a href="index.html">Home</a>
+            </li>
+            <li class="link dropdown-btn position-relative pb-1 cursor-pointer">
+              <a href="#categories">Categories</a>
             </li>
             <li class="link position-relative pb-1 cursor-pointer">
-              <a href="#">Products</a>
+              <a href="all_products.html">Products</a>
             </li>
             <li class="link position-relative pb-1 cursor-pointer">
-              <a href="#">Hot offers</a>
+              <a href="all_products.html">Hot offers</a>
             </li>
             <li class="link position-relative pb-1 cursor-pointer">
               <a href="#">About Us</a>
@@ -76,6 +58,62 @@
           </ul>
         </div>
       </nav>
+
+      <!-- Nav Container -->
+      <div class="nav-contaienr">
+        <!-- NavBar -->
+        <nav class="nav-top py-1">
+          <!-- Container -->
+
+          <div class="nav container d-flex align-center justify-between">
+            <a href="index.html" class="logo"
+              >SKEMB<span class="logo-dot">.</span></a
+            >
+            <!-- Search Bar -->
+
+            <form class="search-container hide-on-mobile d-flex">
+              <input
+                type="text"
+                class="search-input py-1 px-2"
+                id="search-bar"
+                placeholder="Search our store"
+              />
+              <a href="#" class="search-btn py-1 px-2"
+                ><i class="fa-solid fa-magnifying-glass"></i>
+              </a>
+            </form>
+            <div class="nav-icons g-3 d-flex align-center justify-between">
+              <a href="#"> <i class="fa-solid fa-cart-shopping"></i> </a>
+              <a href="#"> <i class="fa-regular fa-user"></i> </a>
+              <a href="#"><i class="show-sidebar-btn fa-solid fa-bars"></i></a>
+            </div>
+          </div>
+        </nav>
+        <!-- Second Nav -->
+        <nav class="nav-secondary hide-on-mobile py-1">
+          <div class="nav container">
+            <ul class="nav-links g-2 d-flex">
+              <li class="link position-relative pb-1 cursor-pointer">
+                <a href="index.html">Home</a>
+              </li>
+              <li
+                class="link dropdown-btn position-relative pb-1 cursor-pointer"
+              >
+                <a href="#categories">Categories</a>
+              </li>
+              <li class="link position-relative pb-1 cursor-pointer">
+                <a href="all_products.html">Products</a>
+              </li>
+              <li class="link position-relative pb-1 cursor-pointer">
+                <a href="all_products.html">Hot offers</a>
+              </li>
+              <li class="link position-relative pb-1 cursor-pointer">
+                <a href="#">About Us</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
     <section>
       <div class="container">
@@ -98,6 +136,82 @@
         </div>
       </div>
     </section>
+
+    <!-- ================= -->
+    <!-- *ANCHOR -  footer -->
+
+    <footer>
+      <div class="container d-grid g-3">
+        <div class="about-us">
+          <h3>About Us</h3>
+          <p>
+            The exciting contemporary brand SKEMB. is known for its attention to
+            detail and premium graphics.
+          </p>
+          <div class="social g-1 d-flex">
+            <a href="https://www.facebook.com"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a href="https://www.instagram.com"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="https://www.youtube.com"
+              ><i class="fa-brands fa-youtube"></i
+            ></a>
+            <a href="https://www.x.com"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+          </div>
+        </div>
+        <div class="quick-links quick-links-col-1">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Find Store Location</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Refund Policy</a></li>
+          </ul>
+        </div>
+        <div class="quick-links quick-links-col-2">
+          <ul>
+            <h3 class="hide-on-mobile">Quick Links</h3>
+            <li><a href="#">Wishlist</a></li>
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">Product Compare</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="news-letter">
+          <h3>Newsletter</h3>
+          <p>Write Your Email To Know More Information</p>
+          <form action="#" class="newsletter py-1 px-2 d-flex align-center">
+            <label for="email">
+              <i class="fa-regular fa-envelope"></i>
+            </label>
+            <input
+              class="w-100 px-2 py-2"
+              type="email"
+              id="email"
+              placeholder="Enter your email"
+            />
+            <button type="submit" class="cursor-pointer">
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+          <img
+            src="/assets/images/payment.png"
+            class="payment"
+            alt="payment methods"
+          />
+        </div>
+      </div>
+      <p class="copyright text-center pt-3">
+        Made With <span class="heart">&#10084;</span> By
+        <span class="footer-logo">SKEMB.</span>
+      </p>
+    </footer>
     <script src="scripts/cart.js"></script>
   </body>
 </html>
