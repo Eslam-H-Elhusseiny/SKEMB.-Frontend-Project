@@ -62,8 +62,7 @@
   margin-top: -2.5rem;
   text-align: center;
   padding: 0 1.5rem;
-  padding-bottom: 2.5rem;
-  transition: all 0.3s;
+  padding-bottom: 2rem;
 }
 
 .profile-card__name {
@@ -119,13 +118,14 @@
   font-weight: var(--fweight-500);
   margin-top: 0.5rem;
 }
-
 @media screen and (max-width: 950px) {
   .profile-card-control {
     flex-wrap: wrap;
   }
 }
-
+.profile-card-control {
+  margin-top: 5em;
+}
 .profile-card__button {
   background: none;
   border: none;
@@ -143,7 +143,12 @@
   box-shadow: 0px 4px 10px rgba(129, 125, 126, 0.35);
   border-radius: 2px;
 }
-
+.profile-card__button:first-child {
+  padding: 0 !important;
+}
+.profile-card__button a {
+  padding: 1rem 2.2rem;
+}
 hr {
   margin-top: 1rem;
   margin-bottom: 1rem;

@@ -12,3 +12,16 @@ window.addEventListener("load", () => {
       : (window.location.href = "/login.html");
   });
 });
+
+// NOTE  search product
+
+async function search() {
+  event.preventDefault();
+  const InputData = document.querySelector("input[name=search-product]").value;
+  if (InputData.length >= 1) {
+    window.location.href = "/all_products.html?search=" + InputData;
+  }
+  InputData.value = "";
+}
+const form = document.querySelector("#search-container");
+document.addEventListener("submit", search);
