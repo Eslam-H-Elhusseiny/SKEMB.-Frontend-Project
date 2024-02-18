@@ -161,6 +161,32 @@
   translate: 0 -1.5rem;
 }
 
+/* ------------- */
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  margin-right: 0.5rem;
+  cursor: pointer;
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.pag-active {
+  background-color: var(--color-accent);
+  color: white;
+  border-radius: 5px;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: var(--color-border-light);
+  border-radius: 5px;
+}
+
+
 /* ====================== */
 /* *ANCHOR -  Footer ==== */
 /* ====================== */
