@@ -42,9 +42,4 @@ var swiper = new Swiper(".mySwiper2", {
   spaceBetween: 30,
   centeredSlides: false,
   freeMode: true,
-
-  // pagination: {
-  //   el: ".swiper-pagination",
-  //   clickable: true,
-  // },
 });

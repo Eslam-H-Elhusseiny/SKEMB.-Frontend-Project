@@ -25,8 +25,13 @@
     <!-- Styles -->
     <link rel="stylesheet" href="styles/general.css" />
     <link rel="stylesheet" href="styles/details.css" />
+    <link rel="stylesheet" href="styles/productCard.css" />
     <link rel="stylesheet" href="styles/nav-footer.css" />
-
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.png"
+      type="image/x-icon"
+    />
     <title>SKEMB. | Product details</title>
   </head>
   <body>
@@ -51,13 +56,13 @@
               <a href="index.html">Home</a>
             </li>
             <li class="link dropdown-btn position-relative pb-1 cursor-pointer">
-              <a href="#categories">Categories</a>
+              <a href="categories.html">Categories</a>
             </li>
             <li class="link position-relative pb-1 cursor-pointer">
               <a href="all_products.html">Products</a>
             </li>
             <li class="link position-relative pb-1 cursor-pointer">
-              <a href="all_products.html">Hot offers</a>
+              <a href="hot-offers.html">Hot offers</a>
             </li>
             <li class="link position-relative pb-1 cursor-pointer">
               <a href="#">About Us</a>
@@ -77,6 +82,7 @@
               >SKEMB<span class="logo-dot">.</span></a
             >
             <!-- Search Bar -->
+
             <form
               id="#search-product"
               class="search-container hide-on-mobile d-flex"
@@ -88,15 +94,17 @@
                 placeholder="Search our store"
                 name="search-product"
               />
-              <button
-                style="border: none"
-                class="search-btn py-2 px-2 cursor-pointer"
-              >
+              <button class="search-btn py-2 px-2 cursor-pointer">
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
             </form>
             <div class="nav-icons g-3 d-flex align-center justify-between">
-              <a href="#"> <i class="fa-solid fa-cart-shopping"></i> </a>
+              <button class="cartBtn position-relative">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span
+                  class="cartQuantity d-flex justify-center align-center text-center"
+                ></span>
+              </button>
               <a id="user-image-profile" href="#">
                 <i class="fa-regular fa-user"></i>
               </a>
@@ -114,13 +122,13 @@
               <li
                 class="link dropdown-btn position-relative pb-1 cursor-pointer"
               >
-                <a href="#categories">Categories</a>
+                <a href="categories.html">Categories</a>
               </li>
               <li class="link position-relative pb-1 cursor-pointer">
                 <a href="all_products.html">Products</a>
               </li>
               <li class="link position-relative pb-1 cursor-pointer">
-                <a href="all_products.html">Hot offers</a>
+                <a href="hot-offers.html">Hot offers</a>
               </li>
               <li class="link position-relative pb-1 cursor-pointer">
                 <a href="#">About Us</a>
@@ -129,7 +137,26 @@
           </div>
         </nav>
       </div>
+
+      <!-- *NOTE - cart side menu modified to all pages  -->
+      <div class="cartSide px-3 py-3 d-none">
+        <i class="fa-solid fa-circle-xmark closeSideCart"></i>
+        <div class="cartSideHead d-flex align-center justify-between">
+          <h2>Your Cart</h2>
+          <button class="goCart">Check Out Your Bag</button>
+        </div>
+        <div class="sideCartContainer"></div>
+      </div>
     </header>
+    <div class="router view-container container">
+      <span class="routes">
+        <a class="home-page" href="/index.html">Home</a>
+        /
+        <a class="previous-page" href="details.html?id=1">Products</a>
+        /
+        <a class="current-page" href="details.html?id=1">Iphone</a>
+      </span>
+    </div>
     <main>
       <section class="section d-grid product container"></section>
 
@@ -186,21 +213,21 @@
         <div class="quick-links quick-links-col-1">
           <h3>Quick Links</h3>
           <ul>
-            <li><a href="#">FAQs</a></li>
-            <li><a href="#">Find Store Location</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Refund Policy</a></li>
+            <li><a href="about_us.html">FAQs</a></li>
+            <li><a href="about_us.html">Find Store Location</a></li>
+            <li><a href="about_us.html">Privacy Policy</a></li>
+            <li><a href="about_us.html">Terms of Service</a></li>
+            <li><a href="about_us.html">Refund Policy</a></li>
           </ul>
         </div>
         <div class="quick-links quick-links-col-2">
           <ul>
             <h3 class="hide-on-mobile">Quick Links</h3>
-            <li><a href="#">Wishlist</a></li>
-            <li><a href="#">My Account</a></li>
-            <li><a href="#">Product Compare</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="all_products.html">Wishlist</a></li>
+            <li><a href="profile.html">My Account</a></li>
+            <li><a href="details.html?id=1">Product Compare</a></li>
+            <li><a href="about_us.html">About Us</a></li>
+            <li><a href="about_us.html">Contact Us</a></li>
           </ul>
         </div>
         <div class="news-letter">
@@ -235,5 +262,5 @@
   </body>
   <script type="module" src="/scripts/modules/productCard.js"></script>
   <script type="module" src="/scripts/modules/details.js"></script>
-  <script src="scripts/main.js"></script>
+  <script type="module" src="/scripts/modules/main.js"></script>
 </html>

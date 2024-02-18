@@ -2,6 +2,10 @@
 /* *ANCHOR - Header ===== */
 /* ====================== */
 
+.cartContainer {
+  min-height: 33vh;
+}
+
 /* -------------------------------------------- */
 /* *ANCHOR - Cart Style */
 .bg-danger {
@@ -21,13 +25,13 @@
 .process {
   color: var(--text-color-light);
   background-color: #fff;
-  position: relative ;  
+  position: relative;
 }
 
 .activeProcess {
   color: var(--color-primary-dark);
 }
-.process:nth-child(1){
+.process:nth-child(1) {
   z-index: 999999;
 }
 .process:nth-child(2)::before,
@@ -38,7 +42,7 @@
   width: 26em;
   height: 2px;
   background-color: var(--color-primary-light);
-  z-index: -1; 
+  z-index: -1;
 }
 
 .process:nth-child(2)::before {
@@ -104,14 +108,14 @@
   color: rgba(113, 113, 113, 0.781);
 }
 /* *ANCHOR - Responsive Design */
-@media screen and (max-width:1220px) {
+@media screen and (max-width: 1220px) {
   .cartElements {
     width: 50%;
   }
-  .orderSummary{
+  .orderSummary {
     width: 40%;
     flex-grow: 1;
-    margin-left:1.2rem;
+    margin-left: 1.2rem;
   }
   .element {
     justify-content: space-between;
@@ -123,10 +127,10 @@
     text-align: center;
   }
   .element .eleImage {
-    width: 40% ;
+    width: 40%;
   }
 }
-@media screen and (max-width:940px) {
+@media screen and (max-width: 940px) {
   .cartContainer {
     flex-direction: column;
   }
@@ -135,10 +139,9 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
-  
   }
-  .orderSummary{
-    position:static;
+  .orderSummary {
+    position: static;
     width: 80%;
     margin-inline: auto;
   }

@@ -9,7 +9,7 @@
 
 .product {
   padding-top: 2rem;
-  grid-template-columns: 1.5fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
 }
 
 .product-images {
@@ -196,7 +196,7 @@
 }
 .date {
   text-align: right;
-  margin-top: 2rem;  
+  margin-top: 2rem;
 }
 
 /* Related-Products */

@@ -88,6 +88,35 @@ ul {
   list-style: none;
 }
 
+/* =========================== */
+/* *ANCHOR - R o u t e r ===== */
+/* =========================== */
+
+.router {
+  margin-block: 1rem;
+  font-size: var(--fsize-100);
+  text-transform: capitalize;
+}
+
+.current-page {
+  font-weight: var(--fweight-700);
+}
+
+/* Products Display Style */
+
+.view-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.products-display {
+  display: flex;
+  gap: 1.5rem;
+  color: var(--color-primary-dark);
+  font-size: var(--fsize-500);
+}
+
 /* *ANCHOR -  Utility Classes */
 
 .container {
@@ -181,13 +210,12 @@ ul {
 .px-5 {
   padding-inline: 2rem;
 }
-.ps-1{
+.ps-1 {
   padding-left: 0.3rem;
 }
-.pe-1{
+.pe-1 {
   padding-right: 0.3rem;
 }
-
 
 /* *ANCHOR - padding block */
 .py-1 {
@@ -323,10 +351,10 @@ ul {
 }
 
 /* ========================================= */
-.d-none{
+.d-none {
   display: none;
 }
-.d-inline-block{
+.d-inline-block {
   display: inline-block;
 }
 /* *ANCHOR - display grid */
@@ -383,10 +411,10 @@ ul {
 }
 
 /* ========================================= */
-.success , 
-.faild{
+.success,
+.faild {
   position: fixed;
-  top: 4rem;
+  top: 1.5rem;
   font-size: var(--fsize-400);
   z-index: 999999;
   left: 50%;
@@ -411,14 +439,14 @@ ul {
   color: var(--background-color);
 }
 
-.checkIcon{
+.checkIcon {
   color: rgb(0, 165, 0);
 }
-.wrongIcon{
+.wrongIcon {
   color: var(--background-color);
 }
 /* *ANCHOR - login modal */
-.loginModal{
+.loginModal {
   background-color: rgba(0, 0, 0, 0.3);
   position: fixed;
   left: 0;
@@ -428,22 +456,31 @@ ul {
   overflow: hidden;
   z-index: 999999;
 }
-.modalContainer{
+.modalContainer {
   background: var(--background-color);
 }
-.closeModal{
+.closeModal {
   position: absolute;
   color: var(--color-red);
   top: 0;
   right: 0;
-  margin: .5rem;
+  margin: 0.5rem;
   font-size: var(--fsize-400);
   cursor: pointer;
 }
-.goLogin{
+.goLogin {
   background-color: var(--color-primary-dark);
   color: var(--background-color);
   border: none;
   cursor: pointer;
-  margin-inline:auto ;
+  margin-inline: auto;
+}
+
+@media (max-width: 768px) {
+  .success,
+  .faild {
+    top: 3.5rem;
+    font-size: 0.9rem;
+    text-align: center;
+  }
 }
