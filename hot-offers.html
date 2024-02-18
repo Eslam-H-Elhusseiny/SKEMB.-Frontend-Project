@@ -25,11 +25,11 @@
     <!-- Styles -->
 
     <link rel="stylesheet" href="styles/general.css" />
-    <link rel="stylesheet" href="styles/all_products_style.css" />
-    <link rel="stylesheet" href="styles/productCard.css" />
+    <link rel="stylesheet" href="styles/home.css" />
+    <link rel="stylesheet" href="styles/hotoffers.css" />
     <link rel="stylesheet" href="styles/nav-footer.css" />
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>All Products</title>
+    <title>SKEMB. | eCommerce Website</title>
   </head>
   <body>
     <header>
@@ -53,7 +53,7 @@
               <a href="index.html">Home</a>
             </li>
             <li class="link dropdown-btn position-relative pb-1 cursor-pointer">
-              <a href="#categories">Categories</a>
+              <a href="categories.html">Categories</a>
             </li>
             <li class="link position-relative pb-1 cursor-pointer">
               <a href="all_products.html">Products</a>
@@ -75,7 +75,9 @@
           <!-- Container -->
 
           <div class="nav container d-flex align-center justify-between">
-            <a href="#" class="logo">SKEMB<span class="logo-dot">.</span></a>
+            <a href="index.html" class="logo"
+              >SKEMB<span class="logo-dot">.</span></a
+            >
             <!-- Search Bar -->
 
             <form
@@ -89,10 +91,7 @@
                 placeholder="Search our store"
                 name="search-product"
               />
-              <button
-                style="border: none"
-                class="search-btn py-2 px-2 cursor-pointer"
-              >
+              <button class="search-btn py-2 px-2 cursor-pointer">
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
             </form>
@@ -115,7 +114,7 @@
               <li
                 class="link dropdown-btn position-relative pb-1 cursor-pointer"
               >
-                <a href="#categories">Categories</a>
+                <a href="categories.html">Categories</a>
               </li>
               <li class="link position-relative pb-1 cursor-pointer">
                 <a href="all_products.html">Products</a>
@@ -124,7 +123,7 @@
                 <a href="all_products.html">Hot offers</a>
               </li>
               <li class="link position-relative pb-1 cursor-pointer">
-                <a href="/about_us.html">About Us</a>
+                <a href="#">About Us</a>
               </li>
             </ul>
           </div>
@@ -132,76 +131,28 @@
       </div>
     </header>
 
-    <div class="router view-container container">
-      <span class="routes">
-        <a class="home-page" href="/index.html">Home</a>
-        /
-        <a class="previous-page" href="/all_products.html">Products</a>
-        /
-        <a class="current-page" href="/all_products.html">All</a>
-      </span>
-
-      <!-- Products Display Style -->
-
-      <div class="products-display">
-        <a class="grid-view" href="#">
-          <i class="fa-solid fa-border-all"></i>
-        </a>
-
-        <a class="list-view" href="#">
-          <i class="fa-solid fa-list"></i>
-        </a>
-      </div>
-    </div>
-
     <!-- ==================== -->
     <!-- *ANCHOR -  MAIN ==== -->
     <!-- ==================== -->
     <main class="main-section">
-      <!-- *ANCHOR -  side bar -->
-      <div class="side_bar px-2">
-        <h2>CATEGORIES</h2>
-        <ul class="cat-sidebar">
-          <li
-            class="link position-relative pb-1 cursor-pointer side_bar_item active"
-          >
-            <a href="#" class="side_bar_item_all "> All </a>
-          </li>
-        </ul>
-      </div>
-
       <!-- *ANCHOR - Products Cards Grid -->
 
       <section class="section">
+        <h2 class="section-heading px-3 py-2 position-relative mx-auto w-fit">
+          Hot Offers
+        </h2>
+        <div class="container products-grid d-grid">
+          <!-- 
 
-        <span class="success px-3 py-1">Product Added Successfully <i class="fa-solid fa-circle-check checkIcon"></i></span>
-        <span class="faild px-3 py-1">An Error Occured, Please Try Again <i class="fa-solid fa-circle-xmark wrongIcon"></i></span>
+        -->
 
-        <!-- *ANCHOR - filter bar -->
-
-        <div class="filter_bar container d-flex">
-          <!-- <h3> Sort by: </h3> -->
+          <!-- Card -->
         </div>
-
-        <!-- *ANCHOR - product cards -->
-
-        <div class="products-grid d-grid" id="productContainer"></div>
-
         <div class="text-center">
-          <!-- <a href="#" class="section-btn btn-more btn-dark"
-            >
-            View More &nbsp;
+          <a href="/all_products.html" class="section-btn btn-more btn-dark"
+            >View All Products &nbsp;
             <i class="fa-solid fa-arrow-right-long"></i>
-          </a> -->
-          <div class="pagination my-7">
-            <!-- <a class="btn1">&laquo;</a> -->
-            <a class="pag-link" value="1">1</a>
-            <a class="pag-link" value="2">2</a>
-            <a class="pag-link" value="3">3</a>
-            <a class="pag-link" value="3">4</a>
-            <a class="pag-link" value="3">5</a>
-            <!-- <a class="btn2">&raquo;</a> -->
-          </div>
+          </a>
         </div>
       </section>
     </main>
@@ -281,10 +232,8 @@
         <span class="footer-logo">SKEMB.</span>
       </p>
     </footer>
-
-    <!-- Scripts -->
-    <script type="module" src="/scripts/modules/productCard.js"></script>
-    <script type="module" src="/scripts/modules/all_products.js"></script>
+    <script src="/scripts/home.js"></script>
+    <script type="module" src="/scripts/modules/products.js"></script>
     <script src="scripts/main.js"></script>
   </body>
 </html>

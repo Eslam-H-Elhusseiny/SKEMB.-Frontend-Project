@@ -40,7 +40,7 @@ async function displayProductsOfCategory(cat) {
 // *ANCHOR -  get data of products using api
 
 async function allproducts() {
-  const res = await fetch("https://dummyjson.com/products");
+  const res = await fetch("https://dummyjson.com/products?limit=20");
   const { products } = await res.json();
   //console.log(products);
   return products;
@@ -61,8 +61,6 @@ async function displayAllProducts() {
 async function allCategories() {
   const res = await fetch("https://dummyjson.com/products/categories");
   const categories = await res.json();
-  console.log(categories);
-
   return categories;
 }
 
@@ -120,3 +118,30 @@ async function crateCategoriesSideBar() {
 
 const categoryAll = document.getElementsByClassName("side_bar_item_all")[0];
 categoryAll.addEventListener("click", displayAllProducts);
+
+// Pagination
+// -----------------------
+
+const productsContainer = document.getElementById("productContainer");
+let links = document.querySelectorAll(".pag-link");
+let current_page = 1;
+const products_per_page = 20;
+
+links.forEach((link) => {
+  link.addEventListener("click", getPageNumber);
+});
+
+function getPageNumber() {
+  console.log(this.innerHTML);
+  current_page = this.innerHTML;
+  productsPerPage(current_page);
+}
+
+async function productsPerPage(current_page) {
+  const skip = products_per_page * (current_page - 1);
+  const paginatedUrl = `https://dummyjson.com/products?limit=${products_per_page}&skip=${skip}`;
+  const res = await fetch(paginatedUrl);
+  const { products } = await res.json();
+  productsContainer.innerHTML = ``;
+  productCard(productsContainer, products, "all");
+}

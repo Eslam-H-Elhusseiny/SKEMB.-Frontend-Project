@@ -25,8 +25,8 @@
     <!-- Styles -->
 
     <link rel="stylesheet" href="styles/general.css" />
+    <link rel="stylesheet" href="styles/categories.css" />
     <link rel="stylesheet" href="styles/all_products_style.css" />
-    <link rel="stylesheet" href="styles/productCard.css" />
     <link rel="stylesheet" href="styles/nav-footer.css" />
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
     <title>All Products</title>
@@ -124,7 +124,7 @@
                 <a href="all_products.html">Hot offers</a>
               </li>
               <li class="link position-relative pb-1 cursor-pointer">
-                <a href="/about_us.html">About Us</a>
+                <a href="#">About Us</a>
               </li>
             </ul>
           </div>
@@ -134,74 +134,116 @@
 
     <div class="router view-container container">
       <span class="routes">
-        <a class="home-page" href="/index.html">Home</a>
+        <a class="home-page" href="index.html">Home</a>
         /
-        <a class="previous-page" href="/all_products.html">Products</a>
+        <a class="previous-page" href="categories.html">Categories</a>
         /
-        <a class="current-page" href="/all_products.html">All</a>
+        <a class="current-page" href="categories.html">All</a>
       </span>
-
-      <!-- Products Display Style -->
-
-      <div class="products-display">
-        <a class="grid-view" href="#">
-          <i class="fa-solid fa-border-all"></i>
-        </a>
-
-        <a class="list-view" href="#">
-          <i class="fa-solid fa-list"></i>
-        </a>
-      </div>
     </div>
 
     <!-- ==================== -->
     <!-- *ANCHOR -  MAIN ==== -->
     <!-- ==================== -->
     <main class="main-section">
-      <!-- *ANCHOR -  side bar -->
-      <div class="side_bar px-2">
-        <h2>CATEGORIES</h2>
-        <ul class="cat-sidebar">
-          <li
-            class="link position-relative pb-1 cursor-pointer side_bar_item active"
-          >
-            <a href="#" class="side_bar_item_all "> All </a>
-          </li>
-        </ul>
-      </div>
-
-      <!-- *ANCHOR - Products Cards Grid -->
-
-      <section class="section">
-
-        <span class="success px-3 py-1">Product Added Successfully <i class="fa-solid fa-circle-check checkIcon"></i></span>
-        <span class="faild px-3 py-1">An Error Occured, Please Try Again <i class="fa-solid fa-circle-xmark wrongIcon"></i></span>
-
-        <!-- *ANCHOR - filter bar -->
-
-        <div class="filter_bar container d-flex">
-          <!-- <h3> Sort by: </h3> -->
-        </div>
-
-        <!-- *ANCHOR - product cards -->
-
-        <div class="products-grid d-grid" id="productContainer"></div>
-
-        <div class="text-center">
-          <!-- <a href="#" class="section-btn btn-more btn-dark"
-            >
-            View More &nbsp;
-            <i class="fa-solid fa-arrow-right-long"></i>
-          </a> -->
-          <div class="pagination my-7">
-            <!-- <a class="btn1">&laquo;</a> -->
-            <a class="pag-link" value="1">1</a>
-            <a class="pag-link" value="2">2</a>
-            <a class="pag-link" value="3">3</a>
-            <a class="pag-link" value="3">4</a>
-            <a class="pag-link" value="3">5</a>
-            <!-- <a class="btn2">&raquo;</a> -->
+      <section id="categories" class="all-categories section">
+        <h2 class="section-heading px-3 py-2 position-relative mx-auto w-fit">
+          All Categories
+        </h2>
+        <div class="all-categories">
+          <div class="cat-wrapper">
+            <a href="all_products.html" class="cat-card">
+              <div>
+                <span class="cat-name">Smartphones</span>
+              </div>
+            </a>
+            <a href="all_products.html" class="cat-card">
+              <div>
+                <span class="cat-name">Laptops</span>
+              </div>
+            </a>
+            <a href="all_products.html" class="cat-card">
+              <div>
+                <span class="cat-name">Fragrances</span>
+              </div>
+            </a>
+            <a href="all_products.html" class="cat-card">
+              <div>
+                <span class="cat-name">Skincare</span>
+              </div>
+            </a>
+            <a href="all_products.html" class="cat-card">
+              <div>
+                <span class="cat-name">Groceries</span>
+              </div>
+            </a>
+            <a href="all_products.html" class="cat-card">
+              <div>
+                <span class="cat-name">Home Decor</span>
+              </div>
+            </a>
+            <a href="all_products.html" class="cat-card">
+              <div>
+                <span class="cat-name">Furniture</span>
+              </div>
+            </a>
+            <a href="all_products.html" class="cat-card">
+              <div>
+                <span class="cat-name">Women's Clothing</span>
+              </div>
+            </a>
+            <a href="all_products.html" class="cat-card">
+              <div>
+                <span class="cat-name">Women's Shoes</span>
+              </div>
+            </a>
+            <a href="all_products.html" class="cat-card">
+              <div>
+                <span class="cat-name">Men's Clothing</span>
+              </div>
+            </a>
+            <a href="all_products.html" class="cat-card">
+              <div>
+                <span class="cat-name">Men's Shoes</span>
+              </div>
+            </a>
+            <a href="all_products.html" class="cat-card">
+              <div>
+                <span class="cat-name">Men's Watches</span>
+              </div>
+            </a>
+            <a href="all_products.html" class="cat-card">
+              <div>
+                <span class="cat-name">Women's Bags</span>
+              </div>
+            </a>
+            <a href="all_products.html" class="cat-card">
+              <div>
+                <span class="cat-name">Women's Jewellery</span>
+              </div>
+            </a>
+            <a href="all_products.html" class="cat-card">
+              <div>
+                <span class="cat-name">Sunglasses</span>
+              </div>
+            </a>
+            <a href="all_products.html" class="cat-card">
+              <div>
+                <span class="cat-name">Automotive</span>
+              </div>
+            </a>
+            <a href="all_products.html" class="cat-card">
+              <div>
+                <span class="cat-name">Motorcycle</span>
+              </div>
+            </a>
+            <a href="all_products.html" class="cat-card">
+              <div>
+                <span class="cat-name">Lighting</span>
+              </div>
+            </a>
           </div>
+          <!-- <div class="swiper-pagination catination"></div> -->
         </div>
       </section>
     </main>
@@ -283,8 +325,8 @@
     </footer>
 
     <!-- Scripts -->
-    <script type="module" src="/scripts/modules/productCard.js"></script>
     <script type="module" src="/scripts/modules/all_products.js"></script>
+    <script src="scripts/categories.js"></script>
     <script src="scripts/main.js"></script>
   </body>
 </html>
