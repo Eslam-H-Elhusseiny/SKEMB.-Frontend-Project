@@ -22,6 +22,12 @@ const LoginModal = () => {
         modal.classList.replace('d-flex','d-none')
         document.body.style.overflow = 'auto';
     })
+    document.addEventListener('click' , (e)=>{
+        if (e.target == modal) {
+            modal.classList.replace('d-flex','d-none')
+            document.body.style.overflow = 'auto';    
+        }
+    })
     modalContainer.appendChild(paragraph);
     modalContainer.appendChild(closeModal);
     modalContainer.appendChild(loginButton);
