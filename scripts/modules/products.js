@@ -29,27 +29,7 @@ const imgArr = [
   "/assets/images/products/p24.png",
 ];
 
-// *LINK -  Show Sidebar
-const showSidebarBtn = document.querySelector(".show-sidebar-btn");
-
-function showSidebar() {
-  const sidebarEl = document.querySelector(".sidebar");
-  sidebarEl.style.right = "0";
-  sidebarEl.style.display = "block";
-}
-showSidebarBtn.addEventListener("click", showSidebar);
-
-// *LINK -  Hide Sidebar
-const hideSidebarBtn = document.querySelector(".hide-sidebar-btn");
-
-function hideSidebar() {
-  const sidebarEl = document.querySelector(".sidebar");
-  // sidebarEl.style.display = "none";
-  sidebarEl.style.right = "-30rem";
-}
-hideSidebarBtn.addEventListener("click", hideSidebar);
-
-// =====================================================================================
+// ======================================================================
 
 // Fetch All Products
 
@@ -63,10 +43,10 @@ async function fetchProductData(limit = "") {
 
 async function displayProducts(limit = "") {
   let productsArr = await fetchProductData(limit);
-  productCard(productsGridEl ,productsArr , 'home' , imgArr)
+  productCard(productsGridEl, productsArr, "home", imgArr);
 }
 
 function displayTrendingProducts() {
-  displayProducts("?limit=24");
+  displayProducts("?limit=8");
 }
 displayTrendingProducts();

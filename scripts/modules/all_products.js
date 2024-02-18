@@ -1,10 +1,20 @@
 window.addEventListener("load", start());
 
 import { productCard } from "./productCard.js";
+import { searchInProduct } from "./search.js";
 
-function start() {
+async function start() {
   crateCategoriesSideBar();
-  displayAllProducts();
+  // displayAllProducts();
+  // ========================================
+  let urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.size != 0) {
+    const cards = document.getElementById("productContainer");
+    await searchInProduct(urlParams, productCard, cards);
+  } else {
+    displayAllProducts();
+  }
+  // ==========================================
 }
 
 // *ANCHOR -  get products of a category using api

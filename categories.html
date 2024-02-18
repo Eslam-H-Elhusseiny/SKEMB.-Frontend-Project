@@ -3,12 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Fonts -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
@@ -17,10 +21,15 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <!-- Styles -->
+
     <link rel="stylesheet" href="styles/general.css" />
-    <link rel="stylesheet" href="styles/cart.css" />
+    <link rel="stylesheet" href="styles/categories.css" />
+    <link rel="stylesheet" href="styles/all_products_style.css" />
     <link rel="stylesheet" href="styles/nav-footer.css" />
-    <title>SKEMB. | My Cart</title>
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+    <title>All Products</title>
   </head>
   <body>
     <header>
@@ -66,9 +75,7 @@
           <!-- Container -->
 
           <div class="nav container d-flex align-center justify-between">
-            <a href="index.html" class="logo"
-              >SKEMB<span class="logo-dot">.</span></a
-            >
+            <a href="#" class="logo">SKEMB<span class="logo-dot">.</span></a>
             <!-- Search Bar -->
 
             <form
@@ -124,27 +131,122 @@
         </nav>
       </div>
     </header>
-    <section>
-      <div class="container">
-        <div class="buyingProcess mb-5 d-flex align-center justify-between">
-          <h4 class="uppercase activeProcess process  w-fit  pe-1">
-            1. My bag
-          </h4>
-          <h4 class="uppercase process w-fit ">
-            2. Delivery
-          </h4>
-          <h4 class="uppercase process w-fit ps-1">
-            3. payment 
-          </h4>
+
+    <div class="router view-container container">
+      <span class="routes">
+        <a class="home-page" href="index.html">Home</a>
+        /
+        <a class="previous-page" href="categories.html">Categories</a>
+        /
+        <a class="current-page" href="categories.html">All</a>
+      </span>
+    </div>
+
+    <!-- ==================== -->
+    <!-- *ANCHOR -  MAIN ==== -->
+    <!-- ==================== -->
+    <main class="main-section">
+      <section id="categories" class="all-categories section">
+        <h2 class="section-heading px-3 py-2 position-relative mx-auto w-fit">
+          All Categories
+        </h2>
+        <div class="all-categories">
+          <div class="cat-wrapper">
+            <a href="all_products.html" class="cat-card">
+              <div>
+                <span class="cat-name">Smartphones</span>
+              </div>
+            </a>
+            <a href="all_products.html" class="cat-card">
+              <div>
+                <span class="cat-name">Laptops</span>
+              </div>
+            </a>
+            <a href="all_products.html" class="cat-card">
+              <div>
+                <span class="cat-name">Fragrances</span>
+              </div>
+            </a>
+            <a href="all_products.html" class="cat-card">
+              <div>
+                <span class="cat-name">Skincare</span>
+              </div>
+            </a>
+            <a href="all_products.html" class="cat-card">
+              <div>
+                <span class="cat-name">Groceries</span>
+              </div>
+            </a>
+            <a href="all_products.html" class="cat-card">
+              <div>
+                <span class="cat-name">Home Decor</span>
+              </div>
+            </a>
+            <a href="all_products.html" class="cat-card">
+              <div>
+                <span class="cat-name">Furniture</span>
+              </div>
+            </a>
+            <a href="all_products.html" class="cat-card">
+              <div>
+                <span class="cat-name">Women's Clothing</span>
+              </div>
+            </a>
+            <a href="all_products.html" class="cat-card">
+              <div>
+                <span class="cat-name">Women's Shoes</span>
+              </div>
+            </a>
+            <a href="all_products.html" class="cat-card">
+              <div>
+                <span class="cat-name">Men's Clothing</span>
+              </div>
+            </a>
+            <a href="all_products.html" class="cat-card">
+              <div>
+                <span class="cat-name">Men's Shoes</span>
+              </div>
+            </a>
+            <a href="all_products.html" class="cat-card">
+              <div>
+                <span class="cat-name">Men's Watches</span>
+              </div>
+            </a>
+            <a href="all_products.html" class="cat-card">
+              <div>
+                <span class="cat-name">Women's Bags</span>
+              </div>
+            </a>
+            <a href="all_products.html" class="cat-card">
+              <div>
+                <span class="cat-name">Women's Jewellery</span>
+              </div>
+            </a>
+            <a href="all_products.html" class="cat-card">
+              <div>
+                <span class="cat-name">Sunglasses</span>
+              </div>
+            </a>
+            <a href="all_products.html" class="cat-card">
+              <div>
+                <span class="cat-name">Automotive</span>
+              </div>
+            </a>
+            <a href="all_products.html" class="cat-card">
+              <div>
+                <span class="cat-name">Motorcycle</span>
+              </div>
+            </a>
+            <a href="all_products.html" class="cat-card">
+              <div>
+                <span class="cat-name">Lighting</span>
+              </div>
+            </a>
+          </div>
+          <!-- <div class="swiper-pagination catination"></div> -->
         </div>
-        <div class="cartContainer my-5 py-5 d-flex align-start justify-between">
-          <div class="cartElements w-60 pe-2"></div>
-          <div
-            class="orderSummary w-35 px-3 py-3 border rounded bg-light"
-          ></div>
-        </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <!-- ================= -->
     <!-- *ANCHOR -  footer -->
@@ -221,7 +323,10 @@
         <span class="footer-logo">SKEMB.</span>
       </p>
     </footer>
-    <script src="scripts/cart.js"></script>
+
+    <!-- Scripts -->
+    <script type="module" src="/scripts/modules/all_products.js"></script>
+    <script src="scripts/categories.js"></script>
     <script src="scripts/main.js"></script>
   </body>
 </html>

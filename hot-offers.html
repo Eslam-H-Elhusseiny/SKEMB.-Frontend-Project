@@ -3,12 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Fonts -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
@@ -17,10 +21,15 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <!-- Styles -->
+
     <link rel="stylesheet" href="styles/general.css" />
-    <link rel="stylesheet" href="styles/cart.css" />
+    <link rel="stylesheet" href="styles/home.css" />
+    <link rel="stylesheet" href="styles/hotoffers.css" />
     <link rel="stylesheet" href="styles/nav-footer.css" />
-    <title>SKEMB. | My Cart</title>
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+    <title>SKEMB. | eCommerce Website</title>
   </head>
   <body>
     <header>
@@ -44,7 +53,7 @@
               <a href="index.html">Home</a>
             </li>
             <li class="link dropdown-btn position-relative pb-1 cursor-pointer">
-              <a href="#categories">Categories</a>
+              <a href="categories.html">Categories</a>
             </li>
             <li class="link position-relative pb-1 cursor-pointer">
               <a href="all_products.html">Products</a>
@@ -82,10 +91,7 @@
                 placeholder="Search our store"
                 name="search-product"
               />
-              <button
-                style="border: none"
-                class="search-btn py-2 px-2 cursor-pointer"
-              >
+              <button class="search-btn py-2 px-2 cursor-pointer">
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
             </form>
@@ -108,7 +114,7 @@
               <li
                 class="link dropdown-btn position-relative pb-1 cursor-pointer"
               >
-                <a href="#categories">Categories</a>
+                <a href="categories.html">Categories</a>
               </li>
               <li class="link position-relative pb-1 cursor-pointer">
                 <a href="all_products.html">Products</a>
@@ -124,27 +130,32 @@
         </nav>
       </div>
     </header>
-    <section>
-      <div class="container">
-        <div class="buyingProcess mb-5 d-flex align-center justify-between">
-          <h4 class="uppercase activeProcess process  w-fit  pe-1">
-            1. My bag
-          </h4>
-          <h4 class="uppercase process w-fit ">
-            2. Delivery
-          </h4>
-          <h4 class="uppercase process w-fit ps-1">
-            3. payment 
-          </h4>
+
+    <!-- ==================== -->
+    <!-- *ANCHOR -  MAIN ==== -->
+    <!-- ==================== -->
+    <main class="main-section">
+      <!-- *ANCHOR - Products Cards Grid -->
+
+      <section class="section">
+        <h2 class="section-heading px-3 py-2 position-relative mx-auto w-fit">
+          Hot Offers
+        </h2>
+        <div class="container products-grid d-grid">
+          <!-- 
+
+        -->
+
+          <!-- Card -->
         </div>
-        <div class="cartContainer my-5 py-5 d-flex align-start justify-between">
-          <div class="cartElements w-60 pe-2"></div>
-          <div
-            class="orderSummary w-35 px-3 py-3 border rounded bg-light"
-          ></div>
+        <div class="text-center">
+          <a href="/all_products.html" class="section-btn btn-more btn-dark"
+            >View All Products &nbsp;
+            <i class="fa-solid fa-arrow-right-long"></i>
+          </a>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <!-- ================= -->
     <!-- *ANCHOR -  footer -->
@@ -221,7 +232,8 @@
         <span class="footer-logo">SKEMB.</span>
       </p>
     </footer>
-    <script src="scripts/cart.js"></script>
+    <script src="/scripts/home.js"></script>
+    <script type="module" src="/scripts/modules/products.js"></script>
     <script src="scripts/main.js"></script>
   </body>
 </html>
