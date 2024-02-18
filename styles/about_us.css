@@ -1,0 +1,81 @@
+.logo-about-us{
+    font-weight: var(--fweight-900);
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+}
+
+.about_num{
+    display: flex;
+    /* color: rgb(19, 19, 51); */
+    justify-content: space-between;
+}
+
+.num_details{
+    display: flex;
+    flex-direction: column;
+}
+
+.num_h1{
+    font-size: 4.2rem;
+}
+
+
+.h5_about_us{
+    text-align: center;
+}
+
+
+.about-us-container{
+    text-align: center;
+    padding: 1.5rem;
+    display: flex;
+    width: 100%;
+}
+
+.logo_image{
+    width: 30rem;
+    height: 30rem;
+}
+
+.container-about-section {
+
+    background-image: url('/assets/images/cover.jpg');
+    background-size: cover;
+    height: 35rem;
+    width: 100%;
+    margin-top: 2.5rem;
+}
+
+.h3_about_us{
+
+    color: var(--color-primary);
+
+}
+
+.animate-charcter {
+    text-transform: uppercase;
+    background-image: linear-gradient(
+      -225deg,
+      rgba(35, 31, 26, 0.559) 0%,
+      rgba(210, 151, 69, 0.837) 29%,
+      rgba(237, 235, 81, 0.775) 67%,
+      #070707 80%
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 4s linear infinite;
+  }
+
+  .about-us-details{
+    display: flex;
+    align-items: center;
+  }
+
+
+
+

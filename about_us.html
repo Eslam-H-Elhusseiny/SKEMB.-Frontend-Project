@@ -23,13 +23,16 @@
     />
 
     <!-- Styles -->
-
+    <!-- Swiper -->
+    <link rel="stylesheet" href="styles/swiper.css" />
+    <link rel="stylesheet" href="styles/home.css" />
+    <!-- End Swiper -->
     <link rel="stylesheet" href="styles/general.css" />
-    <link rel="stylesheet" href="styles/all_products_style.css" />
-    <link rel="stylesheet" href="styles/productCard.css" />
+    <link rel="stylesheet" href="styles/details.css" />
     <link rel="stylesheet" href="styles/nav-footer.css" />
-    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>All Products</title>
+    <link rel="stylesheet" href="styles/about_us.css" />
+
+    <title> About Us </title>
   </head>
   <body>
     <header>
@@ -75,9 +78,8 @@
           <!-- Container -->
 
           <div class="nav container d-flex align-center justify-between">
-            <a href="#" class="logo">SKEMB<span class="logo-dot">.</span></a>
+            <a href="index.html" class="logo">SKEMB<span class="logo-dot">.</span></a>
             <!-- Search Bar -->
-
             <form
               id="#search-product"
               class="search-container hide-on-mobile d-flex"
@@ -97,12 +99,7 @@
               </button>
             </form>
             <div class="nav-icons g-3 d-flex align-center justify-between">
-              <button class="cartBtn position-relative">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <span
-                  class="cartQuantity d-flex justify-center align-center text-center"
-                ></span>
-              </button>
+              <a href="#"> <i class="fa-solid fa-cart-shopping"></i> </a>
               <a id="user-image-profile" href="#">
                 <i class="fa-regular fa-user"></i>
               </a>
@@ -129,93 +126,65 @@
                 <a href="all_products.html">Hot offers</a>
               </li>
               <li class="link position-relative pb-1 cursor-pointer">
-                <a href="/about_us.html">About Us</a>
+                <a href="#">About Us</a>
               </li>
             </ul>
           </div>
         </nav>
       </div>
     </header>
+    <main>
+      <!-- Slider == -->
 
-    <div class="router view-container container">
-      <span class="routes">
-        <a class="home-page" href="/index.html">Home</a>
-        /
-        <a class="previous-page" href="/all_products.html">Products</a>
-        /
-        <a class="current-page" href="/all_products.html">All</a>
-      </span>
+      <section class="section container">
 
-      <!-- Products Display Style -->
+        <h1 class="logo-about-us text-center py-5 animate-charcter">Thank you for choosing SKEMB </h1> 
+        <h2 class="text-center h3_about_us ">your ultimate destination for all your shopping needs!</h2>
 
-      <div class="products-display">
-        <a class="grid-view" href="#">
-          <i class="fa-solid fa-border-all"></i>
-        </a>
-
-        <a class="list-view" href="#">
-          <i class="fa-solid fa-list"></i>
-        </a>
-      </div>
-    </div>
-
-    <!-- ==================== -->
-    <!-- *ANCHOR -  MAIN ==== -->
-    <!-- ==================== -->
-    <main class="main-section">
-      <!-- *ANCHOR -  side bar -->
-      <div class="side_bar px-2">
-        <h2>CATEGORIES</h2>
-        <ul class="cat-sidebar">
-          <li
-            class="link position-relative pb-1 cursor-pointer side_bar_item active"
-          >
-            <a href="" class="side_bar_item_all w-100"> All </a>
-          </li>
-        </ul>
-      </div>
-
-      <!-- *ANCHOR - Products Cards Grid -->
-
-      <section class="section all-products-section">
-        <span class="success px-3 py-1"
-          >Product Added Successfully
-          <i class="fa-solid fa-circle-check checkIcon"></i
-        ></span>
-        <span class="faild px-3 py-1"
-          >An Error Occured, Please Try Again
-          <i class="fa-solid fa-circle-xmark wrongIcon"></i
-        ></span>
-
-        <!-- *ANCHOR - filter bar -->
-
-        <div class="filter_bar container d-flex">
-          <!-- <h3> Sort by: </h3> -->
+        <div class="container section container-about-section py-5">
         </div>
 
-        <!-- *ANCHOR - product cards -->
+        <div class="container text-center  about_num py-5">
+            <div class="num_details">
+                <h1 class="num_h1 animate-charcter">$9.3M+</h1>
+                <h5>Happy Clients</h5>
+            </div>
 
-        <div class="products-grid d-grid" id="productContainer"></div>
+            <div class="num_details">
+                <h1 class="num_h1 animate-charcter">80%</h1>
+                <h5>Daily Active Engagement</h5>
+            </div>
 
-        <div class="text-center">
-          <a href="#" class="section-btn btn-more btn-dark"
-            >View More &nbsp;
-            <i class="fa-solid fa-arrow-right-long"></i>
-          </a>
+            <div class="num_details">
+                <h1 class="num_h1 animate-charcter">500</h1>
+                <h5>Dedicated Members</h5>
+            </div>
+
+            <div class="num_details">
+                <h1 class="num_h1 animate-charcter">25+</h1>
+                <h5>Wins</h5>
+            </div>
+
         </div>
+        <div class="container about-us-container py-5">
+            <div>
+                <img src="/assets/images/skemb-logo.png" alt="SKEMB-Logo" class="logo_image">
+            </div>
+            <p class="about-us-details text-center py-5 fs-5">    
+                At SKEMB, we're passionate about providing you with a seamless online shopping experience, offering a wide range of products from various categories to cater to every aspect of your lifestyle.
+                
+                Founded with a vision to revolutionize the way people shop online, SKEMB strives to offer high-quality products at competitive prices, ensuring that you find exactly what you're looking for, whether it's the latest smartphones, trendy fashion items, essential groceries, or elegant home decorations. 
+            </p>
+        </div>
+        <h1 class="logo-about-us text-center h3_about_us animate-charcter"> Happy shopping!</h1>
+        <h5 class="h5_about_us py-5">The SKEMB Team</h5>
       </section>
     </main>
 
+    <!-- <span class="logo-dot">.</span> -->
+
     <!-- ================= -->
     <!-- *ANCHOR -  footer -->
-    <div class="cartSide px-3 py-3 d-none">
-      <i class="fa-solid fa-circle-xmark closeSideCart"></i>
-      <div class="cartSideHead d-flex align-center justify-between">
-        <h2>Your Cart</h2>
-        <button class="goCart">Check Out Your Bag</button>
-      </div>
-      <div class="sideCartContainer"></div>
-    </div>
 
     <footer>
       <div class="container d-grid g-3">
@@ -284,15 +253,10 @@
           />
         </div>
       </div>
-      <p class="copyright text-center pt-3">
-        Made With <span class="heart">&#10084;</span> By
-        <span class="footer-logo">SKEMB.</span>
+      <p class="copyright text-center pt-3">Made With <span class="heart">&#10084;</span> By<span class="footer-logo">SKEMB.</span>
       </p>
     </footer>
-
-    <!-- Scripts -->
-    <script type="module" src="scripts/modules/all_products.js"></script>
-    <!-- <script  src="scripts/modules/products.js"></script> -->
-    <script type="module" src="scripts/modules/main.js"></script>
   </body>
+  <script src="/scripts/about_us.js"></script>
+  <script src="scripts/main.js"></script>
 </html>
