@@ -31,10 +31,14 @@
     <link rel="stylesheet" href="styles/home.css" />
     <link rel="stylesheet" href="styles/productCard.css" />
     <link rel="stylesheet" href="styles/nav-footer.css" />
-    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.png"
+      type="image/x-icon"
+    />
     <title>SKEMB. | eCommerce Website</title>
   </head>
-  <body >
+  <body>
     <header>
       <!-- Offer Alert -->
       <div class="offer hide-on-mobile py-1 text-center">
@@ -65,7 +69,7 @@
               <a href="hot-offers.html">Hot offers</a>
             </li>
             <li class="link position-relative pb-1 cursor-pointer">
-              <a href="#">About Us</a>
+              <a href="about_us.html">About Us</a>
             </li>
           </ul>
         </div>
@@ -100,8 +104,10 @@
             </form>
             <div class="nav-icons g-3 d-flex align-center justify-between">
               <button class="cartBtn position-relative">
-                <i class="fa-solid fa-cart-shopping "></i>
-                <span class="cartQuantity d-flex justify-center align-center text-center"></span>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span
+                  class="cartQuantity d-flex justify-center align-center text-center"
+                ></span>
               </button>
               <a id="user-image-profile" href="#">
                 <i class="fa-regular fa-user"></i>
@@ -129,11 +135,25 @@
                 <a href="hot-offers.html">Hot offers</a>
               </li>
               <li class="link position-relative pb-1 cursor-pointer">
-                <a href="#">About Us</a>
+                <a href="about_us.html">About Us</a>
               </li>
             </ul>
           </div>
         </nav>
+      </div>
+
+      <!-- *NOTE - cart side menu modified to all pages  -->
+      <div class="cartSide px-3 py-3 d-none">
+        <div class="cartSideHead d-flex flex-col">
+          <a class="closeSideCart w-fit">
+            <i class="fa-solid fa-circle-xmark"></i>
+          </a>
+          <div class="wrap d-flex justify-between align-center my-4">
+            <h2>Your Cart</h2>
+            <button class="goCart">Check Out Your Bag</button>
+          </div>
+        </div>
+        <div class="sideCartContainer"></div>
       </div>
 
       <!-- Slider == -->
@@ -184,49 +204,49 @@
         </h2>
         <div class="all-cat swiper mySwiper2">
           <div class="swiper-wrapper cat-wrapper">
-            <a href="#" class="cat-circle swiper-slide">
+            <a href="categories.html" class="cat-circle swiper-slide">
               <span class="cat-name absolute-center">Smartphones</span>
             </a>
-            <a href="#" class="cat-circle swiper-slide">
+            <a href="categories.html" class="cat-circle swiper-slide">
               <span class="cat-name absolute-center">Laptops</span>
             </a>
-            <a href="#" class="cat-circle swiper-slide">
+            <a href="categories.html" class="cat-circle swiper-slide">
               <span class="cat-name absolute-center">Fragrances</span>
             </a>
-            <a href="#" class="cat-circle swiper-slide">
+            <a href="categories.html" class="cat-circle swiper-slide">
               <span class="cat-name absolute-center">Skincare</span>
             </a>
-            <a href="#" class="cat-circle swiper-slide">
+            <a href="categories.html" class="cat-circle swiper-slide">
               <span class="cat-name absolute-center">Groceries</span>
             </a>
-            <a href="#" class="cat-circle swiper-slide">
+            <a href="categories.html" class="cat-circle swiper-slide">
               <span class="cat-name absolute-center">Home Decor</span>
             </a>
-            <a href="#" class="cat-circle swiper-slide">
+            <a href="categories.html" class="cat-circle swiper-slide">
               <span class="cat-name absolute-center">Furniture</span>
             </a>
-            <a href="#" class="cat-circle swiper-slide">
+            <a href="categories.html" class="cat-circle swiper-slide">
               <span class="cat-name absolute-center">Women's Clothing</span>
             </a>
-            <a href="#" class="cat-circle swiper-slide">
+            <a href="categories.html" class="cat-circle swiper-slide">
               <span class="cat-name absolute-center">Women's Shoes</span>
             </a>
-            <a href="#" class="cat-circle swiper-slide">
+            <a href="categories.html" class="cat-circle swiper-slide">
               <span class="cat-name absolute-center">Men's Clothing</span>
             </a>
-            <a href="#" class="cat-circle swiper-slide">
+            <a href="categories.html" class="cat-circle swiper-slide">
               <span class="cat-name absolute-center">Men's Shoes</span>
             </a>
-            <a href="#" class="cat-circle swiper-slide">
+            <a href="categories.html" class="cat-circle swiper-slide">
               <span class="cat-name absolute-center">Men's Watches</span>
             </a>
-            <a href="#" class="cat-circle swiper-slide">
+            <a href="categories.html" class="cat-circle swiper-slide">
               <span class="cat-name absolute-center">Women's Bags</span>
             </a>
-            <a href="#" class="cat-circle swiper-slide">
+            <a href="categories.html" class="cat-circle swiper-slide">
               <span class="cat-name absolute-center">Women's Jewellery</span>
             </a>
-            <a href="#" class="cat-circle swiper-slide">
+            <a href="categories.html" class="cat-circle swiper-slide">
               <span class="cat-name absolute-center">Sunglasses</span>
             </a>
           </div>
@@ -250,7 +270,7 @@
               <div class="inner-card">
                 <h3>Smartphones</h3>
                 <p>Exclusive deals on smartphones until February 29</p>
-                <a href="#" class="cat-btn tv">Shop Now</a>
+                <a href="categories.html" class="cat-btn tv">Shop Now</a>
               </div>
             </div>
             <!-- card -->
@@ -259,7 +279,7 @@
               <div class="inner-card">
                 <h3>Laptops</h3>
                 <p>Look through our selection of laptops</p>
-                <a href="#" class="cat-btn">Shop Now</a>
+                <a href="categories.html" class="cat-btn">Shop Now</a>
               </div>
             </div>
             <!-- card -->
@@ -268,7 +288,7 @@
               <div class="inner-card">
                 <h3>Shoes</h3>
                 <p>Explore our brand-new Sneakers & Shoes collection</p>
-                <a href="#" class="cat-btn">Shop Now</a>
+                <a href="categories.html" class="cat-btn">Shop Now</a>
               </div>
             </div>
           </div>
@@ -286,9 +306,14 @@
       <!-- *ANCHOR - Products Cards Grid -->
 
       <section class="section">
-
-        <span class="faild px-3 py-1">An Error Occured, Please Try Again <i class="fa-solid fa-circle-xmark wrongIcon"></i></span>
-        <span class="success px-3 py-1">Product Added Successfully <i class="fa-solid fa-circle-check checkIcon"></i></span>
+        <span class="faild px-3 py-1"
+          >An Error Occured, Please Try Again
+          <i class="fa-solid fa-circle-xmark wrongIcon"></i
+        ></span>
+        <span class="success px-3 py-1"
+          >Product Added Successfully
+          <i class="fa-solid fa-circle-check checkIcon"></i
+        ></span>
         <h2 class="section-heading px-3 py-2 position-relative mx-auto w-fit">
           Trending Products
         </h2>
@@ -320,7 +345,9 @@
               Winter Sale <br />
               50% Off On All Fragrances!
             </p>
-            <a href="#" class="sale-btn btn-more btn-dark">Shop Now</a>
+            <a href="all_products.html" class="sale-btn btn-more btn-dark"
+              >Shop Now</a
+            >
           </div>
           <div class="sale-card sale-card2">
             <h3 class="sale-cat-heading">Electronics</h3>
@@ -328,7 +355,9 @@
               Limited Time Sale <br />
               Up To 10% On Laptops & Phones
             </p>
-            <a href="#" class="sale-btn btn-more btn-white">Shop Now</a>
+            <a href="all_products.html" class="sale-btn btn-more btn-white"
+              >Shop Now</a
+            >
           </div>
         </div>
       </section>
@@ -381,7 +410,7 @@
             </div>
           </div>
           <div class="text-center">
-            <a href="#" class="section-btn btn-more btn-dark"
+            <a href="about_us.html" class="section-btn btn-more btn-dark"
               >Learn More &nbsp;
               <i class="fa-solid fa-arrow-right-long"></i>
             </a>
@@ -389,17 +418,6 @@
         </div>
       </section>
     </main>
-    <!-- *NOTE - cart side menu modified to all pages  -->
-    <div class="cartSide px-3 py-3 d-none">
-      <i class="fa-solid fa-circle-xmark closeSideCart"></i>
-      <div class="cartSideHead d-flex align-center justify-between">
-        <h2>Your Cart</h2>
-        <button class="goCart">Check Out Your Bag</button>  
-      </div>
-      <div class="sideCartContainer">
-
-      </div>
-    </div>
 
     <!-- ================= -->
     <!-- *ANCHOR -  footer -->
@@ -430,21 +448,21 @@
         <div class="quick-links quick-links-col-1">
           <h3>Quick Links</h3>
           <ul>
-            <li><a href="#">FAQs</a></li>
-            <li><a href="#">Find Store Location</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Refund Policy</a></li>
+            <li><a href="about_us.html">FAQs</a></li>
+            <li><a href="about_us.html">Find Store Location</a></li>
+            <li><a href="about_us.html">Privacy Policy</a></li>
+            <li><a href="about_us.html">Terms of Service</a></li>
+            <li><a href="about_us.html">Refund Policy</a></li>
           </ul>
         </div>
         <div class="quick-links quick-links-col-2">
           <ul>
             <h3 class="hide-on-mobile">Quick Links</h3>
-            <li><a href="#">Wishlist</a></li>
-            <li><a href="#">My Account</a></li>
-            <li><a href="#">Product Compare</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="all_products.html">Wishlist</a></li>
+            <li><a href="profile.html">My Account</a></li>
+            <li><a href="details.html?id=1">Product Compare</a></li>
+            <li><a href="about_us.html">About Us</a></li>
+            <li><a href="about_us.html">Contact Us</a></li>
           </ul>
         </div>
         <div class="news-letter">

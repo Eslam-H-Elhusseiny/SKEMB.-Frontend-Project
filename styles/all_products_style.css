@@ -1,81 +1,3 @@
-/* Section Heading */
-
-.section-heading {
-  margin-block: 3rem 4rem;
-  letter-spacing: 1px;
-  word-spacing: 3px;
-  font-weight: var(--fweight-900);
-  border: 1px solid black;
-  transition: var(--transition-short);
-  z-index: 10;
-}
-
-.section-heading::before,
-.section-heading::after {
-  content: "";
-  width: 0.75rem;
-  height: 0.75rem;
-  border-radius: 50%;
-  background-color: var(--color-accent);
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.section-heading::before {
-  left: -1.8rem;
-}
-
-.section-heading::after {
-  right: -1.8rem;
-}
-
-.section-heading:hover::before {
-  z-index: -1;
-  animation: left-dot 0.5s linear forwards;
-}
-
-.section-heading:hover::after {
-  z-index: -1;
-  animation: right-dot 0.5s linear forwards;
-}
-
-.section-heading:hover {
-  border: 1px solid var(--color-accent);
-  color: white;
-  background-color: var(--color-accent);
-  transition-delay: 0.5s;
-}
-
-/* =========================== */
-/* *ANCHOR - R o u t e r ===== */
-/* =========================== */
-
-.router {
-  margin-block: 1rem;
-  font-size: var(--fsize-100);
-  text-transform: capitalize;
-}
-
-.current-page {
-  font-weight: var(--fweight-700);
-}
-
-/* Products Display Style */
-
-.view-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.products-display {
-  display: flex;
-  gap: 1.5rem;
-  color: var(--color-primary-dark);
-  font-size: var(--fsize-500);
-}
-
 /* ====================== */
 /* *ANCHOR - Header ===== */
 /* ====================== */
@@ -119,7 +41,7 @@
   transition: var(--transition-short);
 }
 
-.cat-sidebar li::after , 
+.cat-sidebar li::after,
 .cat-sidebar li.active::after {
   content: "";
   position: absolute;
@@ -129,12 +51,11 @@
   background-color: var(--color-primary-dark);
   transition: var(--transition-short);
 }
-.cat-sidebar li::after{
+.cat-sidebar li::after {
   width: 0;
 }
-.cat-sidebar li.active::after ,
-.cat-sidebar li:hover::after
-{
+.cat-sidebar li.active::after,
+.cat-sidebar li:hover::after {
   width: 100%;
 }
 
@@ -221,7 +142,6 @@
   background-color: var(--color-border-light);
   border-radius: 5px;
 }
-
 
 /* ====================== */
 /* *ANCHOR -  Footer ==== */

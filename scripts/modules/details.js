@@ -1,4 +1,6 @@
 import { productCard } from "./productCard.js";
+import { addToCart } from "./addtocart.js";
+
 //  Fetching All Products
 // -------------------------------
 
@@ -125,9 +127,15 @@ async function displayProductDetails() {
   </div>
 
   <h3 class="product-price py-3">EGP ${product.price * 30}</h3>
-  <a href="" class="text-center product-btn">Add To Cart</a>
+  <button class="text-center product-btn">Add To Cart</button>
+  <button class="btn addToCartLoader w-85 cursor-pointer d-none"><i class="fa-solid fa-spinner fa-spin"></i></button>
 </div>
   `;
+  let addToCartBtn = productDetailSection.querySelector(".product-btn");
+  let addToCartLoader = productDetailSection.querySelector(".addToCartLoader");
+  addToCartBtn.addEventListener("click", (e) => {
+    addToCart(product.id, addToCartBtn, addToCartLoader);
+  });
   for (let i = 0; i < product.images.length; i++) {
     let img = document.createElement("a");
     img.classList.add("small-img", "me-2");
@@ -157,10 +165,10 @@ async function displayProductDetails() {
       document.getElementsByClassName("reviews")[0].classList.add("active");
       document.getElementsByClassName("desc-reviews")[0].style.alignItems =
         "center";
-        productReviewSection.innerHTML=``;
-        comments.forEach((comment) => {
-          const commentCard = document.createElement("div");
-          commentCard.innerHTML = `
+      productReviewSection.innerHTML = ``;
+      comments.forEach((comment) => {
+        const commentCard = document.createElement("div");
+        commentCard.innerHTML = `
           <div
           class="reviewSection d-flex align-center px-3 py-3 justify-around"
         ></div>
@@ -193,62 +201,8 @@ async function displayProductDetails() {
       </article>
       </div>
           `;
-          productReviewSection.appendChild(commentCard);
-        })
-
-      // productReviewSection.innerHTML = `
-      // <h4>Our Clients Reviews</h4>
-      // <!-- Clients Review Section -->
-      // <div
-      //   class="reviewSection d-flex align-center px-3 py-3 justify-around"
-      // >
-      // </div>`;
-      // document.getElementsByClassName("desc-reviews")[0].innerText ='';
-      // comments.forEach((comment) => {
-      //   var reviewItem = document.createElement("div");
-      //   reviewItem.classList.add("reviewItem", "me-2", "py-2", "px-2");
-
-      //   var topDiv = document.createElement("div");
-      //   topDiv.classList.add("top");
-
-      //   var clientImageDiv = document.createElement("div");
-      //   clientImageDiv.classList.add("clientImage");
-      //   var usernameSpan = document.createElement("span");
-      //   usernameSpan.textContent = comment.user.username;
-      //   clientImageDiv.appendChild(usernameSpan);
-
-      //   var starList = document.createElement("ul");
-      //   for (var i = 0; i < 3; i++) {
-      //     var li = document.createElement("li");
-      //     var starIcon = document.createElement("i");
-      //     starIcon.classList.add("fa-solid", "fa-star");
-      //     starIcon.style.color = "#ffd43b";
-      //     li.appendChild(starIcon);
-      //     starList.appendChild(li);
-      //   }
-      //   for (var i = 0; i < 2; i++) {
-      //     var li = document.createElement("li");
-      //     var starIcon = document.createElement("i");
-      //     starIcon.classList.add("fa-regular", "fa-star");
-      //     starIcon.style.color = "#ffd43b";
-      //     li.appendChild(starIcon);
-      //     starList.appendChild(li);
-      //   }
-
-      //   var article = document.createElement("article");
-      //   var reviewParagraph = document.createElement("p");
-      //   reviewParagraph.classList.add("review");
-      //   reviewParagraph.textContent = comment.body;
-      //   var dateParagraph = document.createElement("p");
-      //   dateParagraph.textContent = "Jan 01, 2023";
-      //   article.appendChild(reviewParagraph);
-      //   article.appendChild(dateParagraph);
-      //   topDiv.appendChild(clientImageDiv);
-      //   topDiv.appendChild(starList);
-      //   reviewItem.appendChild(topDiv);
-      //   reviewItem.appendChild(article);
-      //   productReviewSection.appendChild(reviewItem);
-      // });
+        productReviewSection.appendChild(commentCard);
+      });
     });
 }
 

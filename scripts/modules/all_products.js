@@ -65,10 +65,7 @@ async function allCategories() {
 // *ANCHOR -  function of creating sidebar with all its categories
 
 async function crateCategoriesSideBar() {
-  // const cards = document.getElementById('productContainer');
-  // cards.innerHTML=""
   const categoriesArray = await allCategories();
-  // console.log(categoriesArray);
   for (let i = 0; i < 20; i++) {
     let category = categoriesArray[i];
 
