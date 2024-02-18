@@ -41,10 +41,10 @@ const productCard = (container, productsArray, page, imgArr = "") => {
         </div>
     `;
     container.appendChild(card);
-    let addToCartBtn = card.querySelector(".addToCart")
-    let addToCartLoader = card.querySelector(".addToCartLoader")
-    addToCartBtn.addEventListener('click', (e) => {
-      addToCart(product.id , addToCartBtn , addToCartLoader);
+    let addToCartBtn = card.querySelector(".addToCart");
+    let addToCartLoader = card.querySelector(".addToCartLoader");
+    addToCartBtn.addEventListener("click", (e) => {
+      addToCart(product.id, addToCartBtn, addToCartLoader);
     });
   });
 };

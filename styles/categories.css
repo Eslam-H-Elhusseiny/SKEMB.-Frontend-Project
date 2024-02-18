@@ -1,0 +1,63 @@
+.cat-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  text-align: center;
+}
+
+.cat-card {
+  position: relative;
+  aspect-ratio: 1/1;
+  padding: 1rem;
+  min-width: 15rem;
+  background-image: url(/assets/images/categories/c1.png);
+  background-position: center;
+  background-size: contain;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.cat-card::before {
+  content: "";
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background-image: url(/assets/images/gradient1.jpg);
+  background-position: center;
+  background-size: cover;
+  transition: var(--transition-mid);
+}
+
+.cat-name {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: var(--fweight-700);
+  font-size: 1.6rem;
+  color: var(--color-primary-dark);
+  padding: 0.25rem 0.5rem;
+  transition: var(--transition-mid);
+  translate: 13rem;
+}
+
+.cat-card:hover .cat-name {
+  translate: 0rem;
+  opacity: 1;
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.cat-card:hover::before {
+  opacity: 1;
+  width: 150%;
+  height: 150%;
+}

@@ -23,11 +23,16 @@
     />
 
     <!-- Styles -->
+    <!-- Swiper -->
+    <link rel="stylesheet" href="styles/swiper.css" />
+    <link rel="stylesheet" href="styles/home.css" />
+    <!-- End Swiper -->
     <link rel="stylesheet" href="styles/general.css" />
     <link rel="stylesheet" href="styles/details.css" />
     <link rel="stylesheet" href="styles/nav-footer.css" />
+    <link rel="stylesheet" href="styles/about_us.css" />
 
-    <title>SKEMB. | Product details</title>
+    <title> About Us </title>
   </head>
   <body>
     <header>
@@ -73,9 +78,7 @@
           <!-- Container -->
 
           <div class="nav container d-flex align-center justify-between">
-            <a href="index.html" class="logo"
-              >SKEMB<span class="logo-dot">.</span></a
-            >
+            <a href="index.html" class="logo">SKEMB<span class="logo-dot">.</span></a>
             <!-- Search Bar -->
             <form
               id="#search-product"
@@ -131,33 +134,54 @@
       </div>
     </header>
     <main>
-      <section class="section d-grid product container"></section>
+      <!-- Slider == -->
 
-      <section class="reviews-section section container">
-        <div class="container">
-          <ul class="d-flex reviews-nav">
-            <li>
-              <a class="reviews-links desc active">Description</a>
-            </li>
-            <li>
-              <a class="reviews-links reviews">Reviews</a>
-            </li>
-          </ul>
-          <div
-            class="desc-reviews comments-container d-flex my-3"
-          ></div>
-        </div>
-      </section>
+      <section class="section container">
 
-      <section class="section related-products container">
-        <div class="container">
-          <h3>RELATED PRODUCTS</h3>
-          <div class="products-grid d-grid py-5">
-            <!-- Card -->
-          </div>
+        <h1 class="logo-about-us text-center py-5 animate-charcter">Thank you for choosing SKEMB </h1> 
+        <h2 class="text-center h3_about_us ">your ultimate destination for all your shopping needs!</h2>
+
+        <div class="container section container-about-section py-5">
         </div>
+
+        <div class="container text-center  about_num py-5">
+            <div class="num_details">
+                <h1 class="num_h1 animate-charcter">$9.3M+</h1>
+                <h5>Happy Clients</h5>
+            </div>
+
+            <div class="num_details">
+                <h1 class="num_h1 animate-charcter">80%</h1>
+                <h5>Daily Active Engagement</h5>
+            </div>
+
+            <div class="num_details">
+                <h1 class="num_h1 animate-charcter">500</h1>
+                <h5>Dedicated Members</h5>
+            </div>
+
+            <div class="num_details">
+                <h1 class="num_h1 animate-charcter">25+</h1>
+                <h5>Wins</h5>
+            </div>
+
+        </div>
+        <div class="container about-us-container py-5">
+            <div>
+                <img src="/assets/images/skemb-logo.png" alt="SKEMB-Logo" class="logo_image">
+            </div>
+            <p class="about-us-details text-center py-5 fs-5">    
+                At SKEMB, we're passionate about providing you with a seamless online shopping experience, offering a wide range of products from various categories to cater to every aspect of your lifestyle.
+                
+                Founded with a vision to revolutionize the way people shop online, SKEMB strives to offer high-quality products at competitive prices, ensuring that you find exactly what you're looking for, whether it's the latest smartphones, trendy fashion items, essential groceries, or elegant home decorations. 
+            </p>
+        </div>
+        <h1 class="logo-about-us text-center h3_about_us animate-charcter"> Happy shopping!</h1>
+        <h5 class="h5_about_us py-5">The SKEMB Team</h5>
       </section>
     </main>
+
+    <!-- <span class="logo-dot">.</span> -->
 
     <!-- ================= -->
     <!-- *ANCHOR -  footer -->
@@ -229,13 +253,10 @@
           />
         </div>
       </div>
-      <p class="copyright text-center pt-3">
-        Made With <span class="heart">&#10084;</span> By
-        <span class="footer-logo">SKEMB.</span>
+      <p class="copyright text-center pt-3">Made With <span class="heart">&#10084;</span> By<span class="footer-logo">SKEMB.</span>
       </p>
     </footer>
   </body>
-  <script type="module" src="/scripts/modules/productCard.js"></script>
-  <script type="module" src="/scripts/modules/details.js"></script>
-  <script type="module" src="scripts/modules/main.js"></script>
+  <script src="/scripts/about_us.js"></script>
+  <script src="scripts/main.js"></script>
 </html>
