@@ -1,4 +1,5 @@
 import LoginModal from "./loginModal.js";
+import { getCartQuantity } from "./main.js";
 
 async function addToCart(productId ,addToCartBtn,addToCartLoader) {
   addToCartBtn.classList.replace('d-inline-block' , 'd-none')
@@ -16,10 +17,10 @@ async function addToCart(productId ,addToCartBtn,addToCartLoader) {
     // Check if the product is already in the cart
     const existingProduct = skembUserCart.find((item) => item.product.id === productId);
     if (existingProduct) {
-      // If product exists, increase its quantity
-      existingProduct.quantity++;
       // change text in BTN to be increase quantity
       addToCartBtn.innerText = "Increase Quantity"
+      // If product exists, increase its quantity
+      existingProduct.quantity++;
     } else {
       // If product does not exist, add it to the cart with quantity 1
       skembUserCart.push({
@@ -34,6 +35,7 @@ async function addToCart(productId ,addToCartBtn,addToCartLoader) {
     document.querySelector('.success').style.opacity = '1';
     addToCartLoader.classList.replace('d-inline-block' , 'd-none')
     addToCartBtn.classList.replace('d-none' , 'd-inline-block')  
+    getCartQuantity()
   }else{
     document.body.appendChild(LoginModal());
     document.body.style.overflow = 'hidden';
@@ -65,22 +67,22 @@ function removeFromCart(productId) {
 // LINK Update Item Quantity Functions
 // -----------------------
 
-function increaseItemQuantity(productId, quantity) {
-  for (let item of cart) {
-    if (item.product.id === productId) {
-      item.quantity = item.quantity + quantity;
-    }
-  }
-  localStorage.setItem("cart", JSON.stringify(cart));
-}
+// function increaseItemQuantity(productId, quantity) {
+//   for (let item of cart) {
+//     if (item.product.id === productId) {
+//       item.quantity = item.quantity + quantity;
+//     }
+//   }
+//   localStorage.setItem("cart", JSON.stringify(cart));
+// }
 
-function decreaseItemQuantity(productId, quantity) {
-  for (let item of cart) {
-    if (item.product.id === productId) {
-      item.quantity = item.quantity - quantity;
-    }
-  }
-  localStorage.setItem("cart", JSON.stringify(cart));
-}
+// function decreaseItemQuantity(productId, quantity) {
+//   for (let item of cart) {
+//     if (item.product.id === productId) {
+//       item.quantity = item.quantity - quantity;
+//     }
+//   }
+//   localStorage.setItem("cart", JSON.stringify(cart));
+// }
 
-export {addToCart , removeFromCart , increaseItemQuantity , decreaseItemQuantity}
+export {addToCart , removeFromCart }

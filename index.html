@@ -34,7 +34,7 @@
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
     <title>SKEMB. | eCommerce Website</title>
   </head>
-  <body >
+  <body>
     <header>
       <!-- Offer Alert -->
       <div class="offer hide-on-mobile py-1 text-center">
@@ -99,7 +99,12 @@
               </button>
             </form>
             <div class="nav-icons g-3 d-flex align-center justify-between">
-              <a href="#"> <i class="fa-solid fa-cart-shopping"></i> </a>
+              <button class="cartBtn position-relative">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span
+                  class="cartQuantity d-flex justify-center align-center text-center"
+                ></span>
+              </button>
               <a id="user-image-profile" href="#">
                 <i class="fa-regular fa-user"></i>
               </a>
@@ -283,9 +288,14 @@
       <!-- *ANCHOR - Products Cards Grid -->
 
       <section class="section">
-
-        <span class="faild px-3 py-1">An Error Occured, Please Try Again <i class="fa-solid fa-circle-xmark wrongIcon"></i></span>
-        <span class="success px-3 py-1">Product Added Successfully <i class="fa-solid fa-circle-check checkIcon"></i></span>
+        <span class="faild px-3 py-1"
+          >An Error Occured, Please Try Again
+          <i class="fa-solid fa-circle-xmark wrongIcon"></i
+        ></span>
+        <span class="success px-3 py-1"
+          >Product Added Successfully
+          <i class="fa-solid fa-circle-check checkIcon"></i
+        ></span>
         <h2 class="section-heading px-3 py-2 position-relative mx-auto w-fit">
           Trending Products
         </h2>
@@ -386,6 +396,15 @@
         </div>
       </section>
     </main>
+    <!-- *NOTE - cart side menu modified to all pages  -->
+    <div class="cartSide px-3 py-3 d-none">
+      <i class="fa-solid fa-circle-xmark closeSideCart"></i>
+      <div class="cartSideHead d-flex align-center justify-between">
+        <h2>Your Cart</h2>
+        <button class="goCart">Check Out Your Bag</button>
+      </div>
+      <div class="sideCartContainer"></div>
+    </div>
 
     <!-- ================= -->
     <!-- *ANCHOR -  footer -->
@@ -466,5 +485,6 @@
     <script src="scripts/library/swiper.js"></script>
     <script src="/scripts/home.js"></script>
     <script type="module" src="/scripts/modules/products.js"></script>
+    <script type="module" src="scripts/modules/main.js"></script>
   </body>
 </html>

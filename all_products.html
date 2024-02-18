@@ -97,7 +97,12 @@
               </button>
             </form>
             <div class="nav-icons g-3 d-flex align-center justify-between">
-              <a href="#"> <i class="fa-solid fa-cart-shopping"></i> </a>
+              <button class="cartBtn position-relative">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span
+                  class="cartQuantity d-flex justify-center align-center text-center"
+                ></span>
+              </button>
               <a id="user-image-profile" href="#">
                 <i class="fa-regular fa-user"></i>
               </a>
@@ -165,14 +170,14 @@
           <li
             class="link position-relative pb-1 cursor-pointer side_bar_item active"
           >
-            <a href="" class="side_bar_item_all"> All </a>
+            <a href="" class="side_bar_item_all w-100"> All </a>
           </li>
         </ul>
       </div>
 
       <!-- *ANCHOR - Products Cards Grid -->
 
-      <section class="section">
+      <section class="section all-products-section">
         <span class="success px-3 py-1"
           >Product Added Successfully
           <i class="fa-solid fa-circle-check checkIcon"></i
@@ -203,6 +208,14 @@
 
     <!-- ================= -->
     <!-- *ANCHOR -  footer -->
+    <div class="cartSide px-3 py-3 d-none">
+      <i class="fa-solid fa-circle-xmark closeSideCart"></i>
+      <div class="cartSideHead d-flex align-center justify-between">
+        <h2>Your Cart</h2>
+        <button class="goCart">Check Out Your Bag</button>
+      </div>
+      <div class="sideCartContainer"></div>
+    </div>
 
     <footer>
       <div class="container d-grid g-3">
@@ -278,8 +291,8 @@
     </footer>
 
     <!-- Scripts -->
-    <script type="module" src="/scripts/modules/all_products.js"></script>
-    <script src="scripts/products.js"></script>
-    <script src="scripts/main.js"></script>
+    <script type="module" src="scripts/modules/all_products.js"></script>
+    <!-- <script  src="scripts/modules/products.js"></script> -->
+    <script type="module" src="scripts/modules/main.js"></script>
   </body>
 </html>
