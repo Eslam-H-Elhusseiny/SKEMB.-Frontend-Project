@@ -52,17 +52,13 @@ async function displayAllProducts() {
   const productsArray = await allproducts();
   const cards = document.getElementById("productContainer");
   cards.innerHTML = "";
-
   productCard(cards, productsArray, "all");
 }
 
 // *ANCHOR -  get data of categoties using api
-
 async function allCategories() {
   const res = await fetch("https://dummyjson.com/products/categories");
   const categories = await res.json();
-  console.log(categories);
-
   return categories;
 }
 
