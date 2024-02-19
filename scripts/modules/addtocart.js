@@ -22,9 +22,6 @@ async function addToCart(productId, addToCartBtn, addToCartLoader) {
         (item) => item.product.id === productId
       );
       if (existingProduct) {
-        // change text in BTN to be increase quantity
-        // addToCartBtn.innerText = "Increase Quantity";
-        // If product exists, increase its quantity
         existingProduct.quantity++;
       } else {
         // If product does not exist, add it to the cart with quantity 1
@@ -63,8 +60,4 @@ async function addToCart(productId, addToCartBtn, addToCartLoader) {
 // LINK Removing Item From Cart Function
 // -----------------------
 
-function removeFromCart(productId) {
-  let cartItems = cart.filter((item) => item.product.id != productId);
-  localStorage.setItem("cart", JSON.stringify(cartItems));
-}
-export { addToCart, removeFromCart };
+export { addToCart };
