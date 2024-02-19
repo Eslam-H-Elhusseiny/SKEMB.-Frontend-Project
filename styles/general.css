@@ -189,6 +189,12 @@ ul {
   color: #282828;
 }
 
+.cart-quantity {
+  outline: none;
+  border: none;
+  padding: 0.25rem;
+}
+
 /* === *STUB -  Start Spacings === */
 
 /*  *ANCHOR - paddings ==== */
