@@ -1,4 +1,11 @@
-/////////// *NOTE -    login page       //////////////
+import {
+  username_validate,
+  password_validate,
+  faildRegex,
+} from "./modules/validateUserData.js";
+////////// *NOTE -    login page       //////////////
+let loginBtn = document.querySelector('.login-btn')
+let loginLoader = document.querySelector('.loginLoader')
 
 // check if user has user_token in localstorage, if itis,  get values from server and set them to inputs
 async function remember() {
@@ -15,26 +22,23 @@ async function remember() {
       document.querySelector("input[name=username]").value = res.username;
       document.querySelector("input[name=password]").value = res.password;
     } else {
-      // if token number expire delete user token and user image from localstorage
-      localStorage.removeItem("skemb-user");
-      localStorage.removeItem("user-image");
+      // if token number expire delete user data from localstorage
+      localStorage.clear();
     }
   }
 }
 window.addEventListener("load", remember);
 
 // regular expression using moduls, if user data true, send data to server  else show error to user
-import {
-  username_validate,
-  password_validate,
-  faildRegex,
-} from "./modules/validateUserData.js";
 async function authUser() {
   event.preventDefault();
   let formdata = new FormData(this); // get inputs data using FormData object
   // validate username and password using regex
   const nameRegex = username_validate(formdata.get("username"));
   const passwordRegex = password_validate(formdata.get("password"));
+  loginBtn.classList.replace("d-inline-block", "d-none");
+  loginLoader.classList.replace("d-none", "d-inline-block");
+
   if (!nameRegex || !passwordRegex) {
     // print faild regex to user
     const inputName = ["username", "password"];
@@ -52,7 +56,7 @@ async function authUser() {
     });
     return false;
   }
-
+  
   // auth user
   try {
     const response = await fetch("https://dummyjson.com/auth/login", {
@@ -72,11 +76,19 @@ async function authUser() {
       localStorage.setItem("user-image", res.image);
       window.location.href = "/index.html";
     }
+    loginLoader.classList.replace("d-inline-block", "d-none");
+    loginBtn.classList.replace("d-none", "d-inline-block");
+  
   } catch (error) {
+    loginLoader.classList.replace("d-inline-block", "d-none");
+    loginBtn.classList.replace("d-none", "d-inline-block");
     document.querySelectorAll(".err").forEach((element) => {
       element.innerHTML = `<small style="color:red;font-size:10px;text-transform:capitalize">${error}</small>`;
     });
   }
+  loginLoader.classList.replace("d-inline-block", "d-none");
+  loginBtn.classList.replace("d-none", "d-inline-block");
+
 }
 const login_submit = document.querySelector("#login-submit");
 login_submit.addEventListener("submit", authUser);
