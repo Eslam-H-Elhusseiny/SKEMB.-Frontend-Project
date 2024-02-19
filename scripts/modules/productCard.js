@@ -37,11 +37,14 @@ const productCard = (container, productsArray) => {
         <div class="card px-2 py-2 h-100">
             <div class="card-product position-relative justify-end d-flex flex-col align-center">
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <img src=${src} alt="${product.title}"/>
                 <a href="#" class="btn cart-btn w-85">Add To Cart</a>
                 <a href="#" class="fav position-absolute py-1 px-2"><i class="fa-regular fa-heart"></i></a>
                 <a href="#" class="fav position-absolute py-1 px-2 fav-solid"><i class="fa-solid fa-heart"></i></a>
 =======
+=======
+>>>>>>> a6c6af2 (fixed increase and decrease cart buttons)
                 <a href="details.html?id=${product.id}"> <img src=${src} alt="${
       product.title
     }"/></a>
@@ -54,6 +57,7 @@ const productCard = (container, productsArray) => {
 >>>>>>> b57def6 (fix add to cart from product details , offers & refactor product image in all products & toggle : fav icons ,  active class on sizes , active color)
             </div>
             <div class="card-text px-1 d-flex flex-col">
+<<<<<<< HEAD
                 <a href="${product.category}" class="product-cat mt-4">${
       product.category
     }</a>
@@ -64,6 +68,18 @@ const productCard = (container, productsArray) => {
       25
     )}</h3></a>
                 <p class="product-p">${product.description}</p>
+=======
+                <a href="categories.html" class="product-cat mt-4">${
+                  product.category
+                }</a>
+                <a href="details.html?id=${product.id}">
+                  <h3 class="product-h mb-1">${product.title.slice(0, 24)}</h3>
+                </a>
+                <p class="product-p mb-3">${product.description.slice(
+                  0,
+                  125
+                )}</p>
+>>>>>>> a6c6af2 (fixed increase and decrease cart buttons)
                 <div class="price-colors my-1 align-center justify-between d-flex" >
                     <h4 class="price-tag">
                         <span class="currency">EGP</span>

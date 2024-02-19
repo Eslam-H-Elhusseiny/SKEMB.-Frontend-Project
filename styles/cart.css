@@ -74,7 +74,7 @@
 .quantity {
   display: inline-block;
   font-size: var(--fsize-500);
-  width: 1.2rem;
+  min-width: 2.2rem;
 }
 /* *ANCHOR - order summary */
 .orderSummary {

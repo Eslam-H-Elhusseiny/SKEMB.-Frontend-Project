@@ -18,10 +18,12 @@ async function addToCart(productId, addToCartBtn, addToCartLoader) {
       const product = await response.json();
 
       // Check if the product is already in the cart
-      const existingProduct = skembUserCart.filter( (item) => item.product.id === productId );
+      const existingProduct = skembUserCart.find(
+        (item) => item.product.id === productId
+      );
       if (existingProduct) {
         // change text in BTN to be increase quantity
-        addToCartBtn.innerText = "Increase Quantity";
+        // addToCartBtn.innerText = "Increase Quantity";
         // If product exists, increase its quantity
         existingProduct.quantity++;
       } else {

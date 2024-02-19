@@ -1,3 +1,5 @@
+import { getCartQuantity } from "./main.js";
+
 // *ANCHOR - get logged user cart
 const getUserCart = () => {
   try {
@@ -28,11 +30,11 @@ const displayCartProducts = (products) => {
                 </div>
                 <div class="priceControl h-100 d-flex flex-col justify-around align-center w-fit">
                     <h3>  
-                        <span class="decrease mx-2 cursor-pointer"><i class="fa-solid fa-minus"></i></span> 
-                        <span class="mx-2 quantity">${
+                        <button class="cart-quantity decrease mx-2 cursor-pointer"><i class="fa-solid fa-minus"></i></button> 
+                        <span  class="px-2 mx-2 quantity">${
                           products[i].quantity
                         }</span> 
-                        <span class="mx-2 cursor-pointer increase"><i class="fa-solid fa-plus"></i></span>  
+                        <button class="cart-quantity mx-2 cursor-pointer increase"><i class="fa-solid fa-plus"></i></button>  
                     </h3>
                     <p class="fs-5 text-dark-blue product-price">${
                       products[i].product.price * 30 * products[i].quantity
@@ -56,6 +58,7 @@ const attachEventListeners = (products) => {
     const removeBtn = document.querySelectorAll(".remove-product")[index];
 
     decreaseBtn.addEventListener("click", () => {
+      getCartQuantity();
       if (product.quantity > 1) {
         product.quantity--;
         quantityElement.textContent = product.quantity;
@@ -75,6 +78,7 @@ const attachEventListeners = (products) => {
     });
 
     increaseBtn.addEventListener("click", () => {
+      getCartQuantity();
       product.quantity++;
       quantityElement.textContent = product.quantity;
       priceElement.textContent = `${
