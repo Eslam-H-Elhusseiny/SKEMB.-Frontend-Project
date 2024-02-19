@@ -61,13 +61,16 @@
   transition: var(--transition-short);
 }
 
-.card-product .fav-solid i {
-  opacity: 0;
+.card-product .fav-solid i , 
+.card-product .fav-regular i
+ {
+  opacity: 1;
   color: red;
   transition: var(--transition-short);
 }
 
-.card-product .fav-solid:hover i {
+.card-product .fav-solid:hover i  ,
+.card-product .fav-regular:hover i  {
   opacity: 1;
 }
 
@@ -122,7 +125,16 @@
 .color4 {
   background-color: maroon;
 }
-
+.opacity-1{
+  opacity: 1;
+  transform: translate(.5rem);
+  -webkit-transform: translate(.5rem);
+  -moz-transform: translate(.5rem);
+  -ms-transform: translate(.5rem);
+  -o-transform: translate(.5rem);
+  width: 1.2rem;
+  height: 1.2rem;
+}
 /* ====================================== */
 /* ====================================== */
 /* ====================================== */

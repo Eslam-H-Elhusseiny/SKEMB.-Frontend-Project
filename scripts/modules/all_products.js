@@ -138,5 +138,5 @@ async function productsPerPage(current_page) {
   const res = await fetch(paginatedUrl);
   const { products } = await res.json();
   productsContainer.innerHTML = ``;
-  productCard(productsContainer, products, "all");
+  productCard(productsContainer, products);
 }

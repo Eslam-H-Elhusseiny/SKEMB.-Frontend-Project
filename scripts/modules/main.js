@@ -59,7 +59,11 @@ const getCartQuantity = () => {
 };
 getCartQuantity();
 // *ANCHOR - SIDE MENU FOR CART & CART ACTIONS FROM IT
+  
+
 document.querySelector(".cartBtn").addEventListener("click", () => {
+  if (localStorage.getItem('skemb-user')) {
+
   let cartSideMenue = document.querySelector(".sideCartContainer");
   document.querySelector(".cartSide").style.right = "0";
   document.querySelector(".cartSide").style.display = "block";
@@ -151,8 +155,10 @@ document.querySelector(".cartBtn").addEventListener("click", () => {
   };
 
   getUserSideCart();
+}
 });
 document.querySelector(".closeSideCart").addEventListener("click", () => {
   document.querySelector(".cartSide").style.right = "-50rem";
 });
+
 export { getCartQuantity };

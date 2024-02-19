@@ -1,15 +1,6 @@
 import { productCard } from "./productCard.js";
 import { addToCart } from "./addtocart.js";
-
-//  Fetching All Products
-// -------------------------------
-
-async function fetchProducts() {
-  const productsUrl = "https://dummyjson.com/products/";
-  const response = await fetch(`${productsUrl}${limit}`);
-  const { products } = await response.json();
-  return products;
-}
+import { getCartQuantity } from "./main.js";
 
 //  Fetching Single Product
 // -------------------------------
@@ -78,61 +69,49 @@ async function displayProductDetails() {
   </div>
 
   <div class="product-color my-1 mb-2">
-    <h4>Color</h4>
-
-    <div class="color-choose my-1">
-      <div>
-        <input
-          data-image="black"
-          type="radio"
-          id="black"
-          name="color"
-          value="black"
-          checked
-        />
-        <label for="black"><span></span></label>
-      </div>
-      <div>
-        <input
-          data-image="blue"
-          type="radio"
-          id="blue"
-          name="color"
-          value="blue"
-          checked
-        />
-        <label for="blue"><span></span></label>
-      </div>
-      <div>
-        <input
-          data-image="gray"
-          type="radio"
-          id="gray"
-          name="color"
-          value="gray"
-        />
-        <label for="gray"><span></span></label>
-      </div>
-      <div>
-        <input
-          data-image="white"
-          type="radio"
-          id="white"
-          name="color"
-          value="white"
-        />
-        <label for="white"><span></span></label>
-      </div>
+    <h4 class="mb-2">Color</h4>
+    <div class="colors d-flex">
+    <div class="color opacity-1 cursor-pointer color1" ></div>
+    <div class="color opacity-1 cursor-pointer color2"></div>
+    <div class="color opacity-1 cursor-pointer color3"></div>
+    <div class="color opacity-1 cursor-pointer color4"></div>
     </div>
+
   </div>
 
   <h3 class="product-price py-3">EGP ${product.price * 30}</h3>
-  <button class="text-center product-btn">Add To Cart</button>
-  <button class="btn addToCartLoader w-85 cursor-pointer d-none"><i class="fa-solid fa-spinner fa-spin"></i></button>
+  <button class="text-center product-btn d-inline-block">Add To Cart</button>
+  <button class="btn productLoader w-85 cursor-pointer d-none"><i class="fa-solid fa-spinner fa-spin"></i></button>
 </div>
   `;
+
+  document.querySelector('.current-page').innerHTML = product.title
+
+  const sizes = productDetailSection.querySelectorAll('.size');
+
+  sizes.forEach(size => {
+    size.addEventListener('click', function() {
+      sizes.forEach(othersize => {
+        othersize.classList.remove('size-active');
+      });
+      this.classList.add('size-active');
+    });
+  });
+
+  const colors = productDetailSection.querySelectorAll('.color');
+
+  colors.forEach(color => {
+    color.addEventListener('click', function() {
+      colors.forEach(otherColor => {
+        otherColor.classList.remove('color-active');
+      });
+      this.classList.add('color-active');
+    });
+  });
+
+
   let addToCartBtn = productDetailSection.querySelector(".product-btn");
-  let addToCartLoader = productDetailSection.querySelector(".addToCartLoader");
+  let addToCartLoader = productDetailSection.querySelector(".productLoader");
   addToCartBtn.addEventListener("click", (e) => {
     addToCart(product.id, addToCartBtn, addToCartLoader);
   });
@@ -199,7 +178,7 @@ async function displayProductDetails() {
         <h4 class="review text-center">${comment.body}</h4>
         <p class="date mb-1">Jan 01, 2023</p>
       </article>
-      </div>
+    </div>
           `;
         productReviewSection.appendChild(commentCard);
       });
@@ -219,7 +198,7 @@ async function relatedProducts(category) {
 async function displayRelatedProducts(category) {
   const productsArray = await relatedProducts(category);
   const cards = document.getElementsByClassName("products-grid")[0];
-  productCard(cards, productsArray, "all");
+  productCard(cards, productsArray);
 }
 
 displayProductDetails();

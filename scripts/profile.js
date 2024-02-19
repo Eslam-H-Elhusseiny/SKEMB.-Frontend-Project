@@ -69,8 +69,7 @@ function user_profile_information(user) {
 
 /*NOTE - logout */
 const logout = () => {
-  localStorage.removeItem("skemb-user");
-  localStorage.removeItem("user-image");
+  localStorage.clear();
   window.location.href = "/index.html";
 };
 const logoutButton = document.getElementById("logout");
